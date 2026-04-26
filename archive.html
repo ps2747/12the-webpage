@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>回顧 Archive — 12the</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;600;700&family=Shippori+Mincho:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/shared.css">
+<style>
+/* Neutralize HDR / extended-range rendering on all photos to prevent overexposure on HDR-capable screens */
+img { dynamic-range-limit: standard; }
+.kuri-grid img, .shido-grid img, .ran-grid img { dynamic-range-limit: standard; }
+</style>
+<style>
+.page-hero { padding: 80px 0; border-bottom: 1px solid var(--line); }
+.page-hero h1 { font-family: var(--serif); font-size: clamp(48px, 8vw, 112px); line-height: 0.98; }
+.page-hero h1 em { font-style: italic; color: var(--coral); }
+.page-hero .sub { max-width: 560px; color: var(--ink-2); line-height: 1.9; margin-top: 24px; font-size: 16px; }
+
+.year-tabs { padding: 24px 0; border-bottom: 1px solid var(--line); display: flex; gap: 24px; font-family: var(--serif); font-style: italic; font-size: 22px; }
+.year-tabs a { color: var(--ink-3); padding-bottom: 6px; border-bottom: 2px solid transparent; transition: all 0.2s; }
+.year-tabs a.active { color: var(--coral); border-color: var(--coral); }
+
+.volume { padding: 80px 0; border-bottom: 1px solid var(--line); }
+.volume-header { display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; margin-bottom: 40px; flex-wrap: wrap; }
+.volume-header .info { max-width: 520px; }
+.vol-num { font-family: var(--mono); font-size: 12px; letter-spacing: 0.3em; color: var(--coral); margin-bottom: 8px; }
+.vol-title { font-family: var(--serif); font-size: clamp(32px, 4vw, 52px); line-height: 1.1; }
+.vol-title em { font-style: italic; color: var(--coral); }
+.vol-jp { font-family: var(--serif); font-size: 13px; letter-spacing: 0.3em; color: var(--ink-3); margin-top: 12px; }
+.vol-meta { display: flex; flex-direction: column; gap: 8px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.15em; color: var(--ink-3); text-align: right; }
+.vol-meta strong { color: var(--ink); font-weight: 500; font-family: var(--serif); font-style: italic; font-size: 16px; letter-spacing: 0; }
+
+.vol-mason { display: grid; grid-template-columns: repeat(12, 1fr); gap: 10px; grid-auto-rows: 80px; }
+@media (max-width: 900px) { .vol-mason { grid-template-columns: repeat(4, 1fr); } }
+.vol-mason .ar { position: relative; overflow: hidden; border-radius: 3px; }
+.vol-mason .ar .ph { position: absolute; inset: 0; transition: transform 0.6s; }
+.vol-mason .ar:hover .ph { transform: scale(1.05); }
+.vol-mason .ar::after { content: ""; position: absolute; inset: 0; background: rgba(42,38,32,0); transition: 0.3s; }
+.vol-mason .ar:hover::after { background: rgba(42,38,32,0.1); }
+.vol-mason .ar .cap { position: absolute; bottom: 10px; left: 12px; color: #fff; font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em; opacity: 0; transform: translateY(6px); transition: all 0.3s; z-index: 2; }
+.vol-mason .ar:hover .cap { opacity: 1; transform: translateY(0); }
+
+/* Layout 1 */
+.v1 .m1 { grid-column: span 4; grid-row: span 5; }
+.v1 .m2 { grid-column: span 3; grid-row: span 3; }
+.v1 .m3 { grid-column: span 5; grid-row: span 3; }
+.v1 .m4 { grid-column: span 4; grid-row: span 2; }
+.v1 .m5 { grid-column: span 4; grid-row: span 2; }
+.v1 .m6 { grid-column: span 3; grid-row: span 4; }
+.v1 .m7 { grid-column: span 5; grid-row: span 4; }
+.v1 .m8 { grid-column: span 4; grid-row: span 4; }
+
+/* Layout 2 */
+.v2 .m1 { grid-column: span 5; grid-row: span 4; }
+.v2 .m2 { grid-column: span 4; grid-row: span 2; }
+.v2 .m3 { grid-column: span 3; grid-row: span 2; }
+.v2 .m4 { grid-column: span 4; grid-row: span 2; }
+.v2 .m5 { grid-column: span 3; grid-row: span 2; }
+.v2 .m6 { grid-column: span 4; grid-row: span 3; }
+.v2 .m7 { grid-column: span 4; grid-row: span 3; }
+.v2 .m8 { grid-column: span 4; grid-row: span 3; }
+
+/* Real photo volume — Kuriyama 2025.11 · refined light treatment */
+.vol-kuri {
+  background:
+    radial-gradient(1200px 600px at 15% -10%, rgba(217,128,112,0.08), transparent 60%),
+    radial-gradient(900px 500px at 90% 110%, rgba(241,197,106,0.09), transparent 55%),
+    #fbf7f1;
+  color: var(--ink);
+  padding: 110px 0 130px;
+  border-top: 1px solid rgba(42,38,32,0.08);
+  border-bottom: 1px solid rgba(42,38,32,0.08);
+  position: relative;
+}
+.vol-kuri::before {
+  content: "REAL DOCUMENT · 真實紀錄";
+  position: absolute;
+  top: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.4em;
+  color: var(--coral);
+  padding: 0 16px;
+  background: #fbf7f1;
+}
+.vol-kuri .vol-num { color: var(--coral); }
+.vol-kuri .vol-title em { color: var(--coral); }
+
+.kuri-lede {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 56px;
+  align-items: end;
+  margin: 56px 0 44px;
+  padding-bottom: 44px;
+  border-bottom: 1px solid rgba(42,38,32,0.1);
+}
+@media (max-width: 900px) { .kuri-lede { grid-template-columns: 1fr; gap: 32px; } }
+.kuri-lede p {
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.95;
+  color: var(--ink-2);
+}
+.kuri-lede p em { color: var(--coral); font-style: italic; }
+
+.kuri-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.kuri-stats .s { border-left: 1px solid rgba(42,38,32,0.18); padding-left: 18px; }
+.kuri-stats .s .k { font-family: var(--mono); font-size: 10px; letter-spacing: 0.25em; color: var(--ink-3); margin-bottom: 8px; text-transform: uppercase; }
+.kuri-stats .s .v { font-family: var(--serif); font-size: 24px; font-style: italic; color: var(--ink); }
+
+.kuri-looks {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-bottom: 52px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--ink-3);
+  text-transform: uppercase;
+}
+.kuri-looks span { display: flex; align-items: center; gap: 10px; }
+.kuri-looks span::before { content: ""; width: 28px; height: 1px; background: var(--coral); }
+
+.kuri-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 10px; grid-auto-rows: 92px; }
+@media (max-width: 900px) { .kuri-grid { grid-template-columns: repeat(4, 1fr); } }
+.kuri-grid .ar { position: relative; overflow: hidden; background: #efe8dc; box-shadow: 0 1px 3px rgba(42,38,32,0.06), 0 8px 24px -12px rgba(42,38,32,0.18); }
+.kuri-grid .ar img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease, filter 0.5s; display: block; filter: saturate(0.94) contrast(1.01); }
+.kuri-grid .ar:hover img { transform: scale(1.04); filter: saturate(1.02) contrast(1.04); }
+.kuri-grid .ar::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 55%, rgba(26,24,20,0.7)); opacity: 0; transition: 0.4s; }
+.kuri-grid .ar:hover::after { opacity: 1; }
+.kuri-grid .tag { position: absolute; left: 14px; bottom: 12px; font-family: var(--mono); font-size: 10px; letter-spacing: 0.22em; color: #fff; text-transform: uppercase; opacity: 0; transform: translateY(4px); transition: 0.4s; z-index: 2; }
+.kuri-grid .ar:hover .tag { opacity: 1; transform: translateY(0); }
+.kuri-grid .idx { position: absolute; top: 12px; right: 14px; font-family: var(--mono); font-size: 10px; letter-spacing: 0.18em; color: #fff; z-index: 2; mix-blend-mode: difference; opacity: 0.85; }
+
+.kuri-k1 { grid-column: span 7; grid-row: span 6; }
+.kuri-k2 { grid-column: span 5; grid-row: span 3; }
+.kuri-k3 { grid-column: span 5; grid-row: span 3; }
+.kuri-k4 { grid-column: span 4; grid-row: span 4; }
+.kuri-k5 { grid-column: span 4; grid-row: span 4; }
+.kuri-k6 { grid-column: span 4; grid-row: span 4; }
+.kuri-k7 { grid-column: span 5; grid-row: span 5; }
+.kuri-k8 { grid-column: span 4; grid-row: span 3; }
+.kuri-k9 { grid-column: span 3; grid-row: span 3; }
+.kuri-k10 { grid-column: span 4; grid-row: span 2; }
+.kuri-k11 { grid-column: span 8; grid-row: span 2; }
+@media (max-width: 900px) {
+  .kuri-k1, .kuri-k7 { grid-column: span 4; grid-row: span 5; }
+  .kuri-k2, .kuri-k3, .kuri-k4, .kuri-k5, .kuri-k6, .kuri-k8, .kuri-k9, .kuri-k10, .kuri-k11 { grid-column: span 4; grid-row: span 3; }
+}
+
+/* VOL.10 · 紫堂留衣 — 冬の二日間 · refined ink/indigo treatment */
+.vol-shido {
+  background:
+    radial-gradient(1100px 580px at 88% -12%, rgba(58, 76, 122, 0.12), transparent 60%),
+    radial-gradient(900px 480px at 8% 110%, rgba(180, 92, 92, 0.10), transparent 55%),
+    #f5f1ea;
+  color: var(--ink);
+  padding: 110px 0 130px;
+  border-top: 1px solid rgba(42,38,32,0.08);
+  border-bottom: 1px solid rgba(42,38,32,0.08);
+  position: relative;
+}
+.vol-shido::before {
+  content: "REAL DOCUMENT · 真實紀錄 · 冬";
+  position: absolute;
+  top: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.4em;
+  color: #3a4c7a;
+  padding: 0 16px;
+  background: #f5f1ea;
+}
+.vol-shido .vol-num { color: #3a4c7a; }
+.vol-shido .vol-title em { color: #3a4c7a; }
+.vol-shido .kuri-stats .s { border-left-color: rgba(58,76,122,0.28); }
+.vol-shido .kuri-looks span::before { background: #3a4c7a; }
+.vol-shido .kuri-lede p em { color: #3a4c7a; }
+.vol-shido .kuri-profile { background: rgba(245,241,234,0.55); border-color: rgba(58,76,122,0.22); }
+.vol-shido .kuri-profile::before { content: "TALENT PROFILE · 女神檔案 · 冬"; color: #3a4c7a; background: #f5f1ea; }
+.vol-shido .kuri-profile .stats-col .row { border-left-color: rgba(58,76,122,0.32); }
+.vol-shido .kuri-profile .copy em { color: #3a4c7a; }
+.vol-shido .kuri-profile .photobook { border-top-color: rgba(58,76,122,0.32); }
+.vol-shido .kuri-profile .photobook strong { color: #3a4c7a; }
+.vol-shido .kuri-profile .filmography {
+  margin-top: 10px; padding-top: 10px; border-top: 1px dashed rgba(58,76,122,0.22);
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.18em; color: var(--ink-3); line-height: 1.8;
+}
+.vol-shido .kuri-profile .filmography span { color: #3a4c7a; }
+
+.shido-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 12px; grid-auto-rows: 110px; }
+@media (max-width: 900px) { .shido-grid { grid-template-columns: repeat(4, 1fr); } }
+.shido-grid .ar { position: relative; overflow: hidden; background: #e8e2d4; box-shadow: 0 1px 3px rgba(42,38,32,0.06), 0 10px 28px -14px rgba(58,76,122,0.22); }
+.shido-grid .ar img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease, filter 0.5s; display: block; filter: saturate(0.96) contrast(1.02); }
+.shido-grid .ar:hover img { transform: scale(1.04); filter: saturate(1.04) contrast(1.05); }
+.shido-grid .ar::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 55%, rgba(20,22,32,0.72)); opacity: 0; transition: 0.4s; }
+.shido-grid .ar:hover::after { opacity: 1; }
+.shido-grid .tag { position: absolute; left: 16px; bottom: 14px; font-family: var(--mono); font-size: 10px; letter-spacing: 0.22em; color: #fff; text-transform: uppercase; opacity: 0; transform: translateY(4px); transition: 0.4s; z-index: 2; }
+.shido-grid .ar:hover .tag { opacity: 1; transform: translateY(0); }
+.shido-grid .idx { position: absolute; top: 14px; right: 16px; font-family: var(--mono); font-size: 10px; letter-spacing: 0.18em; color: #fff; z-index: 2; mix-blend-mode: difference; opacity: 0.85; }
+
+/* VOL.10 grid — 11 published shots, editorial layout
+   Hero (gingham reveal) + couch talk + 2 portraits + brown plaid bedroom set + bunny set + closing pair */
+.shido-s1 { grid-column: span 7; grid-row: span 5; }   /* hero · gingham reveal */
+.shido-s2 { grid-column: span 5; grid-row: span 5; }   /* couch interview wide */
+.shido-s3 { grid-column: span 4; grid-row: span 6; }   /* heart hands portrait */
+.shido-s4 { grid-column: span 4; grid-row: span 6; }   /* candid joy portrait */
+.shido-s5 { grid-column: span 4; grid-row: span 6; }   /* bedroom duo */
+.shido-s6 { grid-column: span 7; grid-row: span 4; }   /* brown plaid · BTS photographer */
+.shido-s7 { grid-column: span 5; grid-row: span 4; }   /* brown plaid · bed lying BTS */
+.shido-s8 { grid-column: span 7; grid-row: span 4; }   /* bunny · sofa BTS */
+.shido-s9 { grid-column: span 5; grid-row: span 6; }   /* bunny · solo portrait */
+.shido-s10 { grid-column: span 7; grid-row: span 4; }  /* late dinner */
+.shido-s11 { grid-column: span 12; grid-row: span 4; } /* farewell — full width finale */
+@media (max-width: 900px) {
+  .shido-s1, .shido-s2, .shido-s3, .shido-s4, .shido-s5, .shido-s6, .shido-s7, .shido-s8, .shido-s9, .shido-s10, .shido-s11 { grid-column: span 4; grid-row: span 4; }
+}
+
+.shido-timeline {
+  margin: 0 0 42px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-top: 1px solid rgba(42,38,32,0.12);
+  border-bottom: 1px solid rgba(42,38,32,0.12);
+}
+@media (max-width: 760px) { .shido-timeline { grid-template-columns: repeat(2, 1fr); } }
+.shido-timeline .t {
+  padding: 22px 22px 24px;
+  border-right: 1px solid rgba(42,38,32,0.1);
+  position: relative;
+}
+.shido-timeline .t:last-child { border-right: none; }
+@media (max-width: 760px) {
+  .shido-timeline .t:nth-child(2) { border-right: none; }
+  .shido-timeline .t:nth-child(-n+2) { border-bottom: 1px solid rgba(42,38,32,0.1); }
+}
+.shido-timeline .t .when { font-family: var(--mono); font-size: 10px; letter-spacing: 0.25em; color: #3a4c7a; text-transform: uppercase; margin-bottom: 8px; }
+.shido-timeline .t .what { font-family: var(--serif); font-size: 18px; font-style: italic; line-height: 1.35; color: var(--ink); margin-bottom: 6px; }
+.shido-timeline .t .where { font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em; color: var(--ink-3); }
+
+/* VOL.08 · 蘭蘭 — 秋の二日間 · honey / amber treatment */
+.vol-ran {
+  background:
+    radial-gradient(1100px 580px at 12% -10%, rgba(196, 138, 76, 0.12), transparent 60%),
+    radial-gradient(900px 480px at 92% 110%, rgba(122, 92, 64, 0.10), transparent 55%),
+    #f7f1e6;
+  color: var(--ink);
+  padding: 110px 0 130px;
+  border-top: 1px solid rgba(42,38,32,0.08);
+  border-bottom: 1px solid rgba(42,38,32,0.08);
+  position: relative;
+}
+.vol-ran::before {
+  content: "REAL DOCUMENT · 真實紀錄 · 秋";
+  position: absolute;
+  top: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.4em;
+  color: #a26a32;
+  padding: 0 16px;
+  background: #f7f1e6;
+}
+.vol-ran .vol-num { color: #a26a32; }
+.vol-ran .vol-title em { color: #a26a32; }
+.vol-ran .kuri-stats .s { border-left-color: rgba(162,106,50,0.32); }
+.vol-ran .kuri-looks span::before { background: #a26a32; }
+.vol-ran .kuri-lede p em { color: #a26a32; }
+.vol-ran .shido-timeline .t .when { color: #a26a32; }
+.vol-ran .kuri-profile { background: rgba(247,241,230,0.6); border-color: rgba(162,106,50,0.22); }
+.vol-ran .kuri-profile::before { content: "TALENT PROFILE · 女神檔案 · 秋"; color: #a26a32; background: #f7f1e6; }
+.vol-ran .kuri-profile .stats-col .row { border-left-color: rgba(162,106,50,0.35); }
+.vol-ran .kuri-profile .copy em { color: #a26a32; }
+.vol-ran .kuri-profile .photobook { border-top-color: rgba(162,106,50,0.32); }
+.vol-ran .kuri-profile .photobook strong { color: #a26a32; }
+.vol-ran .kuri-profile .measure {
+  display: flex; gap: 18px; margin-top: 14px; padding: 10px 14px;
+  background: rgba(162,106,50,0.06); border-left: 2px solid #a26a32;
+  font-family: var(--mono); font-size: 12px; letter-spacing: 0.15em; color: var(--ink-2);
+}
+.vol-ran .kuri-profile .measure span strong { color: #a26a32; font-family: var(--serif); font-style: italic; font-size: 15px; letter-spacing: 0; margin-left: 4px; }
+
+/* VOL.09 · 栗山莉緒 — talent profile card */
+.kuri-profile {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  margin: 0 0 44px;
+  padding: 32px 36px;
+  background: rgba(255,250,243,0.65);
+  border: 1px solid rgba(217,128,112,0.22);
+  position: relative;
+}
+@media (max-width: 900px) { .kuri-profile { grid-template-columns: 1fr; gap: 24px; padding: 24px; } }
+.kuri-profile::before {
+  content: "TALENT PROFILE · 女神檔案";
+  position: absolute; top: -10px; left: 24px;
+  padding: 0 12px; background: #fbf7f1;
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.3em; color: var(--coral);
+}
+.kuri-profile .stats-col { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px 18px; align-content: start; }
+.kuri-profile .stats-col .row { border-left: 1px solid rgba(217,128,112,0.35); padding-left: 14px; }
+.kuri-profile .stats-col .row .k { font-family: var(--mono); font-size: 10px; letter-spacing: 0.22em; color: var(--ink-3); text-transform: uppercase; margin-bottom: 4px; }
+.kuri-profile .stats-col .row .v { font-family: var(--serif); font-size: 18px; font-style: italic; color: var(--ink); }
+.kuri-profile .copy { font-family: var(--serif); font-size: 16px; line-height: 1.95; color: var(--ink-2); }
+.kuri-profile .copy em { color: var(--coral); font-style: italic; }
+.kuri-profile .photobook {
+  margin-top: 14px; padding-top: 14px; border-top: 1px dashed rgba(217,128,112,0.35);
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; color: var(--ink-3); line-height: 1.7;
+}
+.kuri-profile .photobook strong { color: var(--coral); font-family: var(--serif); font-style: italic; font-size: 13px; letter-spacing: 0; }
+
+.ran-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 12px; grid-auto-rows: 92px; }
+@media (max-width: 900px) { .ran-grid { grid-template-columns: repeat(4, 1fr); } }
+.ran-grid .ar { position: relative; overflow: hidden; background: #ece1cc; box-shadow: 0 1px 3px rgba(42,38,32,0.06), 0 10px 28px -14px rgba(122,80,40,0.22); }
+.ran-grid .ar img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease, filter 0.5s; display: block; filter: saturate(0.96) contrast(1.02); }
+.ran-grid .ar:hover img { transform: scale(1.04); filter: saturate(1.06) contrast(1.05); }
+.ran-grid .ar::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 55%, rgba(40,28,16,0.74)); opacity: 0; transition: 0.4s; }
+.ran-grid .ar:hover::after { opacity: 1; }
+.ran-grid .tag { position: absolute; left: 16px; bottom: 14px; font-family: var(--mono); font-size: 10px; letter-spacing: 0.22em; color: #fff; text-transform: uppercase; opacity: 0; transform: translateY(4px); transition: 0.4s; z-index: 2; }
+.ran-grid .ar:hover .tag { opacity: 1; transform: translateY(0); }
+.ran-grid .idx { position: absolute; top: 14px; right: 16px; font-family: var(--mono); font-size: 10px; letter-spacing: 0.18em; color: #fff; z-index: 2; mix-blend-mode: difference; opacity: 0.85; }
+.ran-grid .kind { position: absolute; top: 14px; left: 16px; font-family: var(--mono); font-size: 9px; letter-spacing: 0.22em; color: #fff; z-index: 2; padding: 4px 8px; background: rgba(162,106,50,0.85); text-transform: uppercase; }
+
+/* hero portrait + behind-the-scenes mix */
+.ran-r1  { grid-column: span 4; grid-row: span 6; }
+.ran-r2  { grid-column: span 5; grid-row: span 4; }
+.ran-r3  { grid-column: span 3; grid-row: span 4; }
+.ran-r4  { grid-column: span 5; grid-row: span 4; }
+.ran-r5  { grid-column: span 3; grid-row: span 4; }
+.ran-r6  { grid-column: span 4; grid-row: span 4; }
+.ran-r7  { grid-column: span 5; grid-row: span 3; }
+.ran-r8  { grid-column: span 3; grid-row: span 3; }
+.ran-r9  { grid-column: span 4; grid-row: span 3; }
+.ran-r10 { grid-column: span 6; grid-row: span 4; }
+.ran-r11 { grid-column: span 6; grid-row: span 4; }
+.ran-r12 { grid-column: span 4; grid-row: span 3; }
+.ran-r13 { grid-column: span 8; grid-row: span 3; }
+.ran-r14 { grid-column: span 4; grid-row: span 5; }   /* white knit · sit pose portrait */
+.ran-r15 { grid-column: span 4; grid-row: span 5; }   /* white knit · open knees portrait */
+.ran-r16 { grid-column: span 4; grid-row: span 5; }   /* white knit · finger to lips */
+/* Look 02 expansion · bambi BTS */
+.ran-r17 { grid-column: span 4; grid-row: span 5; }   /* bambi · arms up portrait BTS */
+.ran-r18 { grid-column: span 4; grid-row: span 5; }   /* bambi · standing wide BTS */
+.ran-r19 { grid-column: span 4; grid-row: span 4; }   /* bambi · kneeling 1 BTS */
+.ran-r20 { grid-column: span 8; grid-row: span 4; }   /* bambi · kneeling 2 (mahjong shirt) wide BTS */
+/* Look 05 · white harness */
+.ran-r21 { grid-column: span 6; grid-row: span 4; }   /* harness · on bed BTS canon */
+.ran-r22 { grid-column: span 6; grid-row: span 4; }   /* harness · sit edge BTS mahjong */
+/* Look 03 onyx · CK expansion */
+.ran-r23 { grid-column: span 4; grid-row: span 5; }   /* CK · solo standing BTS */
+.ran-r24 { grid-column: span 4; grid-row: span 5; }   /* CK · finger to lips BTS */
+.ran-r25 { grid-column: span 4; grid-row: span 5; }   /* CK · duo tongue out front */
+.ran-r26 { grid-column: span 6; grid-row: span 4; }   /* CK · duo back booty */
+.ran-r27 { grid-column: span 6; grid-row: span 4; }   /* CK · duo wide */
+@media (max-width: 900px) {
+  .ran-r1, .ran-r2, .ran-r3, .ran-r4, .ran-r5, .ran-r6, .ran-r7, .ran-r8, .ran-r9, .ran-r10, .ran-r11, .ran-r12, .ran-r13, .ran-r14, .ran-r15, .ran-r16, .ran-r17, .ran-r18, .ran-r19, .ran-r20, .ran-r21, .ran-r22, .ran-r23, .ran-r24, .ran-r25, .ran-r26, .ran-r27 { grid-column: span 4; grid-row: span 4; }
+}
+
+.ran-quote {
+  margin: 20px 0 44px;
+  padding: 36px 40px;
+  background: rgba(255, 250, 240, 0.7);
+  border-left: 3px solid #a26a32;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 22px;
+  line-height: 1.7;
+  color: var(--ink);
+  position: relative;
+}
+.ran-quote::before {
+  content: "「";
+  position: absolute;
+  top: 4px;
+  left: 14px;
+  font-size: 56px;
+  color: rgba(162,106,50,0.25);
+  font-family: var(--serif);
+  line-height: 1;
+}
+.ran-quote .who {
+  display: block;
+  margin-top: 16px;
+  font-style: normal;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  color: #a26a32;
+}
+
+.kuri-note {
+  margin-top: 48px;
+  padding: 24px 28px;
+  background: rgba(255,255,255,0.6);
+  border: 1px solid rgba(42,38,32,0.1);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  line-height: 1.95;
+  color: var(--ink-3);
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+.kuri-note::before { content: "※"; color: var(--coral); font-size: 18px; line-height: 1; margin-top: 2px; }
+
+.view-more { display: flex; justify-content: center; margin-top: 32px; }
+</style>
+<!-- visibility-init -->
+<script>(function(){try{var t=JSON.parse(sessionStorage.getItem('12the-tweaks')||'{}');var hideE=t.showEvents!==true;var hideL=t.showLineup!==true;var de=document.documentElement;if(hideE)de.classList.add('hide-events');if(hideL)de.classList.add('hide-lineup');document.addEventListener('DOMContentLoaded',function(){if(hideE)document.body.classList.add('hide-events');if(hideL)document.body.classList.add('hide-lineup');});}catch(e){document.documentElement.classList.add('hide-events');document.documentElement.classList.add('hide-lineup');document.addEventListener('DOMContentLoaded',function(){document.body.classList.add('hide-events');document.body.classList.add('hide-lineup');});}})();</script>
+</head>
+<body data-screen-label="Archive">
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="12the"><img src="assets/brand/12the-logo.png" alt="12the"></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a><a href="events.html" data-route="events">活動 / Events</a><a href="lineup.html" data-route="lineup">女神 / Lineup</a><a href="archive.html">回顧 / Archive</a><a href="about.html">關於 / About</a>
+    </div>
+    <a href="contact.html" class="nav-cta">立即報名 <span class="arrow">→</span></a>
+    <a href="https://www.instagram.com/12the_official/" target="_blank" rel="noopener" class="nav-ig" aria-label="Instagram @12the_official"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container reveal">
+    <span class="eyebrow" style="color: var(--coral);">Archive · 過往攝影集</span>
+    <h1 style="margin-top: 24px;">那些被<em>封存</em>的，<br><em>稍縱即逝</em>的心跳。</h1>
+    <p class="sub">2025 至今、16 個 volumes、近 800 張精選影像。每一場活動結束後 7 天內，我們整理當日攝影師作品成為月度 Volume，僅對 VIP 會員開放完整版瀏覽。</p>
+    <p class="sub" style="margin-top: 16px; font-size: 14px; color: #3a4c7a; font-family: var(--mono); letter-spacing: 0.1em;">★ NEW · VOL.10 紫堂留衣 二日活動紀錄已上線 (2026.01.31 — 02.01)</p>
+    <p class="sub" style="margin-top: 6px; font-size: 14px; color: #a26a32; font-family: var(--mono); letter-spacing: 0.1em;">▲ ALSO · VOL.08 蘭蘭 二日活動紀錄 (2025.09.27 — 09.28)</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="year-tabs">
+      <a href="#" class="active">2026</a>
+      <a href="#">2025</a>
+      <a href="#">ALL</a>
+    </div>
+  </div>
+</section>
+
+<!-- VOL 10 · 紫堂留衣 · 真實活動紀錄 · 2026.01.31 - 02.01 -->
+<section class="volume vol-shido" data-screen-label="Archive VOL.10">
+  <div class="container">
+    <div class="volume-header reveal">
+      <div class="info">
+        <div class="vol-num">VOL. 10 · JAN—FEB 2026 · 真實活動紀錄</div>
+        <h2 class="vol-title">紫堂留衣、<em>冬の二日</em>、<br>跨年的尾韻。</h2>
+        <div class="vol-jp">しどう るい・ふゆのふつか・とものこえ</div>
+      </div>
+      <div class="vol-meta">
+        <div>Featured · <strong>紫堂 留衣 (Rui Shidō)</strong></div>
+        <div>Dates · <strong>2026.01.31 — 02.01</strong></div>
+        <div>Venue · <strong>高雄・12the Studio + 私房料亭</strong></div>
+        <div>Attendees · <strong>22 名 VIP · 滿場</strong></div>
+      </div>
+    </div>
+
+    <div class="kuri-profile reveal">
+      <div class="stats-col">
+        <div class="row"><div class="k">Bust</div><div class="v">I cup</div></div>
+        <div class="row"><div class="k">Origin</div><div class="v">日本</div></div>
+        <div class="row"><div class="k">Debut</div><div class="v">8 歲・童星</div></div>
+        <div class="row"><div class="k">Background</div><div class="v">寫真・模特兒</div></div>
+        <div class="row" style="grid-column: span 2;"><div class="k">Style</div><div class="v">清秀外型 × 自然親和</div></div>
+      </div>
+      <div class="copy">
+        紫堂留衣於 <em>1.31–2.1 首次造訪高雄</em>，與台灣粉絲近距離見面。<br>
+        以<em>清秀外型</em>、高辨識度的 <em>I-Cup 身材</em> 與自然的親和力廣受矚目；在進入現職之前，曾是備受喜愛的<em>寫真女星</em>與<em>模特兒</em>。
+        <div class="photobook">
+          ★ 8 歲出道擔任童星，累積豐富表演經驗
+          <div class="filmography">
+            <span>NHK</span> 教育節目演出 ／ <span>FASHION</span> 平面寫真拍攝
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="kuri-lede reveal">
+      <p>冬末的兩個午後、一場深夜的圍爐。<br>
+      留衣醬從<em>學園水手</em>到<em>暗夜女巫</em>，從<em>紅格紋訪談</em>到最後那場大合照——<br>
+      她說：「這次來台灣，最深的記憶不是相機快門，是<em>大家把我當朋友</em>的那種感覺。」<br>
+      這裡封存的，是兩天裡，那些不必擺拍、卻被快門偷偷記住的瞬間。</p>
+      <div class="kuri-stats">
+        <div class="s"><div class="k">活動天數</div><div class="v">2 days</div></div>
+        <div class="s"><div class="k">造型切換</div><div class="v">4 looks</div></div>
+        <div class="s"><div class="k">公開合照</div><div class="v">11 published</div></div>
+      </div>
+    </div>
+
+    <div class="shido-timeline reveal">
+      <div class="t">
+        <div class="when">DAY 1 · 14:00</div>
+        <div class="what">私密寢室企劃</div>
+        <div class="where">12the Studio · Room A</div>
+      </div>
+      <div class="t">
+        <div class="when">DAY 1 · 19:30</div>
+        <div class="what">紅格紋・公開訪談</div>
+        <div class="where">12the Salon</div>
+      </div>
+      <div class="t">
+        <div class="when">DAY 1 · 21:00</div>
+        <div class="what">私房料亭・圍爐晚宴</div>
+        <div class="where">高雄・新市長私廚</div>
+      </div>
+      <div class="t">
+        <div class="when">DAY 2 · 17:00</div>
+        <div class="what">全員大合照・送別</div>
+        <div class="where">12the Studio · Main</div>
+      </div>
+    </div>
+
+    <div class="kuri-looks reveal">
+      <span>Look 01 — 棕格紋 · brown plaid</span>
+      <span>Look 02 — 白兔耳·泳裝 · bunny set</span>
+      <span>Look 03 — 寢室雙人 · bedroom duo</span>
+      <span>Look 04 — 紅格紋·訪談 · gingham talk</span>
+    </div>
+
+    <div class="shido-grid reveal">
+      <div class="ar shido-s1"><img src="assets/photos/shido-05.jpg" alt="紫堂留衣 · 紅格紋女僕 登場 拍手歡迎" loading="lazy"><span class="idx">001 / 11</span><span class="tag">DAY 01 · GINGHAM REVEAL — APPLAUSE</span></div>
+      <div class="ar shido-s2"><img src="assets/photos/shido-08.jpg" alt="紫堂留衣 · 紅格紋訪談 沙發私聊" loading="lazy"><span class="idx">002 / 11</span><span class="tag">DAY 01 · GINGHAM TALK — COUCH</span></div>
+      <div class="ar shido-s3"><img src="assets/photos/shido-06.jpg" alt="紫堂留衣 · 紅格紋女僕 比心" loading="lazy"><span class="idx">003 / 11</span><span class="tag">DAY 01 · GINGHAM — HEART HANDS</span></div>
+      <div class="ar shido-s4"><img src="assets/photos/shido-07.jpg" alt="紫堂留衣 · 紅格紋女僕 candid 微笑" loading="lazy"><span class="idx">004 / 11</span><span class="tag">DAY 01 · GINGHAM — CANDID</span></div>
+      <div class="ar shido-s5"><img src="assets/photos/shido-01.jpg" alt="紫堂留衣 · 寢室企劃 雙人合照" loading="lazy"><span class="idx">005 / 11</span><span class="tag">DAY 01 · BEDROOM SET — DUO</span></div>
+      <div class="ar shido-s6"><img src="assets/photos/shido-09.jpg" alt="紫堂留衣 · 棕格紋 寢室 · 攝影師工作中" loading="lazy"><span class="idx">006 / 11</span><span class="tag">DAY 01 · BROWN PLAID — BTS</span></div>
+      <div class="ar shido-s7"><img src="assets/photos/shido-10.jpg" alt="紫堂留衣 · 棕格紋 床邊躺姿" loading="lazy"><span class="idx">007 / 11</span><span class="tag">DAY 01 · BROWN PLAID — BED</span></div>
+      <div class="ar shido-s8"><img src="assets/photos/shido-11.jpg" alt="紫堂留衣 · 白兔耳·泳裝 沙發 · 攝影師工作中" loading="lazy"><span class="idx">008 / 11</span><span class="tag">DAY 01 · BUNNY — BTS</span></div>
+      <div class="ar shido-s9"><img src="assets/photos/shido-12.jpg" alt="紫堂留衣 · 白兔耳·泳裝 單人肉身" loading="lazy"><span class="idx">009 / 11</span><span class="tag">DAY 01 · BUNNY — PORTRAIT</span></div>
+      <div class="ar shido-s10"><img src="assets/photos/shido-03.jpg" alt="紫堂留衣 · 私房晚宴合照" loading="lazy"><span class="idx">010 / 11</span><span class="tag">DAY 01 · LATE DINNER — INNER CIRCLE</span></div>
+      <div class="ar shido-s11"><img src="assets/photos/shido-04.jpg" alt="紫堂留衣 · 二日全員大合照" loading="lazy"><span class="idx">011 / 11</span><span class="tag">DAY 02 · FAREWELL — ALL HANDS</span></div>
+    </div>
+
+    <div class="kuri-note">
+      本頁所示為兩日活動之公開紀錄（Group / Talk / Dinner / Farewell）。完整單人攝影作品（約 240 張）已於活動後第 5 日發送至當日參與者之 VIP 雲端，未公開對外。寢室雙人企劃之單人 set 因肖像權雙重授權限制，僅限現場 22 名 VIP 之離線觀看版本。
+    </div>
+
+    <div class="view-more">
+      <a href="#" class="btn btn-outline">當日 VIP — 登入檢視完整攝影集 <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- VOL 09 · 栗山莉緒 · 真實活動紀錄 -->
+<section class="volume vol-kuri" data-screen-label="Archive VOL.09">
+  <div class="container">
+    <div class="volume-header reveal">
+      <div class="info">
+        <div class="vol-num">VOL. 09 · NOVEMBER 2025 · 真實活動紀錄</div>
+        <h2 class="vol-title">栗山莉緒、<em>二日間</em>、<br>四つの顔。</h2>
+        <div class="vol-jp">くりやま りお・ふつかかん・よっつのかお</div>
+      </div>
+      <div class="vol-meta">
+        <div>Featured · <strong>栗山 莉緒 (Rio Kuriyama)</strong></div>
+        <div>Dates · <strong>2025.11.08 — 11.09</strong></div>
+        <div>Venue · <strong>高雄・12the Studio</strong></div>
+        <div>Attendees · <strong>41 名 VIP · 滿場</strong></div>
+      </div>
+    </div>
+
+    <div class="kuri-profile reveal">
+      <div class="stats-col">
+        <div class="row"><div class="k">Height</div><div class="v">148 cm</div></div>
+        <div class="row"><div class="k">Bust</div><div class="v">E cup</div></div>
+        <div class="row"><div class="k">Origin</div><div class="v">日本</div></div>
+        <div class="row"><div class="k">Nickname</div><div class="v">小隻馬女神</div></div>
+        <div class="row" style="grid-column: span 2;"><div class="k">Style</div><div class="v">甜美可人 × 性感藝術</div></div>
+      </div>
+      <div class="copy">
+        栗山莉緒於 <em>11/8–9 首次造訪高雄</em>，與台灣粉絲近距離見面。<br>
+        以甜美可人又具<em>性感魅力</em>的風格著稱——身高 148 公分，以 <em>E 罩杯曲線</em>與極致腰線聞名，是人小但魅力無限的「<em>小隻馬女神</em>」。她熱愛突破框架、把性感化為藝術，每一次亮相都能帶給粉絲不同的驚喜。
+        <div class="photobook">
+          ★ 首本寫真集已於台灣正式授權發行<br>
+          <strong>《Rio あざと可愛いさ七変化・栗山莉緒》</strong><br>
+          展現她多變又精緻的造型風格。
+        </div>
+      </div>
+    </div>
+
+    <div class="kuri-lede reveal">
+      <p>兩個日落、四套造型、四十一位被選中的人。<br>
+      從<em>體操服</em>到<em>水手校服</em>，從<em>夏日比基尼</em>到<em>黑色女僕</em>—— 莉緒醬的每一個切換，都是我們當天最安靜又最澎湃的儀式。<br>
+      這裡封存的，不是完整的攝影集（那屬於 VIP）；而是活動結束、燈光降下、每一場合照的那一瞬。</p>
+      <div class="kuri-stats">
+        <div class="s"><div class="k">造型切換</div><div class="v">4 looks</div></div>
+        <div class="s"><div class="k">活動梯次</div><div class="v">6 rounds</div></div>
+        <div class="s"><div class="k">合照張數</div><div class="v">11 published</div></div>
+      </div>
+    </div>
+
+    <div class="kuri-looks reveal">
+      <span>Look 01 — 體操服 · sports</span>
+      <span>Look 02 — 水手校服 · seifuku</span>
+      <span>Look 03 — 夏日比基尼 · gingham</span>
+      <span>Look 04 — 黑色女僕 · maid</span>
+    </div>
+
+    <div class="kuri-grid reveal">
+      <div class="ar kuri-k1"><img src="assets/photos/kuriyama-10.jpg" alt="栗山莉緒 · 女僕裝 合照" loading="lazy"><span class="idx">001 / 11</span><span class="tag">LOOK 04 · MAID — GROUP A</span></div>
+      <div class="ar kuri-k2"><img src="assets/photos/kuriyama-08.jpg" alt="栗山莉緒 · 比基尼 合照" loading="lazy"><span class="idx">002 / 11</span><span class="tag">LOOK 03 · GINGHAM — GROUP C</span></div>
+      <div class="ar kuri-k3"><img src="assets/photos/kuriyama-05.jpg" alt="栗山莉緒 · 體操服 合照" loading="lazy"><span class="idx">003 / 11</span><span class="tag">LOOK 01 · SPORTS — GROUP A</span></div>
+      <div class="ar kuri-k4"><img src="assets/photos/kuriyama-01.jpg" alt="栗山莉緒 · 水手校服 合照" loading="lazy"><span class="idx">004 / 11</span><span class="tag">LOOK 02 · SEIFUKU — GROUP B</span></div>
+      <div class="ar kuri-k5"><img src="assets/photos/kuriyama-02.jpg" alt="栗山莉緒 · 水手校服 合照" loading="lazy"><span class="idx">005 / 11</span><span class="tag">LOOK 02 · SEIFUKU — GROUP C</span></div>
+      <div class="ar kuri-k6"><img src="assets/photos/kuriyama-11.jpg" alt="栗山莉緒 · 女僕裝 合照" loading="lazy"><span class="idx">006 / 11</span><span class="tag">LOOK 04 · MAID — GROUP B</span></div>
+      <div class="ar kuri-k7"><img src="assets/photos/kuriyama-03.jpg" alt="栗山莉緒 · 比基尼 合照" loading="lazy"><span class="idx">007 / 11</span><span class="tag">LOOK 03 · GINGHAM — CLOSING</span></div>
+      <div class="ar kuri-k8"><img src="assets/photos/kuriyama-04.jpg" alt="栗山莉緒 · 比基尼 合照" loading="lazy"><span class="idx">008 / 11</span><span class="tag">LOOK 03 · GINGHAM — GROUP D</span></div>
+      <div class="ar kuri-k9"><img src="assets/photos/kuriyama-06.jpg" alt="栗山莉緒 · 體操服 合照" loading="lazy"><span class="idx">009 / 11</span><span class="tag">LOOK 01 · SPORTS — GROUP B</span></div>
+      <div class="ar kuri-k10"><img src="assets/photos/kuriyama-07.jpg" alt="栗山莉緒 · 體操服 合照" loading="lazy"><span class="idx">010 / 11</span><span class="tag">LOOK 01 · SPORTS — GROUP C</span></div>
+      <div class="ar kuri-k11"><img src="assets/photos/kuriyama-09.jpg" alt="栗山莉緒 · 女僕裝 合照" loading="lazy"><span class="idx">011 / 11</span><span class="tag">LOOK 04 · MAID — FINALE</span></div>
+    </div>
+
+    <div class="kuri-note">
+      本頁所示為兩日活動之公開合照（Group shots）。完整單人攝影作品（約 380 張）已於活動後第 5 日發送至當日參與者之 VIP 雲端，未公開對外。12the 對所有參與者肖像權、場內錄影規範、二次傳播界線皆有嚴格把關 — 這是對女神、對彼此、對這個場景最基本的尊重。
+    </div>
+
+    <div class="view-more">
+      <a href="#" class="btn btn-outline">當日 VIP — 登入檢視完整攝影集 <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- VOL 08 · 蘭蘭 · 真實活動紀錄 · 2025.09.27 - 09.28 -->
+<section class="volume vol-ran" data-screen-label="Archive VOL.08">
+  <div class="container">
+    <div class="volume-header reveal">
+      <div class="info">
+        <div class="vol-num">VOL. 08 · SEPTEMBER 2025 · 真實活動紀錄</div>
+        <h2 class="vol-title">蘭蘭、<em>初秋の二日</em>、<br>全員比心。</h2>
+        <div class="vol-jp">らんらん・はつあきのふつか・ハートサイン</div>
+      </div>
+      <div class="vol-meta">
+        <div>Featured · <strong>蘭蘭 (Ran Ran)</strong></div>
+        <div>Dates · <strong>2025.09.27 — 09.28</strong></div>
+        <div>Venue · <strong>高雄・12the Studio (粉牆主場景)</strong></div>
+        <div>Attendees · <strong>26 名 VIP · 兩梯次滿場</strong></div>
+      </div>
+    </div>
+
+    <div class="kuri-profile reveal">
+      <div class="stats-col">
+        <div class="row"><div class="k">D.O.B</div><div class="v">1996.10.22</div></div>
+        <div class="row"><div class="k">Height</div><div class="v">156 cm</div></div>
+        <div class="row"><div class="k">Origin</div><div class="v">日本</div></div>
+        <div class="row"><div class="k">Style</div><div class="v">甜美 × 柔美</div></div>
+      </div>
+      <div class="copy">
+        <em>熱烈來襲！</em>日本甜美女優「<em>蘭々</em>」空降高雄，舉辦獨家互動攝影活動。<br>
+        1996 年 10 月 22 日生、身高 <em>156 cm</em>、擁有 <em>82-56-85</em> 的完美曲線。活動於高雄<em>愛河</em>、<em>駁二藝術特區</em> 等浪漫地點展開，粉絲可近距離捕捉蘭々の<em>甜美與柔美</em>風采。
+        <div class="photobook">
+          ★ 專業攝影指導 ／ 限量簽名會 ／ 互動環節 ／ 獨家紀念品
+          <div class="measure">
+            <span>B<strong>82</strong></span>
+            <span>W<strong>56</strong></span>
+            <span>H<strong>85</strong></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="kuri-lede reveal">
+      <p>初秋的高雄、粉牆寢室、軟糯的午後、和一張<em>親手簽下的小卡</em>。<br>
+      蘭蘭從<em>白針織內衣</em>到<em>小鹿斑比比基尼</em>，從<em>黑色小惡魔</em>到<em>女僕內衣</em>—— 三套造型、兩日六場、26 名 VIP 全員到齊。<br>
+      最讓我們難忘的，不是任何一張單人照——而是 Day 2 收工前，蘭蘭主動說：「<em>大家擠進來一起拍嘛</em>」的那兩張全員大合照。</p>
+      <div class="kuri-stats">
+        <div class="s"><div class="k">活動天數</div><div class="v">2 days</div></div>
+        <div class="s"><div class="k">造型切換</div><div class="v">5 looks</div></div>
+        <div class="s"><div class="k">公開紀錄</div><div class="v">27 published</div></div>
+      </div>
+    </div>
+
+    <div class="shido-timeline reveal">
+      <div class="t">
+        <div class="when">DAY 1 · 13:00</div>
+        <div class="what">白針織・寢室企劃</div>
+        <div class="where">12the Studio · 粉牆 Room</div>
+      </div>
+      <div class="t">
+        <div class="when">DAY 1 · 16:30</div>
+        <div class="what">小鹿斑比・比基尼 set</div>
+        <div class="where">12the Studio · Main</div>
+      </div>
+      <div class="t">
+        <div class="when">DAY 2 · 11:00</div>
+        <div class="what">女僕內衣・簽名小卡</div>
+        <div class="where">12the Studio · 粉牆 Room</div>
+      </div>
+      <div class="t">
+        <div class="when">DAY 2 · 17:00</div>
+        <div class="what">兩梯全員大合照</div>
+        <div class="where">12the Studio · Main</div>
+      </div>
+    </div>
+
+    <div class="kuri-looks reveal">
+      <span>Look 01 — 白針織內衣 · knit</span>
+      <span>Look 02 — 小鹿斑比比基尼 · bambi</span>
+      <span>Look 03 — 黑色內衣 (CK) · onyx</span>
+      <span>Look 04 — 女僕內衣 · maid lace</span>
+      <span>Look 05 — 白色繃帶 · white harness</span>
+    </div>
+
+    <div class="ran-grid reveal">
+      <div class="ar ran-r1"><img src="assets/photos/ranran-01.jpg" alt="蘭蘭 · 白針織內衣 寢室" loading="lazy"><span class="kind">SOLO</span><span class="idx">001 / 27</span><span class="tag">DAY 01 · KNIT — BEDROOM SET</span></div>
+      <div class="ar ran-r2"><img src="assets/photos/ranran-02.jpg" alt="蘭蘭 · 小鹿斑比比基尼 拍攝現場" loading="lazy"><span class="kind">BTS</span><span class="idx">002 / 27</span><span class="tag">DAY 01 · BAMBI BIKINI — ON SET</span></div>
+      <div class="ar ran-r3"><img src="assets/photos/ranran-03.jpg" alt="蘭蘭 · 黑色小惡魔 雙人合照" loading="lazy"><span class="kind">DUO</span><span class="idx">003 / 27</span><span class="tag">DAY 01 · ONYX — STAFF DUO</span></div>
+      <div class="ar ran-r4"><img src="assets/photos/ranran-04.jpg" alt="蘭蘭 · 女僕內衣 親簽小卡" loading="lazy"><span class="kind">SOLO</span><span class="idx">004 / 27</span><span class="tag">DAY 02 · MAID — SIGNED CARD</span></div>
+      <div class="ar ran-r5"><img src="assets/photos/ranran-05.jpg" alt="蘭蘭 · 親筆繪心 + 唇印" loading="lazy"><span class="kind">SOLO</span><span class="idx">005 / 27</span><span class="tag">DAY 02 · MAID — KISS NOTE</span></div>
+      <div class="ar ran-r6"><img src="assets/photos/ranran-06.jpg" alt="蘭蘭 · 蘆葦窗邊側拍" loading="lazy"><span class="kind">BTS</span><span class="idx">006 / 27</span><span class="tag">DAY 02 · WINDOW — CANDID</span></div>
+      <div class="ar ran-r7"><img src="assets/photos/ranran-07.jpg" alt="蘭蘭 · DAY1 全員合照" loading="lazy"><span class="kind">GROUP</span><span class="idx">007 / 27</span><span class="tag">DAY 01 · FAREWELL — ROUND A</span></div>
+      <div class="ar ran-r8"><img src="assets/photos/ranran-08.jpg" alt="蘭蘭 · 沙發圍坐 Q&A" loading="lazy"><span class="kind">TALK</span><span class="idx">008 / 27</span><span class="tag">DAY 01 · SOFA Q&A — CIRCLE A</span></div>
+      <div class="ar ran-r9"><img src="assets/photos/ranran-09.jpg" alt="蘭蘭 · 沙發圍坐 Q&A 二" loading="lazy"><span class="kind">TALK</span><span class="idx">009 / 27</span><span class="tag">DAY 01 · SOFA Q&A — CIRCLE B</span></div>
+      <div class="ar ran-r10"><img src="assets/photos/ranran-10.jpg" alt="蘭蘭 · 拍攝現場 wide" loading="lazy"><span class="kind">BTS</span><span class="idx">010 / 27</span><span class="tag">DAY 02 · ON SET — WIDE</span></div>
+      <div class="ar ran-r11"><img src="assets/photos/ranran-11.jpg" alt="蘭蘭 · 拍攝現場 wide 二" loading="lazy"><span class="kind">BTS</span><span class="idx">011 / 27</span><span class="tag">DAY 02 · ON SET — REVERSE</span></div>
+      <div class="ar ran-r12"><img src="assets/photos/ranran-12.jpg" alt="蘭蘭 · DAY2 全員合照 / 粉色針織" loading="lazy"><span class="kind">GROUP</span><span class="idx">012 / 27</span><span class="tag">DAY 02 · FAREWELL — ROUND B</span></div>
+      <div class="ar ran-r13"><img src="assets/photos/ranran-13.jpg" alt="蘭蘭 · DAY2 全員合照 / 黑色內衣" loading="lazy"><span class="kind">GROUP</span><span class="idx">013 / 27</span><span class="tag">DAY 02 · FAREWELL — ALL HANDS</span></div>
+      <div class="ar ran-r14"><img src="assets/photos/ranran-14.jpg" alt="蘭蘭 · 白針織 寢室坐姿" loading="lazy"><span class="kind">SOLO</span><span class="idx">014 / 27</span><span class="tag">DAY 01 · KNIT — SIT POSE</span></div>
+      <div class="ar ran-r15"><img src="assets/photos/ranran-15.jpg" alt="蘭蘭 · 白針織 寢室開膝坐姿" loading="lazy"><span class="kind">SOLO</span><span class="idx">015 / 27</span><span class="tag">DAY 01 · KNIT — OPEN STANCE</span></div>
+      <div class="ar ran-r16"><img src="assets/photos/ranran-16.jpg" alt="蘭蘭 · 白針織 寢室手指比唇" loading="lazy"><span class="kind">SOLO</span><span class="idx">016 / 27</span><span class="tag">DAY 01 · KNIT — FINGER TO LIPS</span></div>
+      <div class="ar ran-r17"><img src="assets/photos/ranran-17.jpg" alt="蘭蘭 · 小鹿斑比 雙手過頭 拍攝中" loading="lazy"><span class="kind">BTS</span><span class="idx">017 / 27</span><span class="tag">DAY 01 · BAMBI — HANDS UP</span></div>
+      <div class="ar ran-r18"><img src="assets/photos/ranran-18.jpg" alt="蘭蘭 · 小鹿斑比 全身站姿 拍攝中" loading="lazy"><span class="kind">BTS</span><span class="idx">018 / 27</span><span class="tag">DAY 01 · BAMBI — FULL POSE</span></div>
+      <div class="ar ran-r19"><img src="assets/photos/ranran-19.jpg" alt="蘭蘭 · 小鹿斑比 跪坐 攝影師 1" loading="lazy"><span class="kind">BTS</span><span class="idx">019 / 27</span><span class="tag">DAY 01 · BAMBI — KNEEL CLOSE</span></div>
+      <div class="ar ran-r20"><img src="assets/photos/ranran-20.jpg" alt="蘭蘭 · 小鹿斑比 跪坐 攝影師圍拍" loading="lazy"><span class="kind">BTS</span><span class="idx">020 / 27</span><span class="tag">DAY 01 · BAMBI — CIRCLE SHOOT</span></div>
+      <div class="ar ran-r21"><img src="assets/photos/ranran-21.jpg" alt="蘭蘭 · 白色繃帶 床邊四足 拍攝中" loading="lazy"><span class="kind">BTS</span><span class="idx">021 / 27</span><span class="tag">DAY 01 · HARNESS — BED</span></div>
+      <div class="ar ran-r22"><img src="assets/photos/ranran-22.jpg" alt="蘭蘭 · 白色繃帶 坐邊 拍攝中" loading="lazy"><span class="kind">BTS</span><span class="idx">022 / 27</span><span class="tag">DAY 01 · HARNESS — EDGE</span></div>
+      <div class="ar ran-r23"><img src="assets/photos/ranran-23.jpg" alt="蘭蘭 · CK 黑 站姿 拍攝中" loading="lazy"><span class="kind">BTS</span><span class="idx">023 / 27</span><span class="tag">DAY 01 · ONYX — CK SOLO</span></div>
+      <div class="ar ran-r24"><img src="assets/photos/ranran-24.jpg" alt="蘭蘭 · CK 黑 手指比唇 拍攝中" loading="lazy"><span class="kind">BTS</span><span class="idx">024 / 27</span><span class="tag">DAY 01 · ONYX — SHHH</span></div>
+      <div class="ar ran-r25"><img src="assets/photos/ranran-25.jpg" alt="蘭蘭 · CK 黑 雙人合照 正面" loading="lazy"><span class="kind">DUO</span><span class="idx">025 / 27</span><span class="tag">DAY 01 · ONYX — DUO FRONT</span></div>
+      <div class="ar ran-r26"><img src="assets/photos/ranran-26.jpg" alt="蘭蘭 · CK 黑 雙人合照 背影" loading="lazy"><span class="kind">DUO</span><span class="idx">026 / 27</span><span class="tag">DAY 01 · ONYX — DUO BACK</span></div>
+      <div class="ar ran-r27"><img src="assets/photos/ranran-27.jpg" alt="蘭蘭 · CK 黑 雙人合照 開腿" loading="lazy"><span class="kind">DUO</span><span class="idx">027 / 27</span><span class="tag">DAY 01 · ONYX — DUO WIDE</span></div>
+    </div>
+
+    <div class="ran-quote reveal">
+      大家擠進來一起拍嘛——<br>這次來高雄，覺得不是攝影會，是回家。
+      <span class="who">— 蘭蘭，DAY 02 收工前</span>
+    </div>
+
+    <div class="kuri-note">
+      本頁所示包含當日公開紀錄之 <strong>SOLO / DUO / GROUP / BTS / TALK</strong> 五類影像。完整單人攝影作品（約 310 張）已於活動後第 5 日發送至當日參與者之 VIP 雲端，未公開對外。BTS 側拍照由活動工作人員拍攝、經蘭蘭本人審稿後釋出。
+    </div>
+
+    <div class="view-more">
+      <a href="#" class="btn btn-outline">當日 VIP — 登入檢視完整攝影集 <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- VOL 14 -->
+<section class="volume">
+  <div class="container">
+    <div class="volume-header reveal">
+      <div class="info">
+        <div class="vol-num">VOL. 14 · MARCH 2026</div>
+        <h2 class="vol-title">桜、駁二、<em>微笑み</em>。</h2>
+        <div class="vol-jp">はる はんぶん すぎた</div>
+      </div>
+      <div class="vol-meta">
+        <div>Featured · <strong>Mai Saotome · Kaori Amane</strong></div>
+        <div>Images · <strong>72 shots</strong></div>
+        <div>Venue · <strong>高雄・駁二</strong></div>
+      </div>
+    </div>
+    <div class="vol-mason v1 reveal">
+      <div class="ar m1"><div class="ph ph-rose ph-light"></div><span class="cap">MAI · 001</span></div>
+      <div class="ar m2"><div class="ph ph-warm ph-light"></div><span class="cap">KAORI · 014</span></div>
+      <div class="ar m3"><div class="ph ph-yellow ph-light"></div><span class="cap">MAI · 022</span></div>
+      <div class="ar m4"><div class="ph ph-teal ph-light"></div><span class="cap">DETAIL</span></div>
+      <div class="ar m5"><div class="ph ph-warm ph-light"></div><span class="cap">DETAIL</span></div>
+      <div class="ar m6"><div class="ph ph-rose ph-light"></div><span class="cap">KAORI · 036</span></div>
+      <div class="ar m7"><div class="ph ph-yellow ph-light"></div><span class="cap">MAI · 042</span></div>
+      <div class="ar m8"><div class="ph ph-teal ph-light"></div><span class="cap">STUDIO</span></div>
+    </div>
+    <div class="view-more"><a href="#" class="btn btn-outline">瀏覽完整 VOL.14 (72) <span class="arrow">→</span></a></div>
+  </div>
+</section>
+
+<!-- VOL 13 -->
+<section class="volume" style="background: var(--cream-2);">
+  <div class="container">
+    <div class="volume-header reveal">
+      <div class="info">
+        <div class="vol-num">VOL. 13 · FEBRUARY 2026</div>
+        <h2 class="vol-title">バレンタイン、<em>密室</em>。</h2>
+        <div class="vol-jp">バレンタイン みっしつ</div>
+      </div>
+      <div class="vol-meta">
+        <div>Featured · <strong>Rin Hoshikawa · Yui Ichinose</strong></div>
+        <div>Images · <strong>58 shots</strong></div>
+        <div>Venue · <strong>台南・美術館</strong></div>
+      </div>
+    </div>
+    <div class="vol-mason v2 reveal">
+      <div class="ar m1"><div class="ph ph-warm ph-light"></div><span class="cap">RIN · COVER</span></div>
+      <div class="ar m2"><div class="ph ph-rose ph-light"></div><span class="cap">YUI · 008</span></div>
+      <div class="ar m3"><div class="ph ph-teal ph-light"></div><span class="cap">DETAIL</span></div>
+      <div class="ar m4"><div class="ph ph-yellow ph-light"></div><span class="cap">RIN · 019</span></div>
+      <div class="ar m5"><div class="ph ph-rose ph-light"></div><span class="cap">DETAIL</span></div>
+      <div class="ar m6"><div class="ph ph-warm ph-light"></div><span class="cap">YUI · 025</span></div>
+      <div class="ar m7"><div class="ph ph-teal ph-light"></div><span class="cap">RIN · 033</span></div>
+      <div class="ar m8"><div class="ph ph-yellow ph-light"></div><span class="cap">YUI · 047</span></div>
+    </div>
+    <div class="view-more"><a href="#" class="btn btn-outline">瀏覽完整 VOL.13 (58) <span class="arrow">→</span></a></div>
+  </div>
+</section>
+
+<!-- VOL 12 -->
+<section class="volume">
+  <div class="container">
+    <div class="volume-header reveal">
+      <div class="info">
+        <div class="vol-num">VOL. 12 · JANUARY 2026</div>
+        <h2 class="vol-title">新春、<em>白い息</em>、旅。</h2>
+        <div class="vol-jp">しんしゅん しろいいき たび</div>
+      </div>
+      <div class="vol-meta">
+        <div>Featured · <strong>Mai · Sakura · Miyu</strong></div>
+        <div>Images · <strong>94 shots</strong></div>
+        <div>Venue · <strong>墾丁・海景別墅</strong></div>
+      </div>
+    </div>
+    <div class="vol-mason v1 reveal">
+      <div class="ar m1"><div class="ph ph-yellow ph-light"></div><span class="cap">MAI · COVER</span></div>
+      <div class="ar m2"><div class="ph ph-rose ph-light"></div><span class="cap">SAKURA</span></div>
+      <div class="ar m3"><div class="ph ph-warm ph-light"></div><span class="cap">MIYU · 018</span></div>
+      <div class="ar m4"><div class="ph ph-teal ph-light"></div><span class="cap">SEASIDE</span></div>
+      <div class="ar m5"><div class="ph ph-yellow ph-light"></div><span class="cap">DETAIL</span></div>
+      <div class="ar m6"><div class="ph ph-rose ph-light"></div><span class="cap">MAI · 041</span></div>
+      <div class="ar m7"><div class="ph ph-warm ph-light"></div><span class="cap">GROUP</span></div>
+      <div class="ar m8"><div class="ph ph-teal ph-light"></div><span class="cap">CLOSING</span></div>
+    </div>
+    <div class="view-more"><a href="#" class="btn btn-outline">瀏覽完整 VOL.12 (94) <span class="arrow">→</span></a></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-banner" style="background: var(--ink); color: var(--cream); border-radius: 8px; padding: 80px 40px; text-align: center;">
+      <div style="font-family: var(--mono); font-size: 11px; letter-spacing: 0.3em; color: var(--yellow); margin-bottom: 16px;">MEMBERS ONLY · 會員限定</div>
+      <h2 style="font-family: var(--serif); font-size: clamp(32px, 5vw, 52px); font-style: italic; margin-bottom: 20px; color: var(--cream);">完整攝影集，<br>由<span style="color: var(--yellow);">管家</span>為你遞上。</h2>
+      <p style="color: rgba(255,255,255,0.6); max-width: 480px; margin: 0 auto 32px;">每月 VIP 會員收到印製精美的實體攝影集，以及線上完整高畫質下載權限。</p>
+      <a href="contact.html" class="btn btn-coral">成為 VIP <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer" style="margin-top: 0;">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><img class="logo-img" src="assets/brand/12the-logo.png" alt="12the"><p>南台灣唯一、最高質感的日本女優私密見面與攝影會品牌。</p></div>
+      <div class="footer-col"><h5>Explore</h5><ul><li><a href="events.html" data-route="events">即將舉辦</a></li><li><a href="lineup.html" data-route="lineup">女神陣容</a></li><li><a href="archive.html">攝影集回顧</a></li><li><a href="about.html">品牌故事</a></li></ul></div>
+      <div class="footer-col"><h5>Formats</h5><ul><li><a href="#">攝影會</a></li><li><a href="#">見面會</a></li><li><a href="#">精緻晚宴</a></li></ul></div>
+      <div class="footer-col"><h5>Contact</h5><ul><li><a href="contact.html">線上報名</a></li><li><a href="https://www.instagram.com/12the_official/" target="_blank" rel="noopener">Instagram · @12the_official</a></li><li><a href="#">LINE · @12the</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><div>© 2026 12THE · SOUTH TAIWAN</div><div>V.1.0</div></div>
+  </div>
+</footer>
+<script src="assets/shared.js"></script>
+</body>
+</html>

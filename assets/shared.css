@@ -1,0 +1,461 @@
+/* ==========================================================================
+   12the — Shared styles
+   Bright south-island palette (CI-driven), Japanese magazine typography
+   ========================================================================== */
+
+:root {
+  /* Brand palette — refined warm-white surfaces */
+  --cream: #f8f6f1;
+  --cream-2: #f2efe8;
+  --cream-3: #fcfbf7;
+  --coral: #e06965;
+  --coral-deep: #c14f4c;
+  --teal: #81a2a7;
+  --teal-deep: #5b7f85;
+  --yellow: #ebb064;
+  --yellow-deep: #d69340;
+
+  --ink: #2a2620;
+  --ink-2: #4a443b;
+  --ink-3: #7a7267;
+  --line: #d8d2c2;
+  --line-2: #c8c0ad;
+
+  /* Type */
+  --serif: "Noto Serif JP", "Shippori Mincho", "Noto Serif TC", serif;
+  --sans: "Noto Sans JP", "Noto Sans TC", -apple-system, system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+
+  /* Layout */
+  --maxw: 1320px;
+  --gutter: clamp(20px, 4vw, 48px);
+  --radius: 2px;
+}
+
+/* Dark (midnight) theme — applied via body.theme-midnight */
+body.theme-midnight {
+  --cream: #0f1a24;
+  --cream-2: #14212d;
+  --cream-3: #1a2936;
+  --coral: #e58a87;
+  --coral-deep: #c96d6a;
+  --teal: #9ebac0;
+  --teal-deep: #7a969c;
+  --yellow: #f0c288;
+  --yellow-deep: #d9a765;
+  --ink: #f2ead9;
+  --ink-2: #c8bea8;
+  --ink-3: #8a8272;
+  --line: #25384a;
+  --line-2: #2f465c;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body {
+  font-family: var(--sans);
+  color: var(--ink);
+  background-color: #f8f6f1;
+  background-image:
+    radial-gradient(1800px 900px at 20% -5%, rgba(255,255,255,0.9), transparent 55%),
+    radial-gradient(1400px 800px at 95% 40%, rgba(255,255,255,0.55), transparent 60%),
+    radial-gradient(1000px 700px at 40% 110%, rgba(224,105,101,0.025), transparent 60%);
+  background-attachment: fixed;
+  font-size: 15px;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+
+/* Typography helpers */
+.serif { font-family: var(--serif); font-weight: 500; letter-spacing: 0.04em; }
+.mono { font-family: var(--mono); letter-spacing: 0.05em; }
+.jp { font-family: var(--serif); letter-spacing: 0.12em; }
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  font-weight: 500;
+}
+.vertical-jp {
+  writing-mode: vertical-rl;
+  font-family: var(--serif);
+  letter-spacing: 0.4em;
+  font-size: 12px;
+  color: var(--ink-3);
+}
+
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; line-height: 1.15; letter-spacing: 0.04em; }
+h1 { font-size: clamp(40px, 7vw, 92px); }
+h2 { font-size: clamp(32px, 5vw, 60px); }
+h3 { font-size: clamp(22px, 2.4vw, 32px); }
+
+.container { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
+
+/* ==========================================================================
+   Top nav
+   ========================================================================== */
+.site-nav {
+  position: sticky; top: 0; z-index: 50;
+  background: color-mix(in srgb, var(--cream) 92%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-inner {
+  max-width: var(--maxw); margin: 0 auto;
+  padding: 0 var(--gutter);
+  height: 80px;
+  display: flex; align-items: center;
+  /* logo gets margin-right:auto below; everything else flows right-aligned */
+}
+.nav-logo {
+  display: flex; align-items: center; gap: 8px;
+  font-family: var(--serif);
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  margin-right: auto;
+}
+.nav-logo img { height: 44px; width: auto; display: block; }
+.nav-logo .num { color: var(--coral); font-style: italic; }
+.nav-logo .the { color: var(--teal); font-style: italic; }
+.nav-logo .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--yellow); transform: translateY(-10px); }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  /* Airy J-magazine spacing — generous gap, fine vertical separators between items */
+  gap: 0;
+  margin-right: 40px;
+}
+.nav-links a {
+  position: relative;
+  padding: 8px 22px;
+  font-family: var(--serif);
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  color: var(--ink-2);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+/* hairline separator between adjacent nav links — classic Japanese editorial detail */
+.nav-links a + a::before {
+  content: ""; position: absolute; left: 0; top: 50%;
+  width: 1px; height: 14px;
+  background: var(--line);
+  transform: translateY(-50%);
+}
+.nav-links a::after {
+  content: ""; position: absolute;
+  left: 22px; right: 22px; bottom: 0;
+  height: 1px;
+  background: var(--ink);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.35s ease;
+}
+.nav-links a:hover { color: var(--ink); }
+.nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); }
+.nav-links a.active { color: var(--ink); }
+
+.nav-cta {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--ink); color: var(--cream);
+  padding: 12px 22px;
+  border-radius: 100px;
+  font-family: var(--mono);
+  font-size: 11px; letter-spacing: 0.22em;
+  text-transform: uppercase;
+  transition: transform 0.2s, background 0.2s;
+  margin-left: 0;
+}
+.nav-cta:hover { transform: translateY(-1px); background: var(--coral); }
+.nav-cta .arrow { display: inline-block; transition: transform 0.2s; }
+.nav-cta:hover .arrow { transform: translateX(3px); }
+
+.nav-ig {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  color: var(--ink-2);
+  border: 1px solid var(--line);
+  transition: color 0.2s, border-color 0.2s, background 0.2s, transform 0.2s;
+  margin-left: 14px;
+}
+.nav-ig:hover { color: var(--coral); border-color: var(--coral); transform: translateY(-1px); }
+.nav-ig svg { width: 16px; height: 16px; display: block; }
+
+@media (max-width: 1100px) {
+  .nav-links { margin-right: 24px; }
+  .nav-links a { padding: 8px 16px; }
+  .nav-links a::after { left: 16px; right: 16px; }
+}
+@media (max-width: 900px) { .nav-ig { display: none; } }
+
+.mobile-menu-btn { display: none; }
+
+@media (max-width: 820px) {
+  .nav-inner { height: 64px; }
+  .nav-links { display: none; }
+  .nav-ig { margin-left: 0; }
+  .mobile-menu-btn {
+    display: flex; flex-direction: column; gap: 5px; cursor: pointer;
+    padding: 8px;
+  }
+  .mobile-menu-btn span { width: 22px; height: 1.5px; background: var(--ink); }
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+.btn {
+  display: inline-flex; align-items: center; gap: 12px;
+  padding: 14px 28px;
+  border-radius: 100px;
+  font-size: 13px; letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: all 0.25s;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.btn-primary { background: var(--ink); color: var(--cream); }
+.btn-primary:hover { background: var(--coral); transform: translateY(-1px); }
+.btn-coral { background: var(--coral); color: #fff; }
+.btn-coral:hover { background: var(--coral-deep); transform: translateY(-1px); }
+.btn-outline { border: 1px solid var(--ink); color: var(--ink); }
+.btn-outline:hover { background: var(--ink); color: var(--cream); }
+.btn .arrow { transition: transform 0.2s; }
+.btn:hover .arrow { transform: translateX(4px); }
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer {
+  background: var(--ink);
+  color: var(--cream-2);
+  padding: 80px 0 40px;
+  margin-top: 120px;
+}
+body.theme-midnight .site-footer { background: #050b12; }
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+@media (max-width: 820px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+.footer-brand .logo-img { height: 72px; width: auto; margin-bottom: 20px; filter: brightness(1.1); }
+.footer-brand h3 {
+  font-family: var(--serif); font-size: 40px; letter-spacing: 0; line-height: 1;
+  margin-bottom: 20px;
+}
+.footer-brand h3 .num { color: var(--coral); }
+.footer-brand h3 .the { color: var(--teal); }
+.footer-brand p { color: rgba(255,255,255,0.5); font-size: 13px; line-height: 1.8; max-width: 320px; }
+.footer-col h5 {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.3em;
+  color: rgba(255,255,255,0.4); text-transform: uppercase;
+  margin-bottom: 20px; font-weight: 500;
+}
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.footer-col ul a { color: var(--cream-2); font-size: 14px; opacity: 0.85; transition: opacity 0.2s, color 0.2s; }
+.footer-col ul a:hover { opacity: 1; color: var(--yellow); }
+.footer-bottom {
+  padding-top: 40px;
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 20px;
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.2em;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   Placeholder imagery — Japanese-photography mood, no real people
+   ========================================================================== */
+.ph {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #d9c4b0 0%, #e8d8c3 40%, #f0e4d0 100%);
+  display: flex; align-items: flex-end; justify-content: flex-start;
+  color: rgba(0,0,0,0.45);
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.ph::before {
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 30% 20%, rgba(255,255,255,0.5) 0%, transparent 60%),
+    repeating-linear-gradient(135deg, transparent 0 8px, rgba(0,0,0,0.03) 8px 9px);
+}
+.ph::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: 12px; left: 12px;
+  z-index: 2;
+  opacity: 0.6;
+}
+
+/* Different tonal placeholders */
+.ph-coral { background: linear-gradient(135deg, #e8b8a5 0%, #f0c9b6 50%, #f5d8c8 100%); }
+.ph-teal  { background: linear-gradient(135deg, #a8bec2 0%, #b8ccd0 50%, #c9dadd 100%); }
+.ph-yellow{ background: linear-gradient(135deg, #e8c68a 0%, #f0d4a0 50%, #f5dfb2 100%); }
+.ph-warm  { background: linear-gradient(135deg, #c9a48a 0%, #d8b89c 50%, #e4cab0 100%); }
+.ph-rose  { background: linear-gradient(160deg, #dca89c 0%, #e8c0b2 50%, #f0d3c6 100%); }
+
+/* Real-photo modifier — overrides gradient placeholder while keeping label hook */
+.ph-photo { background: #1a1814 !important; }
+.ph-photo > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; dynamic-range-limit: standard; z-index: 0; }
+.ph-photo::before, .ph-photo.ph-light::before { display: none !important; } /* drop placeholder texture & backlight */
+.ph-photo::after {
+  /* Bottom-left caption sits over a soft gradient so it stays legible against the photo */
+  bottom: 0; left: 0; right: 0;
+  padding: 28px 14px 12px;
+  background: linear-gradient(to top, rgba(20,18,14,0.78), rgba(20,18,14,0) 100%);
+  color: #f5e9d8;
+  opacity: 1;
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+}
+
+/* Soft backlight blur dot, for that "natural light" feel */
+.ph-light::before {
+  background:
+    radial-gradient(ellipse 40% 30% at 70% 30%, rgba(255,255,255,0.75) 0%, transparent 70%),
+    radial-gradient(ellipse 80% 60% at 20% 80%, rgba(0,0,0,0.1) 0%, transparent 60%),
+    repeating-linear-gradient(135deg, transparent 0 8px, rgba(0,0,0,0.025) 8px 9px);
+}
+
+/* ==========================================================================
+   Reveal animations (scroll-triggered)
+   ========================================================================== */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.9s cubic-bezier(.2,.7,.2,1), transform 0.9s cubic-bezier(.2,.7,.2,1); }
+.reveal.in { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+
+/* Marquee */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--cream-2);
+}
+.marquee-track {
+  display: inline-flex; gap: 48px;
+  animation: marquee 40s linear infinite;
+  padding-right: 48px;
+}
+.marquee-item {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-style: italic;
+  color: var(--ink-2);
+  display: inline-flex; align-items: center; gap: 48px;
+}
+.marquee-item::after {
+  content: "✦"; color: var(--coral); font-size: 14px; font-style: normal;
+}
+
+/* ==========================================================================
+   Tag pills
+   ========================================================================== */
+.tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 5px 12px;
+  border-radius: 100px;
+  font-family: var(--mono); font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: 1px solid currentColor;
+}
+.tag-coral { color: var(--coral); }
+.tag-teal { color: var(--teal-deep); }
+.tag-yellow { color: var(--yellow-deep); }
+.tag-filled-coral { background: var(--coral); color: #fff; border-color: var(--coral); }
+.tag-filled-teal { background: var(--teal-deep); color: #fff; border-color: var(--teal-deep); }
+.tag-filled-yellow { background: var(--yellow); color: var(--ink); border-color: var(--yellow); }
+
+/* ==========================================================================
+   Decorative mini-SVG primitives (allowed: circle, diamond, squiggle)
+   ========================================================================== */
+.deco-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+.deco-line { display: inline-block; height: 1px; background: currentColor; }
+
+/* ==========================================================================
+   Tweaks panel
+   ========================================================================== */
+.tweaks-panel {
+  position: fixed; right: 20px; bottom: 20px; z-index: 100;
+  width: 280px;
+  background: var(--cream-3);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 24px 60px -20px rgba(0,0,0,0.25);
+  font-family: var(--sans);
+  display: none;
+}
+.tweaks-panel.open { display: block; }
+.tweaks-panel h4 {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.3em;
+  text-transform: uppercase; color: var(--ink); font-weight: 500;
+  margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center;
+}
+.tweaks-panel h4 button { font-size: 14px; color: var(--ink-3); }
+.tweak-group { margin-bottom: 18px; }
+.tweak-group label {
+  display: block; font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--ink-3);
+  margin-bottom: 8px; font-family: var(--mono);
+}
+.tweak-options { display: flex; gap: 6px; flex-wrap: wrap; }
+.tweak-opt {
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  font-size: 11px;
+  background: transparent;
+  color: var(--ink-2);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: var(--sans);
+}
+.tweak-opt:hover { border-color: var(--ink); }
+.tweak-opt.active { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+
+/* ==========================================================================
+   Page visibility — events / lineup toggles (controlled via Tweaks)
+   When body has hide-events or hide-lineup, hide all entry points to those
+   routes (nav links, footer links, in-page CTAs, and home sections).
+   ========================================================================== */
+body.hide-events [data-route="events"],
+html.hide-events [data-route="events"] { display: none !important; }
+body.hide-lineup [data-route="lineup"],
+html.hide-lineup [data-route="lineup"] { display: none !important; }
+
+body.hide-events .home-events-section,
+html.hide-events .home-events-section { display: none !important; }
+body.hide-lineup .home-lineup-section,
+html.hide-lineup .home-lineup-section { display: none !important; }
+
+/* If both targets in a footer-col list are hidden, the <li> wrappers go too —
+   the surviving siblings keep the column readable. */
+body.hide-events li:has(> a[data-route="events"]),
+html.hide-events li:has(> a[data-route="events"]) { display: none !important; }
+body.hide-lineup li:has(> a[data-route="lineup"]),
+html.hide-lineup li:has(> a[data-route="lineup"]) { display: none !important; }

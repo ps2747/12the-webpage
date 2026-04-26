@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>女神 Lineup — 12the</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;600;700&family=Shippori+Mincho:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/shared.css">
+<style>
+.page-hero { padding: 80px 0; border-bottom: 1px solid var(--line); }
+.page-hero h1 { font-family: var(--serif); font-size: clamp(48px, 8vw, 112px); line-height: 0.98; }
+.page-hero h1 em { font-style: italic; color: var(--coral); }
+.page-hero .sub { max-width: 560px; color: var(--ink-2); line-height: 1.9; margin-top: 24px; font-size: 16px; }
+
+.lineup-filter { padding: 24px 0; border-bottom: 1px solid var(--line); display: flex; gap: 16px; flex-wrap: wrap; }
+.lineup-filter .btn-f { padding: 8px 18px; border: 1px solid var(--line); border-radius: 100px; font-size: 12px; letter-spacing: 0.1em; color: var(--ink-2); background: transparent; }
+.lineup-filter .btn-f.active { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+
+.big-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 60px 0; }
+@media (max-width: 900px) { .big-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .big-grid { grid-template-columns: 1fr; } }
+.lc { position: relative; cursor: pointer; }
+.lc .img { aspect-ratio: 3/4; border-radius: 4px; overflow: hidden; position: relative; margin-bottom: 18px; transition: transform 0.4s; }
+.lc:hover .img { transform: translateY(-4px); }
+.lc .img .ph { position: absolute; inset: 0; transition: transform 0.6s; }
+.lc:hover .img .ph { transform: scale(1.04); }
+.lc .idx { position: absolute; top: 16px; left: 16px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.3em; color: #fff; background: rgba(0,0,0,0.3); padding: 5px 10px; border-radius: 100px; backdrop-filter: blur(6px); }
+.lc .next-ev { position: absolute; top: 16px; right: 16px; background: var(--yellow); color: var(--ink); padding: 5px 10px; border-radius: 100px; font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em; }
+.lc .body { }
+.lc .kanji { font-family: var(--serif); font-size: 28px; letter-spacing: 0.05em; margin-bottom: 4px; }
+.lc .rom { font-family: var(--mono); font-size: 11px; letter-spacing: 0.3em; color: var(--coral); }
+.lc .meta { display: flex; gap: 14px; margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line); font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em; color: var(--ink-3); text-transform: uppercase; }
+.lc .tags { display: flex; gap: 6px; margin-top: 12px; }
+</style>
+<!-- visibility-init -->
+<script>(function(){try{var t=JSON.parse(sessionStorage.getItem('12the-tweaks')||'{}');var hideE=t.showEvents!==true;var hideL=t.showLineup!==true;var de=document.documentElement;if(hideE)de.classList.add('hide-events');if(hideL)de.classList.add('hide-lineup');document.addEventListener('DOMContentLoaded',function(){if(hideE)document.body.classList.add('hide-events');if(hideL)document.body.classList.add('hide-lineup');});}catch(e){document.documentElement.classList.add('hide-events');document.documentElement.classList.add('hide-lineup');document.addEventListener('DOMContentLoaded',function(){document.body.classList.add('hide-events');document.body.classList.add('hide-lineup');});}})();</script>
+</head>
+<body data-screen-label="Lineup">
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="12the"><img src="assets/brand/12the-logo.png" alt="12the"></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a><a href="events.html" data-route="events">活動 / Events</a><a href="lineup.html" data-route="lineup">女神 / Lineup</a><a href="archive.html">回顧 / Archive</a><a href="about.html">關於 / About</a>
+    </div>
+    <a href="contact.html" class="nav-cta">立即報名 <span class="arrow">→</span></a>
+    <a href="https://www.instagram.com/12the_official/" target="_blank" rel="noopener" class="nav-ig" aria-label="Instagram @12the_official"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container reveal">
+    <span class="eyebrow" style="color: var(--coral);">Lineup · 2026 Season</span>
+    <h1 style="margin-top: 24px;">本季的<em>她</em>，<br>是你的<em>誰</em>？</h1>
+    <p class="sub">8 位日本新生代女優，為南台灣量身訂製的 2026 春夏陣容。每一位都將以最純粹的眼神、最真實的呼吸，為你留下一段只屬於你的相遇。</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="lineup-filter">
+      <button class="btn-f active">全部 · All</button>
+      <button class="btn-f">新面孔 · New</button>
+      <button class="btn-f">即將登場 · Upcoming</button>
+      <button class="btn-f">VIP 限定</button>
+    </div>
+
+    <div class="big-grid">
+      <div class="lc reveal"><div class="img"><div class="ph ph-rose ph-light"></div><span class="idx">NO. 01</span><span class="next-ev">05 / 17</span></div><div class="body"><div class="kanji">早乙女 麻衣</div><div class="rom">MAI SAOTOME</div><div class="tags"><span class="tag tag-coral">攝影會</span><span class="tag tag-teal">見面會</span></div><div class="meta"><span>2003 · 横浜</span><span>163 CM · AB</span></div></div></div>
+
+      <div class="lc reveal reveal-delay-1"><div class="img"><div class="ph ph-warm ph-light"></div><span class="idx">NO. 02</span><span class="next-ev">05 / 24</span></div><div class="body"><div class="kanji">天音 香織</div><div class="rom">KAORI AMANE</div><div class="tags"><span class="tag tag-yellow">晚宴</span><span class="tag tag-teal">見面會</span></div><div class="meta"><span>2001 · 京都</span><span>158 CM · B</span></div></div></div>
+
+      <div class="lc reveal reveal-delay-2"><div class="img"><div class="ph ph-teal ph-light"></div><span class="idx">NO. 03</span><span class="next-ev">06 / 07</span></div><div class="body"><div class="kanji">星川 凜</div><div class="rom">RIN HOSHIKAWA</div><div class="tags"><span class="tag tag-teal">見面會</span><span class="tag tag-coral">攝影會</span></div><div class="meta"><span>2000 · 大阪</span><span>168 CM · O</span></div></div></div>
+
+      <div class="lc reveal"><div class="img"><div class="ph ph-yellow ph-light"></div><span class="idx">NO. 04</span><span class="next-ev">06 / 21</span></div><div class="body"><div class="kanji">一ノ瀬 結衣</div><div class="rom">YUI ICHINOSE</div><div class="tags"><span class="tag tag-coral">攝影會</span><span class="tag tag-yellow">晚宴</span></div><div class="meta"><span>2002 · 福岡</span><span>160 CM · A</span></div></div></div>
+
+      <div class="lc reveal reveal-delay-1"><div class="img"><div class="ph ph-rose ph-light"></div><span class="idx">NO. 05</span><span class="next-ev">07 / 19</span></div><div class="body"><div class="kanji">藤村 さくら</div><div class="rom">SAKURA FUJIMURA</div><div class="tags"><span class="tag tag-teal">見面會</span></div><div class="meta"><span>2004 · 東京</span><span>155 CM · B</span></div></div></div>
+
+      <div class="lc reveal reveal-delay-2"><div class="img"><div class="ph ph-warm ph-light"></div><span class="idx">NO. 06</span><span class="next-ev">08 / 02</span></div><div class="body"><div class="kanji">西園寺 美優</div><div class="rom">MIYU SAIONJI</div><div class="tags"><span class="tag tag-yellow">晚宴</span></div><div class="meta"><span>1999 · 名古屋</span><span>165 CM · A</span></div></div></div>
+
+      <div class="lc reveal"><div class="img"><div class="ph ph-teal ph-light"></div><span class="idx">NO. 07</span><span class="next-ev">NEW</span></div><div class="body"><div class="kanji">黒澤 蘭</div><div class="rom">RAN KUROSAWA</div><div class="tags"><span class="tag tag-coral">攝影會</span></div><div class="meta"><span>2003 · 札幌</span><span>170 CM · O</span></div></div></div>
+
+      <div class="lc reveal reveal-delay-1"><div class="img"><div class="ph ph-yellow ph-light"></div><span class="idx">NO. 08</span><span class="next-ev">NEW</span></div><div class="body"><div class="kanji">月岡 ひまり</div><div class="rom">HIMARI TSUKIOKA</div><div class="tags"><span class="tag tag-teal">見面會</span><span class="tag tag-coral">攝影會</span></div><div class="meta"><span>2002 · 神戸</span><span>161 CM · AB</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-banner" style="background: var(--cream-2); border-radius: 8px; padding: 80px 40px; text-align: center;">
+      <div style="font-family: var(--mono); font-size: 11px; letter-spacing: 0.3em; color: var(--ink-3); margin-bottom: 16px;">NEWSLETTER · 最新情報</div>
+      <h2 style="font-family: var(--serif); font-size: clamp(32px, 5vw, 52px); font-style: italic; margin-bottom: 20px;">新面孔加入時，<br><span style="color: var(--coral);">第一時間</span>通知你</h2>
+      <form style="display: flex; gap: 10px; max-width: 480px; margin: 0 auto; flex-wrap: wrap; justify-content: center;">
+        <input type="email" placeholder="your@email.com" style="flex: 1; min-width: 240px; padding: 14px 20px; border-radius: 100px; border: 1px solid var(--line); background: var(--cream); font-family: var(--sans);" />
+        <button type="submit" class="btn btn-primary">訂閱 <span class="arrow">→</span></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><img class="logo-img" src="assets/brand/12the-logo.png" alt="12the"><p>南台灣唯一、最高質感的日本女優私密見面與攝影會品牌。</p></div>
+      <div class="footer-col"><h5>Explore</h5><ul><li><a href="events.html" data-route="events">即將舉辦</a></li><li><a href="lineup.html" data-route="lineup">女神陣容</a></li><li><a href="archive.html">攝影集回顧</a></li><li><a href="about.html">品牌故事</a></li></ul></div>
+      <div class="footer-col"><h5>Formats</h5><ul><li><a href="#">攝影會</a></li><li><a href="#">見面會</a></li><li><a href="#">精緻晚宴</a></li></ul></div>
+      <div class="footer-col"><h5>Contact</h5><ul><li><a href="contact.html">線上報名</a></li><li><a href="https://www.instagram.com/12the_official/" target="_blank" rel="noopener">Instagram · @12the_official</a></li><li><a href="#">LINE · @12the</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><div>© 2026 12THE · SOUTH TAIWAN</div><div>V.1.0</div></div>
+  </div>
+</footer>
+<script src="assets/shared.js"></script>
+</body>
+</html>

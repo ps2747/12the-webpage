@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>關於 About — 12the</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;600;700&family=Shippori+Mincho:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/shared.css">
+<style>
+.page-hero { padding: 100px 0 60px; }
+.hero-jp-vertical { writing-mode: vertical-rl; font-family: var(--serif); letter-spacing: 0.4em; font-size: 14px; color: var(--coral); position: absolute; top: 100px; right: var(--gutter); }
+.page-hero h1 { font-family: var(--serif); font-size: clamp(52px, 9vw, 132px); line-height: 0.98; font-weight: 400; }
+.page-hero h1 em { font-style: italic; color: var(--coral); }
+.page-hero h1 .sub-jp { font-size: 0.3em; letter-spacing: 0.3em; color: var(--ink-3); display: block; margin-top: 20px; font-weight: 400; letter-spacing: 0.3em; }
+
+.manifesto { padding: 80px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.manifesto-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 80px; }
+@media (max-width: 900px) { .manifesto-grid { grid-template-columns: 1fr; } }
+.manifesto .label { font-family: var(--mono); font-size: 11px; letter-spacing: 0.3em; color: var(--coral); text-transform: uppercase; }
+.manifesto .body p { font-family: var(--serif); font-size: 22px; line-height: 1.75; color: var(--ink); margin-bottom: 28px; }
+.manifesto .body p em { font-style: italic; color: var(--coral); }
+.manifesto .signature { font-family: var(--serif); font-style: italic; font-size: 16px; color: var(--ink-3); margin-top: 40px; border-top: 1px solid var(--line); padding-top: 24px; }
+
+.story { padding: 100px 0; }
+.story-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: start; }
+@media (max-width: 900px) { .story-grid { grid-template-columns: 1fr; } }
+.story h2 { font-family: var(--serif); font-size: clamp(36px, 5vw, 60px); line-height: 1.1; margin-bottom: 32px; }
+.story h2 em { font-style: italic; color: var(--coral); }
+.story p { font-size: 15px; line-height: 1.9; color: var(--ink-2); margin-bottom: 20px; }
+.story .aside { position: sticky; top: 100px; }
+.story .aside-img { aspect-ratio: 3/4; border-radius: 4px; overflow: hidden; margin-bottom: 20px; }
+.story .aside-caption { font-family: var(--mono); font-size: 11px; letter-spacing: 0.2em; color: var(--ink-3); text-transform: uppercase; }
+
+/* Values numbered list */
+.values { padding: 100px 0; background: var(--cream-2); }
+.values-list { }
+.value-row {
+  display: grid; grid-template-columns: 100px 1fr 1fr; gap: 60px;
+  padding: 48px 0;
+  border-top: 1px solid var(--line);
+  align-items: start;
+}
+.value-row:last-child { border-bottom: 1px solid var(--line); }
+@media (max-width: 900px) { .value-row { grid-template-columns: 1fr; gap: 12px; } }
+.value-num { font-family: var(--serif); font-style: italic; font-size: 72px; color: var(--coral); line-height: 1; }
+.value-row:nth-child(2) .value-num { color: var(--teal-deep); }
+.value-row:nth-child(3) .value-num { color: var(--yellow-deep); }
+.value-row:nth-child(4) .value-num { color: var(--ink); }
+.value-title h3 { font-family: var(--serif); font-size: 32px; margin-bottom: 6px; }
+.value-title .jp { font-family: var(--serif); font-size: 13px; letter-spacing: 0.3em; color: var(--ink-3); }
+.value-desc { color: var(--ink-2); font-size: 15px; line-height: 1.9; }
+
+/* Tone of voice */
+.tone { padding: 100px 0; }
+.tone-bubble {
+  background: var(--cream-2);
+  border-radius: 8px;
+  padding: 48px 40px;
+  position: relative;
+  margin-bottom: 16px;
+}
+.tone-bubble .q { font-family: var(--mono); font-size: 11px; letter-spacing: 0.3em; color: var(--ink-3); text-transform: uppercase; margin-bottom: 16px; }
+.tone-bubble p { font-family: var(--serif); font-size: 22px; font-style: italic; line-height: 1.5; color: var(--ink); }
+.tone-bubble.good { border-left: 3px solid var(--teal); }
+.tone-bubble.bad { border-left: 3px solid var(--coral); }
+.tone-bubble .tag { position: absolute; top: 20px; right: 20px; }
+
+.slogans-sec { padding: 80px 0; background: var(--ink); color: var(--cream); }
+.slogans-sec .label { font-family: var(--mono); font-size: 11px; letter-spacing: 0.3em; color: var(--yellow); margin-bottom: 40px; display: block; }
+.slogans-sec .s-item { padding: 32px 0; border-top: 1px solid rgba(255,255,255,0.1); display: grid; grid-template-columns: 140px 1fr; gap: 40px; align-items: center; }
+.slogans-sec .s-item:last-child { border-bottom: 1px solid rgba(255,255,255,0.1); }
+.slogans-sec .s-item .kind { font-family: var(--mono); font-size: 11px; letter-spacing: 0.25em; color: rgba(255,255,255,0.5); text-transform: uppercase; }
+.slogans-sec .s-item .line { font-family: var(--serif); font-size: clamp(22px, 3vw, 36px); font-style: italic; color: var(--cream); }
+.slogans-sec .s-item .line em { color: var(--yellow); font-style: italic; }
+
+/* Palette section */
+.palette { padding: 100px 0; }
+.swatches { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+@media (max-width: 700px) { .swatches { grid-template-columns: 1fr 1fr; } }
+.sw { border-radius: 6px; overflow: hidden; border: 1px solid var(--line); }
+.sw .color { aspect-ratio: 5/4; }
+.sw .info { padding: 16px; background: var(--cream-3); }
+.sw .n { font-family: var(--serif); font-size: 18px; font-style: italic; }
+.sw .h { font-family: var(--mono); font-size: 11px; letter-spacing: 0.15em; color: var(--ink-3); margin-top: 4px; }
+</style>
+<!-- visibility-init -->
+<script>(function(){try{var t=JSON.parse(sessionStorage.getItem('12the-tweaks')||'{}');var hideE=t.showEvents!==true;var hideL=t.showLineup!==true;var de=document.documentElement;if(hideE)de.classList.add('hide-events');if(hideL)de.classList.add('hide-lineup');document.addEventListener('DOMContentLoaded',function(){if(hideE)document.body.classList.add('hide-events');if(hideL)document.body.classList.add('hide-lineup');});}catch(e){document.documentElement.classList.add('hide-events');document.documentElement.classList.add('hide-lineup');document.addEventListener('DOMContentLoaded',function(){document.body.classList.add('hide-events');document.body.classList.add('hide-lineup');});}})();</script>
+</head>
+<body data-screen-label="About">
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="12the"><img src="assets/brand/12the-logo.png" alt="12the"></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a><a href="events.html" data-route="events">活動 / Events</a><a href="lineup.html" data-route="lineup">女神 / Lineup</a><a href="archive.html">回顧 / Archive</a><a href="about.html">關於 / About</a>
+    </div>
+    <a href="contact.html" class="nav-cta">立即報名 <span class="arrow">→</span></a>
+    <a href="https://www.instagram.com/12the_official/" target="_blank" rel="noopener" class="nav-ig" aria-label="Instagram @12the_official"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container reveal" style="position: relative;">
+    <div class="hero-jp-vertical">南台湾・唯一・私密</div>
+    <span class="eyebrow" style="color: var(--coral);">About · 品牌故事</span>
+    <h1 style="margin-top: 32px;">打破<em>距離</em>，<br>只為那份<em>純粹</em>。<span class="sub-jp">SOUTH TAIWAN · EST. 2025</span></h1>
+  </div>
+</section>
+
+<section class="manifesto">
+  <div class="container">
+    <div class="manifesto-grid">
+      <div class="reveal">
+        <span class="label">Manifesto · 品牌宣言</span>
+      </div>
+      <div class="body reveal reveal-delay-1">
+        <p>過去，螢幕裡的美好總是<em>遙不可及</em>。</p>
+        <p>要見上心儀的女神一面，往往伴隨著漫長的北上車程與擁擠的排隊人潮。南部的粉絲，總是只能在盛大的博覽會中，捕捉那<em>稍縱即逝</em>的幾秒鐘。</p>
+        <p>12the 的誕生，正是為了<em>打破</em>這段距離。</p>
+        <div class="signature">— 12the Studio, 2026 Spring</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="story">
+  <div class="container">
+    <div class="story-grid">
+      <div class="reveal">
+        <span class="eyebrow" style="color: var(--coral);">The Story · 由來</span>
+        <h2 style="margin-top: 16px;">我們不生產<em>擁擠</em>，<br>我們只生產<em>專屬</em>。</h2>
+        <p>12the 是南台灣第一個，也是唯一專注於日本女優私密見面與攝影會的團隊。我們深知，真正的感動不是走馬看花，而是在專屬的空間裡，感受她的呼吸、她的笑容，以及她看著鏡頭時，眼裡只有你的那份純粹。</p>
+        <p>從企劃、選角，到現場的光影與溫度，12the 捨棄了量產化的商業模式，選擇了一條「零距離、精緻互動」的道路。我們把最頂級的日系甜美直接帶到熱情的南台灣。</p>
+        <p>每一場活動，我們僅接待 8 至 40 名受邀者。每一個時段，只為你一人準備。這不是商業行為，這是一封封給女神的邀請函——以及一封封給你的秘密信。</p>
+        <p>在 12the，你不是數千名觀眾之一，你是被女神<em style="font-style: italic; color: var(--coral);">專屬款待的唯一</em>。</p>
+      </div>
+      <div class="aside reveal reveal-delay-1">
+        <div class="aside-img"><div class="ph ph-rose ph-light" data-label="STUDIO · KAOHSIUNG"></div></div>
+        <div class="aside-caption">12THE · STUDIO · KAOHSIUNG · 2026</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="values">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="left">
+        <span class="eyebrow">Values · 四個承諾</span>
+        <h2 style="font-family: var(--serif); font-size: clamp(36px, 5vw, 60px); margin-top: 16px;">我們所<em style="font-style: italic; color: var(--coral);">相信</em>的。</h2>
+      </div>
+    </div>
+
+    <div class="values-list">
+      <div class="value-row reveal">
+        <div class="value-num">01</div>
+        <div class="value-title"><h3>近距離</h3><div class="jp">クロースアップ · CLOSE-UP</div></div>
+        <div class="value-desc">限額控場、禁止攝錄、專屬管家。我們為每一位受邀者保護他的安靜與體面。</div>
+      </div>
+      <div class="value-row reveal">
+        <div class="value-num">02</div>
+        <div class="value-title"><h3>精緻</h3><div class="jp">精緻 · CRAFT</div></div>
+        <div class="value-desc">自然光、情緒張力、日系寫真感。避免腥羶色，專注於作為一件作品該有的美學。</div>
+      </div>
+      <div class="value-row reveal">
+        <div class="value-num">03</div>
+        <div class="value-title"><h3>南下</h3><div class="jp">サウス · LOCAL</div></div>
+        <div class="value-desc">不再北上奔波、不再排長長的隊伍。南台灣唯一的專屬場域，由女神為你南下。</div>
+      </div>
+      <div class="value-row reveal">
+        <div class="value-num">04</div>
+        <div class="value-title"><h3>尊榮</h3><div class="jp">プレミアム · PREMIUM</div></div>
+        <div class="value-desc">像私人管家為 VIP 安排的一場完美秘密約會。從接待、入場、拍攝、離場，都是專屬的體驗。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tone">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="left">
+        <span class="eyebrow">Tone · 我們說話的方式</span>
+        <h2 style="font-family: var(--serif); font-size: clamp(36px, 5vw, 60px); margin-top: 16px;">像<em style="font-style: italic; color: var(--coral);">一位品味極佳</em>的私人管家。</h2>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;" class="reveal">
+      <div class="tone-bubble good">
+        <div class="q">We sound like…</div>
+        <p>「關於這次的拍攝計畫，我為您準備了三個時段。15:00 的自然光最適合您喜歡的那種質感——是否願意讓我為您安排？」</p>
+        <span class="tag tag-teal" style="position: absolute; top: 20px; right: 20px;">YES · 尊重・懂・溫柔</span>
+      </div>
+      <div class="tone-bubble bad">
+        <div class="q">We never sound like…</div>
+        <p>「超級 HOT！！！ 快來搶！！！限定超殺優惠只剩 3 小時！！！⚠️⚠️⚠️」</p>
+        <span class="tag tag-coral" style="position: absolute; top: 20px; right: 20px;">NO · 廉價・喧囂・低俗</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slogans-sec">
+  <div class="container">
+    <span class="label">Slogans · 品牌短句</span>
+    <div class="s-item">
+      <div class="kind">Core · 核心</div>
+      <div class="line">讓螢幕裡的<em>幻想</em>，成為眼前的日常。</div>
+    </div>
+    <div class="s-item">
+      <div class="kind">Local · 地域</div>
+      <div class="line">這一次，她為你<em>南下</em>。</div>
+    </div>
+    <div class="s-item">
+      <div class="kind">Photo Salon · 攝影會</div>
+      <div class="line">在你的觀景窗裡，<em>占有她的每一次心跳</em>。</div>
+    </div>
+    <div class="s-item">
+      <div class="kind">Meetup · 見面會</div>
+      <div class="line">12the，給你更深、<em>更近距離</em>的凝視女神。</div>
+    </div>
+  </div>
+</section>
+
+<section class="palette">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="left">
+        <span class="eyebrow">Palette · 品牌色彩</span>
+        <h2 style="font-family: var(--serif); font-size: clamp(36px, 5vw, 60px); margin-top: 16px;">南島的<em style="font-style: italic; color: var(--coral);">陽光</em>、海風、與心跳。</h2>
+      </div>
+    </div>
+    <div class="swatches reveal">
+      <div class="sw"><div class="color" style="background: #ebe7db;"></div><div class="info"><div class="n">Sand Cream</div><div class="h">#EBE7DB</div></div></div>
+      <div class="sw"><div class="color" style="background: #e06965;"></div><div class="info"><div class="n">Sunset Coral</div><div class="h">#E06965</div></div></div>
+      <div class="sw"><div class="color" style="background: #81a2a7;"></div><div class="info"><div class="n">Ocean Teal</div><div class="h">#81A2A7</div></div></div>
+      <div class="sw"><div class="color" style="background: #ebb064;"></div><div class="info"><div class="n">Citrine</div><div class="h">#EBB064</div></div></div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer" style="margin-top: 0;">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><img class="logo-img" src="assets/brand/12the-logo.png" alt="12the"><p>南台灣唯一、最高質感的日本女優私密見面與攝影會品牌。</p></div>
+      <div class="footer-col"><h5>Explore</h5><ul><li><a href="events.html" data-route="events">即將舉辦</a></li><li><a href="lineup.html" data-route="lineup">女神陣容</a></li><li><a href="archive.html">攝影集回顧</a></li><li><a href="about.html">品牌故事</a></li></ul></div>
+      <div class="footer-col"><h5>Formats</h5><ul><li><a href="#">攝影會</a></li><li><a href="#">見面會</a></li><li><a href="#">精緻晚宴</a></li></ul></div>
+      <div class="footer-col"><h5>Contact</h5><ul><li><a href="contact.html">線上報名</a></li><li><a href="https://www.instagram.com/12the_official/" target="_blank" rel="noopener">Instagram · @12the_official</a></li><li><a href="#">LINE · @12the</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><div>© 2026 12THE · SOUTH TAIWAN</div><div>V.1.0</div></div>
+  </div>
+</footer>
+<script src="assets/shared.js"></script>
+</body>
+</html>
