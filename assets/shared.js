@@ -1,5 +1,57 @@
 /* 12the — shared scripts */
 
+/* Mobile menu (hamburger) toggle */
+(function () {
+  const init = () => {
+    const nav = document.querySelector(".site-nav");
+    const btn = document.querySelector(".mobile-menu-btn");
+    const links = document.querySelector(".nav-links");
+    if (!nav || !btn || !links) return;
+
+    btn.setAttribute("role", "button");
+    btn.setAttribute("tabindex", "0");
+    btn.setAttribute("aria-label", "選單");
+    btn.setAttribute("aria-expanded", "false");
+    btn.setAttribute("aria-controls", "primary-nav");
+    if (!links.id) links.id = "primary-nav";
+
+    const setOpen = (open) => {
+      nav.classList.toggle("mobile-open", open);
+      document.body.classList.toggle("nav-open", open);
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    };
+    const toggle = (e) => {
+      if (e) { e.preventDefault(); e.stopPropagation(); }
+      setOpen(!nav.classList.contains("mobile-open"));
+    };
+
+    btn.addEventListener("click", toggle);
+    btn.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") toggle(e);
+    });
+    // close when a link is tapped
+    links.querySelectorAll("a").forEach((a) =>
+      a.addEventListener("click", () => setOpen(false))
+    );
+    // close on ESC
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") setOpen(false);
+    });
+    // close on outside click
+    document.addEventListener("click", (e) => {
+      if (!nav.contains(e.target) && nav.classList.contains("mobile-open")) {
+        setOpen(false);
+      }
+    });
+    // close if resized back to desktop
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 820) setOpen(false);
+    });
+  };
+  if (document.readyState !== "loading") init();
+  else document.addEventListener("DOMContentLoaded", init);
+})();
+
 /* Scroll reveal */
 (function () {
   const io = new IntersectionObserver(
