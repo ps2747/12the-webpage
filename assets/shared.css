@@ -372,7 +372,7 @@ body.theme-midnight .site-footer { background: #050b12; }
 
 /* Real-photo modifier — overrides gradient placeholder while keeping label hook */
 .ph-photo { background: #1a1814 !important; }
-.ph-photo > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; dynamic-range-limit: standard; z-index: 0; }
+.ph-photo > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; dynamic-range-limit: standard; z-index: 0; }
 .ph-photo::before, .ph-photo.ph-light::before { display: none !important; } /* drop placeholder texture & backlight */
 .ph-photo::after {
   /* Bottom-left caption sits over a soft gradient so it stays legible against the photo */

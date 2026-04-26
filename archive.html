@@ -134,7 +134,7 @@ img { dynamic-range-limit: standard; }
 .kuri-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 10px; grid-auto-rows: 92px; }
 @media (max-width: 900px) { .kuri-grid { grid-template-columns: repeat(4, 1fr); } }
 .kuri-grid .ar { position: relative; overflow: hidden; background: #efe8dc; box-shadow: 0 1px 3px rgba(42,38,32,0.06), 0 8px 24px -12px rgba(42,38,32,0.18); }
-.kuri-grid .ar img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease, filter 0.5s; display: block; filter: saturate(0.94) contrast(1.01); }
+.kuri-grid .ar img { width: 100%; height: 100%; object-fit: cover; object-position: center center; transition: transform 0.8s ease, filter 0.5s; display: block; filter: saturate(0.94) contrast(1.01); }
 .kuri-grid .ar:hover img { transform: scale(1.04); filter: saturate(1.02) contrast(1.04); }
 .kuri-grid .ar::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 55%, rgba(26,24,20,0.7)); opacity: 0; transition: 0.4s; }
 .kuri-grid .ar:hover::after { opacity: 1; }
@@ -203,7 +203,7 @@ img { dynamic-range-limit: standard; }
 .shido-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 12px; grid-auto-rows: 110px; }
 @media (max-width: 900px) { .shido-grid { grid-template-columns: repeat(4, 1fr); } }
 .shido-grid .ar { position: relative; overflow: hidden; background: #e8e2d4; box-shadow: 0 1px 3px rgba(42,38,32,0.06), 0 10px 28px -14px rgba(58,76,122,0.22); }
-.shido-grid .ar img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease, filter 0.5s; display: block; filter: saturate(0.96) contrast(1.02); }
+.shido-grid .ar img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; transition: transform 0.8s ease, filter 0.5s; display: block; filter: saturate(0.96) contrast(1.02); }
 .shido-grid .ar:hover img { transform: scale(1.04); filter: saturate(1.04) contrast(1.05); }
 .shido-grid .ar::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 55%, rgba(20,22,32,0.72)); opacity: 0; transition: 0.4s; }
 .shido-grid .ar:hover::after { opacity: 1; }
@@ -328,7 +328,9 @@ img { dynamic-range-limit: standard; }
 .ran-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 12px; grid-auto-rows: 92px; }
 @media (max-width: 900px) { .ran-grid { grid-template-columns: repeat(4, 1fr); } }
 .ran-grid .ar { position: relative; overflow: hidden; background: #ece1cc; box-shadow: 0 1px 3px rgba(42,38,32,0.06), 0 10px 28px -14px rgba(122,80,40,0.22); }
-.ran-grid .ar img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease, filter 0.5s; display: block; filter: saturate(0.96) contrast(1.02); }
+.ran-grid .ar img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; transition: transform 0.8s ease, filter 0.5s; display: block; filter: saturate(0.96) contrast(1.02); }
+.ar img.fit-mid { object-position: center center !important; }  /* group/talk/dinner/farewell shots */
+
 .ran-grid .ar:hover img { transform: scale(1.04); filter: saturate(1.06) contrast(1.05); }
 .ran-grid .ar::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 55%, rgba(40,28,16,0.74)); opacity: 0; transition: 0.4s; }
 .ran-grid .ar:hover::after { opacity: 1; }
@@ -537,7 +539,7 @@ img { dynamic-range-limit: standard; }
 
     <div class="shido-grid reveal">
       <div class="ar shido-s1"><img src="assets/photos/shido-05.jpg" alt="紫堂留衣 · 紅格紋女僕 登場 拍手歡迎" loading="lazy"><span class="idx">001 / 11</span><span class="tag">DAY 01 · GINGHAM REVEAL — APPLAUSE</span></div>
-      <div class="ar shido-s2"><img src="assets/photos/shido-08.jpg" alt="紫堂留衣 · 紅格紋訪談 沙發私聊" loading="lazy"><span class="idx">002 / 11</span><span class="tag">DAY 01 · GINGHAM TALK — COUCH</span></div>
+      <div class="ar shido-s2"><img class="fit-mid" src="assets/photos/shido-08.jpg" alt="紫堂留衣 · 紅格紋訪談 沙發私聊" loading="lazy"><span class="idx">002 / 11</span><span class="tag">DAY 01 · GINGHAM TALK — COUCH</span></div>
       <div class="ar shido-s3"><img src="assets/photos/shido-06.jpg" alt="紫堂留衣 · 紅格紋女僕 比心" loading="lazy"><span class="idx">003 / 11</span><span class="tag">DAY 01 · GINGHAM — HEART HANDS</span></div>
       <div class="ar shido-s4"><img src="assets/photos/shido-07.jpg" alt="紫堂留衣 · 紅格紋女僕 candid 微笑" loading="lazy"><span class="idx">004 / 11</span><span class="tag">DAY 01 · GINGHAM — CANDID</span></div>
       <div class="ar shido-s5"><img src="assets/photos/shido-01.jpg" alt="紫堂留衣 · 寢室企劃 雙人合照" loading="lazy"><span class="idx">005 / 11</span><span class="tag">DAY 01 · BEDROOM SET — DUO</span></div>
@@ -545,8 +547,8 @@ img { dynamic-range-limit: standard; }
       <div class="ar shido-s7"><img src="assets/photos/shido-10.jpg" alt="紫堂留衣 · 棕格紋 床邊躺姿" loading="lazy"><span class="idx">007 / 11</span><span class="tag">DAY 01 · BROWN PLAID — BED</span></div>
       <div class="ar shido-s8"><img src="assets/photos/shido-11.jpg" alt="紫堂留衣 · 白兔耳·泳裝 沙發 · 攝影師工作中" loading="lazy"><span class="idx">008 / 11</span><span class="tag">DAY 01 · BUNNY — BTS</span></div>
       <div class="ar shido-s9"><img src="assets/photos/shido-12.jpg" alt="紫堂留衣 · 白兔耳·泳裝 單人肉身" loading="lazy"><span class="idx">009 / 11</span><span class="tag">DAY 01 · BUNNY — PORTRAIT</span></div>
-      <div class="ar shido-s10"><img src="assets/photos/shido-03.jpg" alt="紫堂留衣 · 私房晚宴合照" loading="lazy"><span class="idx">010 / 11</span><span class="tag">DAY 01 · LATE DINNER — INNER CIRCLE</span></div>
-      <div class="ar shido-s11"><img src="assets/photos/shido-04.jpg" alt="紫堂留衣 · 二日全員大合照" loading="lazy"><span class="idx">011 / 11</span><span class="tag">DAY 02 · FAREWELL — ALL HANDS</span></div>
+      <div class="ar shido-s10"><img class="fit-mid" src="assets/photos/shido-03.jpg" alt="紫堂留衣 · 私房晚宴合照" loading="lazy"><span class="idx">010 / 11</span><span class="tag">DAY 01 · LATE DINNER — INNER CIRCLE</span></div>
+      <div class="ar shido-s11"><img class="fit-mid" src="assets/photos/shido-04.jpg" alt="紫堂留衣 · 二日全員大合照" loading="lazy"><span class="idx">011 / 11</span><span class="tag">DAY 02 · FAREWELL — ALL HANDS</span></div>
     </div>
 
     <div class="kuri-note">
@@ -724,13 +726,13 @@ img { dynamic-range-limit: standard; }
       <div class="ar ran-r4"><img src="assets/photos/ranran-04.jpg" alt="蘭蘭 · 女僕內衣 親簽小卡" loading="lazy"><span class="kind">SOLO</span><span class="idx">004 / 24</span><span class="tag">DAY 02 · MAID — SIGNED CARD</span></div>
       <div class="ar ran-r5"><img src="assets/photos/ranran-05.jpg" alt="蘭蘭 · 親筆繪心 + 唇印" loading="lazy"><span class="kind">SOLO</span><span class="idx">005 / 24</span><span class="tag">DAY 02 · MAID — KISS NOTE</span></div>
       <div class="ar ran-r6"><img src="assets/photos/ranran-06.jpg" alt="蘭蘭 · 蘆葦窗邊側拍" loading="lazy"><span class="kind">BTS</span><span class="idx">006 / 24</span><span class="tag">DAY 02 · WINDOW — CANDID</span></div>
-      <div class="ar ran-r7"><img src="assets/photos/ranran-07.jpg" alt="蘭蘭 · DAY1 全員合照" loading="lazy"><span class="kind">GROUP</span><span class="idx">007 / 24</span><span class="tag">DAY 01 · FAREWELL — ROUND A</span></div>
-      <div class="ar ran-r8"><img src="assets/photos/ranran-08.jpg" alt="蘭蘭 · 沙發圍坐 Q&A" loading="lazy"><span class="kind">TALK</span><span class="idx">008 / 24</span><span class="tag">DAY 01 · SOFA Q&A — CIRCLE A</span></div>
-      <div class="ar ran-r9"><img src="assets/photos/ranran-09.jpg" alt="蘭蘭 · 沙發圍坐 Q&A 二" loading="lazy"><span class="kind">TALK</span><span class="idx">009 / 24</span><span class="tag">DAY 01 · SOFA Q&A — CIRCLE B</span></div>
+      <div class="ar ran-r7"><img class="fit-mid" src="assets/photos/ranran-07.jpg" alt="蘭蘭 · DAY1 全員合照" loading="lazy"><span class="kind">GROUP</span><span class="idx">007 / 24</span><span class="tag">DAY 01 · FAREWELL — ROUND A</span></div>
+      <div class="ar ran-r8"><img class="fit-mid" src="assets/photos/ranran-08.jpg" alt="蘭蘭 · 沙發圍坐 Q&A" loading="lazy"><span class="kind">TALK</span><span class="idx">008 / 24</span><span class="tag">DAY 01 · SOFA Q&A — CIRCLE A</span></div>
+      <div class="ar ran-r9"><img class="fit-mid" src="assets/photos/ranran-09.jpg" alt="蘭蘭 · 沙發圍坐 Q&A 二" loading="lazy"><span class="kind">TALK</span><span class="idx">009 / 24</span><span class="tag">DAY 01 · SOFA Q&A — CIRCLE B</span></div>
       <div class="ar ran-r10"><img src="assets/photos/ranran-10.jpg" alt="蘭蘭 · 拍攝現場 wide" loading="lazy"><span class="kind">BTS</span><span class="idx">010 / 24</span><span class="tag">DAY 02 · ON SET — WIDE</span></div>
       <div class="ar ran-r11"><img src="assets/photos/ranran-11.jpg" alt="蘭蘭 · 拍攝現場 wide 二" loading="lazy"><span class="kind">BTS</span><span class="idx">011 / 24</span><span class="tag">DAY 02 · ON SET — REVERSE</span></div>
-      <div class="ar ran-r12"><img src="assets/photos/ranran-12.jpg" alt="蘭蘭 · DAY2 全員合照 / 粉色針織" loading="lazy"><span class="kind">GROUP</span><span class="idx">012 / 24</span><span class="tag">DAY 02 · FAREWELL — ROUND B</span></div>
-      <div class="ar ran-r13"><img src="assets/photos/ranran-13.jpg" alt="蘭蘭 · DAY2 全員合照 / 黑色內衣" loading="lazy"><span class="kind">GROUP</span><span class="idx">013 / 24</span><span class="tag">DAY 02 · FAREWELL — ALL HANDS</span></div>
+      <div class="ar ran-r12"><img class="fit-mid" src="assets/photos/ranran-12.jpg" alt="蘭蘭 · DAY2 全員合照 / 粉色針織" loading="lazy"><span class="kind">GROUP</span><span class="idx">012 / 24</span><span class="tag">DAY 02 · FAREWELL — ROUND B</span></div>
+      <div class="ar ran-r13"><img class="fit-mid" src="assets/photos/ranran-13.jpg" alt="蘭蘭 · DAY2 全員合照 / 黑色內衣" loading="lazy"><span class="kind">GROUP</span><span class="idx">013 / 24</span><span class="tag">DAY 02 · FAREWELL — ALL HANDS</span></div>
       <div class="ar ran-r14"><img src="assets/photos/ranran-14.jpg" alt="蘭蘭 · 白針織 寢室坐姿" loading="lazy"><span class="kind">SOLO</span><span class="idx">014 / 24</span><span class="tag">DAY 01 · KNIT — SIT POSE</span></div>
       <div class="ar ran-r15"><img src="assets/photos/ranran-15.jpg" alt="蘭蘭 · 白針織 寢室開膝坐姿" loading="lazy"><span class="kind">SOLO</span><span class="idx">015 / 24</span><span class="tag">DAY 01 · KNIT — OPEN STANCE</span></div>
       <div class="ar ran-r16"><img src="assets/photos/ranran-16.jpg" alt="蘭蘭 · 白針織 寢室手指比唇" loading="lazy"><span class="kind">SOLO</span><span class="idx">016 / 24</span><span class="tag">DAY 01 · KNIT — FINGER TO LIPS</span></div>
