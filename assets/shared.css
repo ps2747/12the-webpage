@@ -5,9 +5,9 @@
 
 :root {
   /* Brand palette — refined warm-white surfaces */
-  --cream: #f8f6f1;
-  --cream-2: #f2efe8;
-  --cream-3: #fcfbf7;
+  --cream: #ffffff;
+  --cream-2: #f5f5f5;
+  --cream-3: #fafafa;
   --coral: #e06965;
   --coral-deep: #c14f4c;
   --teal: #81a2a7;
@@ -55,12 +55,8 @@ html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; 
 body {
   font-family: var(--sans);
   color: var(--ink);
-  background-color: #f8f6f1;
-  background-image:
-    radial-gradient(1800px 900px at 20% -5%, rgba(255,255,255,0.9), transparent 55%),
-    radial-gradient(1400px 800px at 95% 40%, rgba(255,255,255,0.55), transparent 60%),
-    radial-gradient(1000px 700px at 40% 110%, rgba(224,105,101,0.025), transparent 60%);
-  background-attachment: fixed;
+  background-color: #ffffff;
+  background-image: none;
   font-size: 15px;
   line-height: 1.7;
   letter-spacing: 0.02em;
@@ -239,7 +235,7 @@ h3 { font-size: clamp(22px, 2.4vw, 32px); }
     gap: 0;
     margin: 0;
     padding: 8px 0;
-    background: var(--cream, #f7f3ec);
+    background: var(--cream, #ffffff);
     border-top: 1px solid rgba(0,0,0,.08);
     box-shadow: 0 12px 24px rgba(0,0,0,.08);
     transform: translateY(-8px);
