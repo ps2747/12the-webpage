@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>12the — 讓螢幕裡的幻想，成為眼前的日常</title>
+<title>12the — 南臺灣最清涼的次文化基地之類的</title>
 <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
@@ -48,7 +48,7 @@
   letter-spacing: -0.005em;
   margin-bottom: 20px;
 }
-.hero-title .line-1 { display: block; }
+.hero-title .line-1 { display: block; white-space: nowrap; }
 .hero-title .line-2 { display: block; font-style: italic; color: var(--ink-2); }
 .hero-title em { font-style: italic; color: var(--coral); position: relative; display: inline-block; }
 .hero-title em::after {
@@ -182,6 +182,10 @@
 .section-header .eyebrow { margin-bottom: 20px; display: block; }
 .section-header h2 { font-style: normal; }
 .section-header h2 em { font-style: italic; color: var(--coral); }
+.section-header h2.h2-2line .row { display: block; }
+@media (min-width: 540px) {
+  .section-header h2.h2-2line .row { white-space: nowrap; }
+}
 .section-header .right {
   display: flex; flex-direction: column; align-items: flex-end; gap: 12px;
 }
@@ -489,7 +493,7 @@ body.cards-immersive .type-card .link { color: #fff; }
         </div>
 
         <h1 class="hero-title">
-          <span class="line-1">讓螢幕裡的<em>幻想</em>，</span>
+          <span class="line-1">讓螢幕裡的<em>幻想</em></span>
           <span class="line-1">成為眼前的日常</span>
         </h1>
 
@@ -553,7 +557,7 @@ body.cards-immersive .type-card .link { color: #fff; }
     <div class="section-header reveal">
       <div class="left">
         <span class="eyebrow">01 — About 12the</span>
-        <h2>不再遙遠的悸動，<br>專屬南部的<em>近距離相遇</em>。</h2>
+        <h2 class="h2-2line"><span class="row">不再遙遠的悸動</span><span class="row">專屬南部的<em>近距離相遇</em></span></h2>
       </div>
       <div class="right">
         <span class="vertical-jp">十二の物語</span>
@@ -625,7 +629,7 @@ body.cards-immersive .type-card .link { color: #fff; }
           <div class="jp-label">撮影会 · PHOTO SALON</div>
           <p>在你的觀景窗裡，占有她的每一次心跳。專業打光、自然光棚內外，個人或雙人時段。</p>
           <ul class="features">
-            <li><span>時長</span><span>90 min</span></li>
+            <li><span>器材</span><span>手機 · 專業相機皆 OK</span></li>
             <li><span>人數</span><span>20 人</span></li>
           </ul>
           <a class="link">了解攝影會 <span class="arrow">→</span></a>
