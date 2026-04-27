@@ -1,0 +1,23 @@
+# 12THE — robots.txt
+# https://www.12the.com
+
+User-agent: *
+Allow: /
+Disallow: /uploads/
+
+# Crawl-delay (be friendly to image bots)
+User-agent: Googlebot-Image
+Allow: /assets/photos/
+Allow: /assets/brand/
+
+# Block known scraper / SEO scanner bots from wasting bandwidth
+User-agent: SemrushBot
+Disallow: /
+User-agent: AhrefsBot
+Disallow: /
+User-agent: MJ12bot
+Disallow: /
+User-agent: DotBot
+Disallow: /
+
+Sitemap: https://www.12the.com/sitemap.xml
