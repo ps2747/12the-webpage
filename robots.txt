@@ -1,4 +1,4 @@
-# 12THE — robots.txt
+# 12the — robots.txt
 # https://www.12the.com
 
 User-agent: *
