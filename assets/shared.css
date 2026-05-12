@@ -198,10 +198,60 @@ h3 { font-size: clamp(22px, 2.4vw, 32px); }
 }
 /* On narrow screens, hide Instagram first (LINE is the primary booking channel) */
 @media (max-width: 900px) { .nav-ig.nav-instagram { display: none; } }
-/* On phones, also slim down LINE icons */
-@media (max-width: 540px) {
-  .nav-ig { width: 36px; height: 36px; margin-left: 6px; }
-  .nav-ig svg { width: 14px; height: 14px; }
+/* On mobile, hide ALL nav social icons — they move to the floating widget below */
+@media (max-width: 820px) {
+  .nav-ig { display: none !important; }
+}
+
+/* ==========================================================================
+   Floating social widget — fixed bottom-right, mobile only
+   ========================================================================== */
+.social-float {
+  display: none;
+  position: fixed;
+  right: 14px;
+  bottom: 16px;
+  z-index: 950;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;       /* parent ignores clicks; children re-enable */
+}
+.social-float-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: var(--ink-2);
+  border: 1px solid var(--line);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.10), 0 2px 4px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  pointer-events: auto;
+  text-decoration: none;
+}
+.social-float-btn:hover,
+.social-float-btn:active {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.14), 0 3px 6px rgba(0,0,0,0.07);
+}
+.social-float-btn svg { width: 22px; height: 22px; display: block; }
+.social-float-btn.line-official svg { width: 26px; height: 26px; }
+.social-float-btn.line-official:hover,
+.social-float-btn.line-community:hover { color: #06C755; border-color: #06C755; }
+.social-float-btn.ig:hover { color: var(--coral); border-color: var(--coral); }
+
+/* Show only on mobile */
+@media (max-width: 820px) {
+  .social-float { display: flex; }
+}
+/* On very small phones, slightly smaller buttons */
+@media (max-width: 380px) {
+  .social-float { right: 10px; bottom: 12px; gap: 8px; }
+  .social-float-btn { width: 44px; height: 44px; }
+  .social-float-btn svg { width: 20px; height: 20px; }
+  .social-float-btn.line-official svg { width: 24px; height: 24px; }
 }
 
 .mobile-menu-btn { display: none; }
