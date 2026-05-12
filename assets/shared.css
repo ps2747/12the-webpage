@@ -182,17 +182,27 @@ h3 { font-size: clamp(22px, 2.4vw, 32px); }
   color: var(--ink-2);
   border: 1px solid var(--line);
   transition: color 0.2s, border-color 0.2s, background 0.2s, transform 0.2s;
-  margin-left: 14px;
+  margin-left: 10px;
 }
 .nav-ig:hover { color: var(--coral); border-color: var(--coral); transform: translateY(-1px); }
 .nav-ig svg { width: 16px; height: 16px; display: block; }
+/* LINE icons use LINE brand green on hover for better recognition */
+.nav-ig.nav-line:hover { color: #06C755; border-color: #06C755; }
+/* The filled LINE brand logo needs slightly more room to read clearly */
+.nav-ig.nav-line-official svg { width: 18px; height: 18px; }
 
 @media (max-width: 1100px) {
   .nav-links { margin-right: 24px; }
   .nav-links a { padding: 8px 16px; }
   .nav-links a::after { left: 16px; right: 16px; }
 }
-@media (max-width: 900px) { .nav-ig { display: none; } }
+/* On narrow screens, hide Instagram first (LINE is the primary booking channel) */
+@media (max-width: 900px) { .nav-ig.nav-instagram { display: none; } }
+/* On phones, also slim down LINE icons */
+@media (max-width: 540px) {
+  .nav-ig { width: 36px; height: 36px; margin-left: 6px; }
+  .nav-ig svg { width: 14px; height: 14px; }
+}
 
 .mobile-menu-btn { display: none; }
 
