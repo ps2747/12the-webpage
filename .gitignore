@@ -1,0 +1,23 @@
+# Claude Code internal state — never commit
+.claude/
+
+# macOS Finder metadata
+.DS_Store
+**/.DS_Store
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# Build / temp
+node_modules/
+.cache/
+dist/
+.tmp/
+
+# Environment & secrets
+.env
+.env.local
+*.pem
