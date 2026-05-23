@@ -77,4 +77,68 @@
     <priority>0.6</priority>
   </url>
 
+
+  <url>
+    <loc>https://www.12the.com/jp/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.12the.com/jp/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.12the.com/"/>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://www.12the.com/jp/events.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.12the.com/jp/events.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.12the.com/events.html"/>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.12the.com/jp/lineup.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.12the.com/jp/lineup.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.12the.com/lineup.html"/>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.12the.com/jp/archive.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.12the.com/jp/archive.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.12the.com/archive.html"/>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.12the.com/jp/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.12the.com/jp/about.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.12the.com/about.html"/>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.12the.com/jp/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.12the.com/jp/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.12the.com/contact.html"/>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.12the.com/jp/event-detail.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.12the.com/jp/event-detail.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.12the.com/event-detail.html"/>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
