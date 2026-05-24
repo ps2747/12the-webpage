@@ -77,7 +77,6 @@
     <priority>0.6</priority>
   </url>
 
-
   <url>
     <loc>https://www.12the.com/jp/</loc>
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.12the.com/jp/"/>
@@ -141,4 +140,37 @@
     <priority>0.7</priority>
   </url>
 
+
+  <url>
+    <loc>https://www.12the.com/news/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.12the.com/news/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.12the.com/jp/news/"/>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.12the.com/jp/news/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.12the.com/news/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.12the.com/jp/news/"/>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.12the.com/news/mai-saotome-debut.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.12the.com/news/mai-saotome-debut.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.12the.com/jp/news/mai-saotome-debut.html"/>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.12the.com/jp/news/mai-saotome-debut.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.12the.com/news/mai-saotome-debut.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.12the.com/jp/news/mai-saotome-debut.html"/>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>

@@ -21,3 +21,9 @@ dist/
 .env
 .env.local
 *.pem
+
+# Python exe
+*.py
+
+# News tool
+*.md
