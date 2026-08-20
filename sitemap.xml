@@ -39,7 +39,7 @@
 
   <url>
     <loc>https://www.12the.com/archive.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -53,6 +53,17 @@
     <image:image>
       <image:loc>https://www.12the.com/assets/photos/kuriyama-01.jpg</image:loc>
       <image:title>栗山莉緒 高雄 12the</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.12the.com/archive/tre-2026.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.12the.com/assets/photos/tre-0705-03.jpg</image:loc>
+      <image:title>2026 TRE 台北國際成人展 12the 活動回顧</image:title>
     </image:image>
   </url>
 
