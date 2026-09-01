@@ -58,12 +58,27 @@
 
   <url>
     <loc>https://www.12the.com/archive/tre-2026.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.12the.com/archive/tre-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.12the.com/jp/archive/tre-2026.html"/>
     <lastmod>2026-08-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://www.12the.com/assets/photos/tre-0705-03.jpg</image:loc>
       <image:title>2026 TRE 台北國際成人展 12the 活動回顧</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.12the.com/jp/archive/tre-2026.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.12the.com/archive/tre-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.12the.com/jp/archive/tre-2026.html"/>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.12the.com/assets/photos/tre-0705-03.jpg</image:loc>
+      <image:title>2026 TRE 台北国際成人展 12the イベントレポート</image:title>
     </image:image>
   </url>
 
