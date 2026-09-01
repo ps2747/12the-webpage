@@ -616,24 +616,16 @@ body.theme-midnight .site-footer { background: #050b12; }
 .tweak-opt.active { background: var(--ink); color: var(--cream); border-color: var(--ink); }
 
 /* ==========================================================================
-   Page visibility — events / lineup toggles (controlled via Tweaks)
-   When body has hide-events or hide-lineup, hide all entry points to those
-   routes (nav links, footer links, in-page CTAs, and home sections).
+   Page visibility — lineup toggle (controlled via Tweaks)
+   Events are a permanent site section; only the lineup preview may be hidden.
    ========================================================================== */
-body.hide-events [data-route="events"],
-html.hide-events [data-route="events"] { display: none !important; }
 body.hide-lineup [data-route="lineup"],
 html.hide-lineup [data-route="lineup"] { display: none !important; }
 
-body.hide-events .home-events-section,
-html.hide-events .home-events-section { display: none !important; }
 body.hide-lineup .home-lineup-section,
 html.hide-lineup .home-lineup-section { display: none !important; }
 
-/* If both targets in a footer-col list are hidden, the <li> wrappers go too —
-   the surviving siblings keep the column readable. */
-body.hide-events li:has(> a[data-route="events"]),
-html.hide-events li:has(> a[data-route="events"]) { display: none !important; }
+/* Hide the list wrapper as well when the lineup route is hidden. */
 body.hide-lineup li:has(> a[data-route="lineup"]),
 html.hide-lineup li:has(> a[data-route="lineup"]) { display: none !important; }
 

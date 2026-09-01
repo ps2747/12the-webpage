@@ -84,8 +84,7 @@
 })();
 
 /* Theme + page-visibility application (reads from sessionStorage + tweak defaults).
-   This runs immediately on script load so that the events/lineup hide classes
-   are set BEFORE the nav paints, preventing a flash of hidden links. */
+   Events are always available; only the optional lineup section can be hidden. */
 (function () {
   // Apply page-visibility flags ASAP (before DOMContentLoaded)
   const applyVisibility = () => {
@@ -94,18 +93,16 @@
       const saved = sessionStorage.getItem("12the-tweaks");
       if (saved) t = JSON.parse(saved);
     } catch {}
-    // Events are visible by default now that the live Himari event is published.
-    const showEvents = t.showEvents !== false;
     const showLineup = t.showLineup === true;
     if (document.body) {
-      document.body.classList.toggle("hide-events", !showEvents);
+      document.body.classList.remove("hide-events");
       document.body.classList.toggle("hide-lineup", !showLineup);
     } else {
       // body not yet parsed — set on documentElement; copy to body when ready
-      document.documentElement.classList.toggle("hide-events", !showEvents);
+      document.documentElement.classList.remove("hide-events");
       document.documentElement.classList.toggle("hide-lineup", !showLineup);
       document.addEventListener("DOMContentLoaded", () => {
-        document.body.classList.toggle("hide-events", !showEvents);
+        document.body.classList.remove("hide-events");
         document.body.classList.toggle("hide-lineup", !showLineup);
       });
     }
@@ -137,7 +134,6 @@
       "theme": "beach",
       "typography": "magazine",
       "cards": "magazine",
-      "showEvents": true,
       "showLineup": false
     } /*EDITMODE-END*/;
 
@@ -174,11 +170,7 @@
       </div>
       <div class="tweak-group">
         <label>分頁顯示 / Page visibility</label>
-        <div class="tweak-options" data-key="showEvents">
-          <button class="tweak-opt" data-val="true">顯示 活動 Events</button>
-          <button class="tweak-opt" data-val="false">隱藏 活動 Events</button>
-        </div>
-        <div class="tweak-options" data-key="showLineup" style="margin-top: 8px;">
+        <div class="tweak-options" data-key="showLineup">
           <button class="tweak-opt" data-val="true">顯示 女神 Lineup</button>
           <button class="tweak-opt" data-val="false">隱藏 女神 Lineup</button>
         </div>
@@ -191,7 +183,7 @@
       panel.querySelectorAll(".tweak-options").forEach((g) => {
         const key = g.dataset.key;
         g.querySelectorAll(".tweak-opt").forEach((b) => {
-          const v = (key === "showEvents" || key === "showLineup")
+          const v = key === "showLineup"
             ? (b.dataset.val === "true")
             : b.dataset.val;
           b.classList.toggle("active", v === current[key]);
@@ -205,7 +197,7 @@
         const key = b.parentElement.dataset.key;
         let val = b.dataset.val;
         // Boolean keys: stored as real booleans
-        if (key === "showEvents" || key === "showLineup") {
+        if (key === "showLineup") {
           val = val === "true";
         }
         current[key] = val;
@@ -242,7 +234,7 @@
     document.body.classList.toggle("type-elegant", t.typography === "elegant");
     document.body.classList.toggle("cards-minimal", t.cards === "minimal");
     document.body.classList.toggle("cards-immersive", t.cards === "immersive");
-    document.body.classList.toggle("hide-events", t.showEvents === false);
+    document.body.classList.remove("hide-events");
     document.body.classList.toggle("hide-lineup", t.showLineup === false);
   };
 
