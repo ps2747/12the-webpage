@@ -111,6 +111,8 @@
 }
 .event-card:hover { transform: translateY(-6px); }
 .event-card .img { position: relative; aspect-ratio: 4/5; border-radius: 4px; overflow: hidden; margin-bottom: 20px; }
+.event-card .img > img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; transition: transform 0.8s; }
+.event-card:hover .img > img { transform: scale(1.05); }
 .event-card .img .ph { position: absolute; inset: 0; transition: transform 0.8s; }
 .event-card:hover .img .ph { transform: scale(1.05); }
 .event-card .tag-row { position: absolute; top: 16px; left: 16px; display: flex; gap: 6px; z-index: 2; }
@@ -194,13 +196,13 @@
 <div class="reveal">
 <span class="eyebrow">Events · 2026 Season · Spring &amp; Summer</span>
 <h1>這一次，<br/>她為你<em>南下</em>。</h1>
-<p class="sub">從攝影會、見面會，到專屬晚宴。12the 2026 春夏季精選 12 場，每一場都是為南台灣粉絲量身訂製的私密相遇。</p>
+<p class="sub">從互動見面會、女神晚宴，到專屬攝影會。Himari 兩日高雄限定專場現正開放報名。</p>
 </div>
 <div class="page-hero-meta reveal reveal-delay-1">
-<div class="row"><span>Total Events</span><strong>12 場</strong></div>
-<div class="row"><span>Date Range</span><strong>05.17 — 08.30</strong></div>
-<div class="row"><span>Locations</span><strong>高雄・台南・墾丁</strong></div>
-<div class="row"><span>Remaining</span><strong style="color: var(--coral);">8 可報名</strong></div>
+<div class="row"><span>Featured Event</span><strong>Himari</strong></div>
+<div class="row"><span>Date</span><strong>09.12 — 09.13</strong></div>
+<div class="row"><span>Location</span><strong>高雄</strong></div>
+<div class="row"><span>Status</span><strong style="color: var(--coral);">開放報名</strong></div>
 </div>
 </div>
 </div>
@@ -213,7 +215,7 @@
 <div class="cal-month"><div class="m-name">Jun</div><div class="m-jp">六月 · 水無月</div><div class="dots"><span class="teal"></span><span class="coral"></span></div></div>
 <div class="cal-month"><div class="m-name">Jul</div><div class="m-jp">七月 · 文月</div><div class="dots"><span class="coral"></span><span class="yellow"></span></div></div>
 <div class="cal-month"><div class="m-name">Aug</div><div class="m-jp">八月 · 葉月</div><div class="dots"><span class="teal"></span><span class="coral"></span></div></div>
-<div class="cal-month"><div class="m-name">Sep</div><div class="m-jp">九月 · 長月</div><div class="dots"></div></div>
+<div class="cal-month"><div class="m-name">Sep</div><div class="m-jp">九月 · 長月</div><div class="dots"><span class="coral"></span><span class="yellow"></span><span class="teal"></span></div></div>
 <div class="cal-month"><div class="m-name">Oct</div><div class="m-jp">十月 · 神無月</div><div class="dots"></div></div>
 </div>
 </div>
@@ -236,6 +238,17 @@
 <section class="events-page section" style="padding-top: 48px;">
 <div class="container">
 <div class="events-grid" id="events-grid">
+<a class="event-card reveal" data-type="photo meetup dinner" href="events/himari-2026.html">
+<div class="img">
+<img src="assets/events/himari-2026/hero.jpg" alt="Himari 高雄限定專場主視覺" loading="eager"/>
+<div class="tag-row"><span class="tag tag-filled-coral">兩日限定</span><span class="tag tag-filled-yellow">SPECIAL</span></div>
+<div class="status-corner">OPEN</div>
+<div class="date-corner"><div class="d">09.12</div><span class="m">SAT — SUN · 2026</span></div>
+</div>
+<h3>Himari — Beachside Special 高雄專場</h3>
+<div class="jp-line">ひまり · カオシュン スペシャルイベント</div>
+<div class="meta-row"><span>高雄限定</span><span>09.12 — 09.13</span><span class="price">FREE 起</span></div>
+</a>
 <a class="event-card reveal" data-type="photo" href="event-detail.html">
 <div class="img">
 <div class="ph ph-rose ph-light"></div>
@@ -375,7 +388,8 @@ document.querySelectorAll('#type-filter .filter-btn').forEach(b => {
     b.classList.add('active');
     const t = b.dataset.type;
     document.querySelectorAll('#events-grid .event-card').forEach(c => {
-      c.style.display = (t === 'all' || c.dataset.type === t) ? '' : 'none';
+      const types = (c.dataset.type || '').split(/\s+/);
+      c.style.display = (t === 'all' || types.includes(t)) ? '' : 'none';
     });
   });
 });

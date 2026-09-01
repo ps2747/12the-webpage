@@ -1,0 +1,1159 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#dff3fb" />
+  <meta name="description" content="12the｜Himari 2026/09/12–13 高雄專場活動頁。" />
+  <title>Himari 高雄專場｜12the</title>
+  <link rel="canonical" href="https://www.12the.com/events/himari-2026.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="12the" />
+  <meta property="og:title" content="Himari 高雄專場｜12the" />
+  <meta property="og:description" content="Himari 2026/09/12–13 高雄限定互動見面會、女神晚宴與專屬攝影會。" />
+  <meta property="og:url" content="https://www.12the.com/events/himari-2026.html" />
+  <meta property="og:image" content="https://www.12the.com/assets/events/himari-2026/hero.jpg" />
+  <link rel="icon" href="../assets/favicon/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&amp;family=Noto+Sans+JP:wght@300;400;500;600;700&amp;family=Noto+Sans+TC:wght@300;400;500;600;700&amp;family=Shippori+Mincho:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/shared.css" />
+  <style>
+    :root {
+      --sky-50:#f4fbff; --sky-100:#eaf7fd; --sky-200:#d9eff9; --sky-300:#bee1f0; --sky-400:#95cae0; --sky-500:#68add0; --sky-600:#4f8fb1;
+      --sun-100:#fff7d6; --sun-200:#f8efb1; --sun-300:#f0db79; --sun-400:#e6c552;
+      --sand:#fbf6eb; --shell:#fffdf9; --ink:#34444b; --muted:#72818a; --coral:#e57f73;
+      --white:#fff; --line:rgba(95,144,169,.16); --shadow:0 20px 50px rgba(80,136,165,.14);
+      --r:24px; --rl:34px; --max:1180px;
+    }
+    * { box-sizing:border-box }
+    html { scroll-behavior:smooth }
+    body {
+      margin:0; color:var(--ink);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+      background:
+        radial-gradient(circle at 8% 6%, rgba(240,219,121,.18), transparent 16%),
+        radial-gradient(circle at 90% 4%, rgba(149,202,224,.23), transparent 18%),
+        linear-gradient(180deg, #fffefc 0%, #ffffff 40%, #f9fdff 100%);
+      line-height:1.72;
+    }
+    a { color:inherit; text-decoration:none }
+    img { display:block; max-width:100% }
+    .wrap { width:min(var(--max), calc(100% - 34px)); margin:auto }
+    h1,h2,h3,h4,p { margin-top:0 }
+    .poster-title, h2 {
+      font-family:Georgia,"Times New Roman","Noto Serif TC","PMingLiU",serif;
+      letter-spacing:-.035em;
+    }
+    .poster-title { font-size:clamp(3.3rem,9vw,6.6rem); line-height:.9; margin:0 0 16px }
+    h2 { font-size:clamp(2rem,4vw,3.35rem); line-height:1.08; margin:0 0 16px }
+    h3 { font-size:1.16rem; margin-bottom:8px }
+    .muted { color:var(--muted) }
+    .eyebrow {
+      display:inline-flex; align-items:center; gap:.55rem;
+      font-size:.76rem; font-weight:900; text-transform:uppercase; letter-spacing:.16em; color:var(--sky-600);
+    }
+    .eyebrow:before {
+      content:""; width:28px; height:2px; border-radius:999px;
+      background:linear-gradient(90deg,var(--sky-500),var(--sun-300));
+    }
+    .btn {
+      display:inline-flex; align-items:center; justify-content:center; gap:.5rem;
+      padding:14px 20px; border-radius:999px; font-weight:900; border:1px solid transparent; transition:.2s ease;
+    }
+    .btn:hover { transform:translateY(-2px) }
+    .btn-primary { background:linear-gradient(135deg,var(--sky-500),var(--sky-400)); color:#fff; box-shadow:0 14px 28px rgba(104,173,208,.30) }
+    .btn-secondary { background:linear-gradient(135deg,var(--sun-300),var(--sun-200)); color:#6f5d29; box-shadow:0 14px 28px rgba(240,219,121,.28) }
+    .btn-white { background:rgba(255,255,255,.9); color:var(--sky-600); border-color:rgba(255,255,255,.95) }
+    .chip {
+      display:inline-flex; align-items:center; gap:.45rem; padding:8px 12px; border-radius:999px;
+      background:rgba(255,255,255,.90); border:1px solid rgba(255,255,255,.96); font-size:.88rem; font-weight:800; color:var(--sky-600)
+    }
+
+    .site-nav {
+      --cream:#fff; --coral:#e06965; --ink:#2a2620; --ink-2:#4a443b; --ink-3:#7a7267;
+      --line:#d8d2c2; --mono:"JetBrains Mono",ui-monospace,monospace;
+      --serif:"Noto Serif JP","Shippori Mincho","Noto Serif TC",serif;
+      --maxw:1320px; --gutter:clamp(20px,4vw,48px);
+    }
+    .event-subnav {
+      position:sticky; top:81px; z-index:45; border-bottom:1px solid var(--line);
+      background:rgba(255,255,255,.92); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+    }
+    .event-subnav .wrap { display:flex; align-items:center; justify-content:center; gap:22px; min-height:48px; overflow-x:auto; }
+    .event-subnav a { flex:0 0 auto; color:var(--sky-600); font-size:.82rem; font-weight:800; }
+    .event-subnav .register { color:#fff; background:var(--sky-500); border-radius:999px; padding:7px 14px; }
+    #highlights, #schedule, #tickets, #faq { scroll-margin-top:145px; }
+
+    .hero {
+      position:relative; overflow:hidden; padding:106px 0 0;
+      background:linear-gradient(180deg, rgba(217,239,249,.95) 0%, rgba(255,255,255,.92) 76%);
+    }
+    .hero-grid { display:grid; grid-template-columns:.9fr 1.1fr; gap:34px; align-items:center; padding:12px 0 20px }
+    .hero-copy p { font-size:1.08rem; color:#61747d; max-width:560px }
+    .meta, .hero-actions { display:flex; flex-wrap:wrap; gap:12px }
+    .meta { margin:18px 0 0 }
+    .hero-actions { margin-top:26px }
+
+    .hero-visual { position:relative; min-height:720px }
+    .sun-ball {
+      position:absolute; top:76px; right:28px; width:112px; aspect-ratio:1; border-radius:50%; z-index:1;
+      background:radial-gradient(circle at 34% 34%, #fff8cf 0%, var(--sun-300) 72%, #e3b545 100%);
+      box-shadow:0 18px 40px rgba(240,219,121,.34);
+    }
+    .poster-note {
+      position:absolute; left:0; top:36px; width:min(420px,68%); z-index:5;
+      background:rgba(255,255,255,.92); border:1px solid rgba(255,255,255,.96);
+      border-radius:30px; padding:24px 26px; box-shadow:var(--shadow);
+    }
+    .poster-note strong { display:block; color:var(--coral); font-size:1rem; margin-bottom:8px }
+
+    .hero-card {
+      position:absolute; right:0; top:20px; width:min(530px,86%);
+      background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(255,255,255,.78));
+      border-radius:34px; padding:14px; box-shadow:0 24px 70px rgba(74,126,151,.18); transform:rotate(-1.15deg); z-index:2;
+    }
+    .hero-card .frame { position:relative; overflow:hidden; border-radius:24px; aspect-ratio:4/5 }
+    .hero-card img { width:100%; height:100%; object-fit:cover; object-position:57% 40% }
+    .hero-card .caption {
+      position:absolute; left:18px; right:18px; bottom:14px; z-index:2; color:#fff; font-weight:900; text-shadow:0 3px 10px rgba(0,0,0,.25)
+    }
+    .hero-card .caption small { display:block; color:rgba(255,255,255,.88); font-weight:800 }
+    .mini-card {
+      position:absolute; left:54px; bottom:22px; width:250px; z-index:4; transform:rotate(3deg);
+      background:#fff; border-radius:28px; padding:12px 12px 18px; box-shadow:var(--shadow);
+    }
+    .mini-card img { width:100%; border-radius:18px; aspect-ratio:1/1; object-fit:cover }
+    .mini-card .cap { margin-top:10px; font-weight:900; color:var(--sky-600) }
+    .logo-badge { position:absolute; right:0; bottom:-8px; width:170px; z-index:5 }
+
+    .icon-float {
+      position:absolute; z-index:4; background:rgba(255,255,255,.94); border:1px solid rgba(255,255,255,.96);
+      box-shadow:var(--shadow); border-radius:999px; padding:10px 14px; display:flex; align-items:center; gap:8px;
+      font-size:.86rem; font-weight:900; color:var(--sky-600);
+    }
+    .icon-float img { width:30px; height:30px; object-fit:contain }
+    .f1 { right:82px; top:182px }
+    .f2 { left:14px; bottom:196px }
+    .f3 { right:18px; bottom:178px }
+    .f4 { right:126px; bottom:90px }
+    .hero-wave { height:118px; background:url("data:image/svg+xml;utf8,%0A%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201440%20170%27%20preserveAspectRatio%3D%27none%27%3E%0A%3Cpath%20fill%3D%27%23ffffff%27%20d%3D%27M0%2C96L40%2C101.3C80%2C107%2C160%2C117%2C240%2C112C320%2C107%2C400%2C85%2C480%2C80C560%2C75%2C640%2C85%2C720%2C101.3C800%2C117%2C880%2C139%2C960%2C138.7C1040%2C139%2C1120%2C117%2C1200%2C106.7C1280%2C96%2C1360%2C96%2C1400%2C96L1440%2C96L1440%2C171L1400%2C171C1360%2C171%2C1280%2C171%2C1200%2C171C1120%2C171%2C1040%2C171%2C960%2C171C880%2C171%2C800%2C171%2C720%2C171C640%2C171%2C560%2C171%2C480%2C171C400%2C171%2C320%2C171%2C240%2C171C160%2C171%2C80%2C171%2C40%2C171L0%2C171Z%27/%3E%0A%3C/svg%3E%0A") center bottom / 100% 100% no-repeat }
+
+    section { padding:92px 0 }
+    .section-head {
+      display:grid; grid-template-columns:.78fr 1.22fr; gap:34px; align-items:end; margin-bottom:40px;
+    }
+    .section-head p { margin-bottom:0 }
+
+
+    .hero-copy {
+      position:relative;
+      padding:28px 0 54px;
+    }
+    .hero-copy:before {
+      content:""; position:absolute; left:-28px; top:8px; width:78px; height:6px;
+      border-radius:999px; background:linear-gradient(90deg,var(--sky-500),var(--sun-300));
+      opacity:.9;
+    }
+    .hero-copy .poster-title {
+      max-width:620px;
+      text-shadow:0 1px 0 rgba(255,255,255,.6);
+    }
+    .hero-copy p {
+      font-size:1.1rem; line-height:1.9; max-width:610px;
+    }
+    .hero-card {
+      border:1px solid rgba(255,255,255,.96);
+    }
+    .hero-card:before {
+      content:""; position:absolute; inset:24px auto auto -18px;
+      width:9px; height:150px; border-radius:999px;
+      background:linear-gradient(180deg,var(--sun-300),var(--sky-400));
+      z-index:3;
+    }
+    .hero-stamp {
+      position:absolute; left:10px; top:154px; z-index:6;
+      width:108px; height:108px; border-radius:50%;
+      border:1px solid rgba(255,255,255,.94);
+      background:rgba(255,255,255,.90); backdrop-filter:blur(8px);
+      box-shadow:var(--shadow); display:grid; place-items:center; text-align:center;
+      font-size:.72rem; font-weight:900; letter-spacing:.08em; color:var(--sky-600);
+      transform:rotate(-7deg);
+    }
+    .hero-stamp span { display:block; font-size:1.05rem; color:var(--coral); letter-spacing:.02em; }
+
+    .section-kicker {
+      display:flex; align-items:center; gap:10px; color:var(--sky-600); font-size:.8rem;
+      font-weight:900; letter-spacing:.14em; text-transform:uppercase; margin-bottom:12px;
+    }
+    .section-kicker:after {
+      content:""; width:58px; height:1px; background:linear-gradient(90deg,var(--sky-400),transparent);
+    }
+
+    .countdown-grid {
+      display:grid; grid-template-columns:1.15fr .85fr; gap:22px;
+    }
+    .count-card, .seat-card, .info-card, .polaroid, .faq-item, .ticket-card, .offer-card, .addon, .rule-card, .cta-panel {
+      box-shadow:var(--shadow);
+    }
+    .count-card {
+      border-radius:32px; background:linear-gradient(135deg,var(--sky-100),#fff); border:1px solid var(--line); padding:28px;
+      position:relative; overflow:hidden;
+    }
+    .count-card:after {
+      content:""; position:absolute; inset:auto -30px -36px auto; width:170px; height:170px; border-radius:50%; background:rgba(240,219,121,.16);
+    }
+    .count-top { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:16px }
+    .count-top img { width:56px; height:56px; object-fit:contain }
+    .timer {
+      display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:20px;
+    }
+    .timebox {
+      background:#fff; border:1px solid var(--line); border-radius:22px; padding:18px 10px; text-align:center;
+    }
+    .timebox strong { display:block; font-size:2rem; line-height:1; color:var(--sky-600); margin-bottom:6px }
+    .timebox span { font-size:.82rem; font-weight:800; color:var(--muted); text-transform:uppercase; letter-spacing:.08em }
+
+    .seats {
+      display:grid; gap:16px;
+    }
+    .seat-card {
+      background:linear-gradient(180deg,#fff,#fbfeff); border:1px solid var(--line); border-radius:26px; padding:22px;
+    }
+    .seat-card .head { display:flex; align-items:center; gap:12px; margin-bottom:10px }
+    .seat-card .head img { width:34px; height:34px; object-fit:contain }
+    .seat-num { font-size:2rem; font-weight:900; color:var(--coral); line-height:1 }
+    .seat-note { color:var(--muted); font-size:.9rem }
+    .tagline { display:inline-flex; padding:7px 11px; border-radius:999px; background:var(--sun-100); color:#9a7a26; font-size:.78rem; font-weight:900; margin-top:12px }
+
+    .icon-band { padding-top:0 }
+    .band {
+      display:grid; grid-template-columns:repeat(8,1fr); gap:14px;
+    }
+    .band-item {
+      background:#fff; border:1px solid var(--line); border-radius:22px; padding:14px 10px; text-align:center; box-shadow:var(--shadow);
+    }
+    .band-item img { width:46px; height:46px; margin:0 auto 8px; object-fit:contain }
+    .band-item span { font-weight:800; color:var(--sky-600); font-size:.84rem }
+
+    .card-grid-4 { display:grid; grid-template-columns:repeat(4,1fr); gap:16px }
+    .info-card {
+      background:linear-gradient(180deg,#fff,#fbfeff); border:1px solid var(--line); border-radius:24px; padding:24px; position:relative; overflow:hidden;
+    }
+    .info-card:after {
+      content:""; position:absolute; right:-16px; bottom:-18px; width:90px; height:90px; border-radius:50%; background:rgba(240,219,121,.16);
+    }
+    .info-card .icon-wrap { width:48px; height:48px; border-radius:16px; display:grid; place-items:center; background:linear-gradient(135deg,rgba(104,173,208,.14),rgba(240,219,121,.18)); margin-bottom:14px }
+    .info-card .icon-wrap img { width:28px; height:28px; object-fit:contain }
+    .info-card strong { display:block; font-size:1.72rem; line-height:1; color:var(--sky-600); margin-bottom:8px }
+    .info-card p { margin:0; color:var(--muted); font-size:.93rem }
+
+    .photo-story { background:linear-gradient(180deg, #fff 0%, #f6fcff 100%) }
+    .gallery-layout { display:grid; grid-template-columns:1.02fr .98fr; gap:22px }
+    .gallery-main { overflow:hidden; border-radius:32px; min-height:700px; position:relative; border:1px solid var(--line) }
+    .gallery-main img { width:100%; height:100%; object-fit:cover }
+    .gallery-main:after { content:""; position:absolute; inset:auto 0 0 0; height:38%; background:linear-gradient(180deg,transparent 0%, rgba(95,144,169,.16) 100%) }
+    .gallery-side { display:grid; gap:20px }
+    .polaroid {
+      background:#fff; border:1px solid var(--line); border-radius:28px; padding:14px 14px 18px;
+    }
+    .polaroid:nth-child(1) { transform:rotate(-1.8deg) }
+    .polaroid:nth-child(2) { transform:rotate(2deg) }
+    .polaroid img { width:100%; height:280px; object-fit:cover; border-radius:18px }
+    .polaroid .caption { margin-top:10px; font-weight:900; color:var(--sky-600) }
+    .story-box {
+      margin-top:20px; border-radius:24px; padding:24px; border:1px solid rgba(240,219,121,.38);
+      background:linear-gradient(135deg,#fffef5,#fff);
+    }
+
+    .schedule-wrap { background:linear-gradient(180deg,#fbfeff 0%, #ffffff 100%) }
+    .day-grid { display:grid; grid-template-columns:1fr 1fr; gap:22px }
+    .day-card { background:#fff; border:1px solid var(--line); border-radius:32px; overflow:hidden; box-shadow:var(--shadow) }
+    .day-head { padding:24px; color:#fff; position:relative }
+    .day-head .label { display:inline-flex; padding:7px 12px; border-radius:999px; background:rgba(255,255,255,.22); font-size:.84rem; font-weight:900; margin-bottom:10px }
+    .day1 .day-head { background:linear-gradient(135deg,var(--sky-600),var(--sky-400)) }
+    .day2 .day-head { background:linear-gradient(135deg,#6fb9d8,#a8d8eb) }
+    .day-head .decor { position:absolute; right:18px; bottom:12px; width:58px; height:58px; opacity:.95; object-fit:contain }
+    .schedule-list { padding:18px }
+    .schedule-item {
+      display:grid; grid-template-columns:78px 118px 1fr auto; gap:14px; align-items:start;
+      padding:16px; border-radius:18px; margin-bottom:10px; background:#fbfeff; border:1px solid rgba(95,144,169,.12);
+    }
+    .session { font-weight:900; color:var(--sky-600) }
+    .time { font-weight:900 }
+    .type { font-weight:800 }
+    .price { font-weight:900; color:#a8872c; white-space:nowrap }
+    .note { font-size:.84rem; color:var(--muted); margin-top:4px }
+    .venue { padding:18px 22px 24px; border-top:1px dashed rgba(95,144,169,.18); display:flex; flex-direction:column; gap:8px }
+    .map-link { font-weight:900; color:var(--sky-600) }
+
+    .pricing-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:18px }
+    .ticket-card {
+      background:linear-gradient(180deg,#fff,#fbfeff); border:1px solid var(--line); border-radius:28px; padding:24px; position:relative; overflow:hidden;
+    }
+    .ticket-card:after {
+      content:""; position:absolute; right:-18px; top:-18px; width:74px; height:74px; border-radius:50%; background:rgba(240,219,121,.13);
+    }
+    .ticket-tag { display:inline-flex; padding:7px 11px; border-radius:999px; background:#eef8fc; color:var(--sky-600); font-size:.78rem; font-weight:900; margin-bottom:14px }
+    .ticket-card.vip .ticket-tag, .ticket-card.dinner .ticket-tag { background:var(--sun-100); color:#9a7a26 }
+    .ticket-price { font-size:2.2rem; line-height:1; font-weight:900; color:var(--sky-600); margin:8px 0 14px }
+    .ticket-card.vip .ticket-price, .ticket-card.dinner .ticket-price { color:#a7852d }
+    .list { list-style:none; margin:0; padding:0; display:grid; gap:9px }
+    .list li { padding-left:24px; position:relative }
+    .list li:before { content:"✓"; position:absolute; left:0; top:0; font-weight:900; color:var(--sky-600) }
+
+    .offer-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:24px }
+    .offer-card {
+      background:linear-gradient(135deg,#fffef4,#fff8de); border:1px solid rgba(240,219,121,.42); border-radius:24px; padding:24px;
+    }
+    .offer-card strong { display:block; font-size:1.2rem; color:#9c7c28; margin-bottom:8px }
+
+    .addon-shell { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:24px }
+    .addon {
+      background:linear-gradient(180deg,#fff,#fbfeff); border:1px solid var(--line); border-radius:24px; padding:24px;
+    }
+    .addon .mini { font-size:.82rem; font-weight:900; color:var(--sky-600); margin-bottom:8px }
+    .addon .money { font-size:1.8rem; font-weight:900; color:var(--coral); margin-bottom:6px }
+
+    .experience-grid {
+      display:grid; grid-template-columns:1fr 1fr; gap:20px; align-items:start;
+    }
+    .experience-card {
+      display:flex; flex-direction:column; overflow:hidden;
+      border-radius:32px; border:1px solid var(--line); box-shadow:var(--shadow);
+      background:linear-gradient(180deg,#ffffff 0%, #f6fbfe 100%);
+    }
+    .experience-photo {
+      background:linear-gradient(180deg,#eef7fb 0%, #f8fcff 100%);
+      padding:22px 22px 0;
+    }
+    .experience-photo img {
+      display:block; width:100%; height:440px; object-fit:contain; object-position:center top;
+      background:#eef7fb; border-radius:24px 24px 0 0;
+    }
+    .experience-copy {
+      position:relative; left:auto; right:auto; bottom:auto;
+      padding:24px 26px 28px; color:var(--ink);
+    }
+    .experience-copy .label {
+      display:inline-flex; padding:7px 12px; border-radius:999px;
+      background:rgba(104,173,208,.12); border:1px solid rgba(104,173,208,.25);
+      color:var(--sky-600); font-size:.78rem; font-weight:900; margin-bottom:12px;
+    }
+    .experience-copy h3 {
+      font-family:Georgia,"Times New Roman","Noto Serif TC","PMingLiU",serif;
+      font-size:clamp(1.8rem,3vw,2.6rem); line-height:1.1; margin-bottom:12px;
+      color:var(--ink);
+    }
+    .experience-copy p { margin:0; color:var(--muted) }
+
+    .extra-photo-grid {
+      display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:22px;
+    }
+    .extra-photo {
+      position:relative; overflow:hidden; border-radius:24px; min-height:290px;
+      border:1px solid var(--line); box-shadow:var(--shadow); background:#fff;
+    }
+    .extra-photo img { width:100%; height:100%; object-fit:cover }
+    .extra-photo.tall { grid-row:span 2; min-height:596px }
+    .extra-photo.wide { grid-column:span 2 }
+
+
+
+    .editorial-gallery {
+      display:grid; gap:28px; margin-top:30px;
+    }
+    .editorial-row {
+      display:grid; grid-template-columns:.92fr 1.08fr; gap:22px; align-items:stretch;
+    }
+    .editorial-row.reverse {
+      grid-template-columns:1.08fr .92fr;
+    }
+    .editorial-row.reverse .editorial-photo { order:2; }
+    .editorial-row.reverse .editorial-copy { order:1; }
+    .editorial-photo {
+      overflow:hidden; border-radius:30px; min-height:430px;
+      border:1px solid var(--line); box-shadow:var(--shadow); background:#eef7fb;
+    }
+    .editorial-photo img {
+      width:100%; height:100%; object-fit:cover; object-position:center;
+    }
+    .editorial-copy {
+      border-radius:30px; padding:34px; display:flex; flex-direction:column; justify-content:center;
+      border:1px solid var(--line); box-shadow:var(--shadow);
+      background:linear-gradient(180deg,#fff,#fbfeff);
+    }
+    .editorial-copy.sunny {
+      background:linear-gradient(180deg,#fffdf4,#ffffff);
+    }
+    .editorial-copy.dark {
+      background:linear-gradient(180deg,#213947,#2d4958);
+      color:#fff;
+    }
+    .editorial-copy.dark .muted { color:rgba(255,255,255,.78); }
+    .editorial-copy .mini-label {
+      display:inline-flex; width:max-content; padding:7px 11px; border-radius:999px;
+      background:rgba(104,173,208,.12); color:var(--sky-600);
+      font-size:.76rem; font-weight:900; margin-bottom:12px; letter-spacing:.1em;
+    }
+    .editorial-copy.dark .mini-label {
+      background:rgba(255,255,255,.12); color:#fff;
+    }
+    .editorial-copy h3 {
+      font-family:Georgia,"Times New Roman","Noto Serif TC","PMingLiU",serif;
+      font-size:clamp(2rem,3vw,2.8rem); line-height:1.12; margin-bottom:12px;
+    }
+    .editorial-copy p { margin:0; color:var(--muted); }
+
+    .faq-shell {
+      border-radius:34px;
+      padding:10px 28px;
+      background:linear-gradient(180deg,#f7fcff 0%, #ffffff 100%);
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .faq-grid {
+      display:block;
+    }
+    .faq-item {
+      margin:0;
+      border:0 !important;
+      border-bottom:1px solid rgba(95,144,169,.16) !important;
+      border-radius:0 !important;
+      background:transparent !important;
+      box-shadow:none !important;
+      overflow:visible !important;
+    }
+    .faq-item:last-child {
+      border-bottom:0 !important;
+    }
+    .faq-q {
+      width:100%;
+      padding:22px 0 !important;
+      display:grid !important;
+      grid-template-columns:minmax(0,1fr) 32px;
+      gap:16px;
+      align-items:center;
+      cursor:pointer;
+      font-weight:900;
+      color:var(--sky-600);
+      line-height:1.5;
+    }
+    .faq-q .left {
+      min-width:0;
+      display:flex;
+      align-items:flex-start;
+      gap:12px;
+    }
+    .faq-q .left span:last-child {
+      display:block;
+      min-width:0;
+      overflow-wrap:anywhere;
+      word-break:normal;
+    }
+    .faq-q img {
+      width:28px;
+      height:28px;
+      object-fit:contain;
+      flex:0 0 auto;
+      margin-top:1px;
+    }
+    .faq-q > span:last-child {
+      width:30px;
+      height:30px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:#fff;
+      border:1px solid var(--line);
+      color:var(--sky-600);
+      flex:0 0 auto;
+      justify-self:end;
+      line-height:1;
+    }
+    .faq-a {
+      display:none;
+      padding:0 44px 22px 40px !important;
+      color:var(--muted);
+      line-height:1.9;
+      max-width:none;
+    }
+    .faq-item.open .faq-a {
+      display:block;
+    }
+.rule-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:28px }
+    .rule-card {
+      background:#fff; border:1px solid var(--line); border-radius:22px; padding:22px;
+    }
+    .rule-card strong { display:block; margin-bottom:6px; color:var(--sky-600) }
+
+    .cta-panel {
+      display:grid; grid-template-columns:1fr 1fr; overflow:hidden; border-radius:36px; border:1px solid var(--line); background:#fff;
+    }
+    .cta-copy {
+      padding:42px; background:linear-gradient(180deg,#fffdf4 0%, #ffffff 100%);
+    }
+    .cta-copy .link-row { display:flex; flex-wrap:wrap; gap:10px; margin-top:18px }
+    .social-pill { padding:10px 13px; border-radius:999px; background:#f3fbff; border:1px solid rgba(95,144,169,.18); font-weight:800; font-size:.9rem; color:var(--sky-600) }
+    .cta-photo img { width:100%; height:100%; object-fit:cover; object-position:center }
+
+    footer { padding:34px 0 110px; color:var(--muted); font-size:.9rem }
+    .footer-inner { display:flex; justify-content:space-between; flex-wrap:wrap; align-items:center; gap:18px }
+    .footer-inner img { height:42px; width:auto }
+
+    .floating-cta {
+      display:none; position:fixed; left:14px; right:14px; bottom:14px; z-index:99;
+      background:linear-gradient(135deg,var(--sky-500),var(--sky-400)); color:#fff;
+      padding:15px 18px; text-align:center; border-radius:18px; font-weight:900; box-shadow:0 16px 42px rgba(104,173,208,.36);
+    }
+
+    @media (max-width:1100px) {
+      .pricing-grid { grid-template-columns:repeat(3,1fr) }
+      .band { grid-template-columns:repeat(4,1fr) }
+    }
+    @media (max-width:980px) {
+      .hero-grid, .gallery-layout, .cta-panel, .countdown-grid { grid-template-columns:1fr }
+      .section-head { grid-template-columns:1fr; gap:14px }
+      .card-grid-4, .day-grid, .offer-grid, .addon-shell, .rule-grid { grid-template-columns:1fr 1fr }
+      .pricing-grid { grid-template-columns:repeat(2,1fr) }
+      .hero-visual { min-height:690px }
+      .editorial-row, .editorial-row.reverse { grid-template-columns:1fr }
+      .editorial-row.reverse .editorial-photo, .editorial-row.reverse .editorial-copy { order:initial }
+      .editorial-photo { min-height:380px }
+      .experience-grid { grid-template-columns:1fr }
+      .experience-photo img { height:380px }
+    }
+    @media (max-width:820px) {
+      .event-subnav { top:65px; }
+    }
+    @media (max-width:720px) {
+      .wrap { width:min(calc(100% - 24px), var(--max)) }
+      section { padding:72px 0 }
+      .poster-title { font-size:clamp(3rem,15vw,5.2rem) }
+      .hero { padding-top:92px }
+      .hero-visual { min-height:570px }
+      .sun-ball { top:10px; right:16px; width:88px }
+      .hero-stamp { left:8px; top:116px; width:92px; height:92px; font-size:.64rem }
+      .hero-card { position:relative; right:auto; width:100%; top:0; transform:none; padding:10px }
+      .mini-card { left:10px; bottom:10px; width:160px; padding:8px }
+      .logo-badge { width:112px; right:6px; bottom:-4px }
+      .icon-float { font-size:.8rem; padding:8px 11px }
+      .icon-float img { width:24px; height:24px }
+      .f1 { right:10px; top:86px }
+      .f2 { left:8px; bottom:136px }
+      .f3 { right:10px; bottom:138px }
+      .f4 { display:none }
+      .band, .card-grid-4, .day-grid, .offer-grid, .addon-shell, .rule-grid, .pricing-grid { grid-template-columns:1fr }
+      .timer { grid-template-columns:repeat(2,1fr) }
+      .gallery-main { min-height:480px }
+      .polaroid img { height:240px }
+      .schedule-item { grid-template-columns:1fr 1fr; gap:6px 10px }
+      .schedule-item .type, .schedule-item .price { grid-column:1 / -1 }
+      .faq-shell { padding:6px 18px }
+      .faq-q { grid-template-columns:minmax(0,1fr) 30px; padding:18px 0 !important; font-size:.96rem }
+      .faq-a { padding:0 0 20px 40px !important; font-size:.94rem }
+      .cta-copy { padding:30px 24px }
+      .editorial-copy { padding:26px 24px }
+      .editorial-photo { min-height:340px }
+      .experience-photo { padding:16px 16px 0 }
+      .experience-photo img { height:320px }
+      .experience-copy { padding:20px 20px 22px }
+      .floating-cta { display:block }
+    }
+  </style>
+</head>
+<body>
+  <nav class="site-nav">
+<div class="nav-inner">
+<a aria-label="12the" class="nav-logo" href="../index.html"><img alt="12the" src="../assets/brand/12the-logo.png"/></a>
+<div class="nav-links">
+<a href="../index.html">Home</a>
+<a class="active" data-route="events" href="../events.html">活動 / Events</a>
+<a data-route="lineup" href="../lineup.html">女神 / Lineup</a>
+<a href="../archive.html">回顧 / Archive</a><a href="../news/index.html">新聞 / News</a>
+<a href="../about.html">關於 / About</a>
+<div aria-label="Language" class="lang-switch lang-switch-mobile"><a aria-current="true" class="lang-active" lang="zh-Hant">中</a><span class="lang-sep">·</span><a href="../jp/events.html" hreflang="ja" lang="ja" title="日本語">日</a></div></div>
+<div aria-label="Language" class="lang-switch lang-switch-desktop"><a aria-current="true" class="lang-active" lang="zh-Hant">中</a><span class="lang-sep">·</span><a href="../jp/events.html" hreflang="ja" lang="ja" title="日本語">日</a></div><a class="nav-cta" href="https://forms.gle/MCSg6jZnZRcUrSkF6" target="_blank" rel="noopener">立即報名 <span class="arrow">→</span></a>
+<a aria-label="官方 LINE @12the_official" class="nav-ig nav-line nav-line-official" href="https://lin.ee/wfoWMbE" rel="noopener" target="_blank" title="官方 LINE"><svg fill="currentColor" viewbox="0 0 24 24"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.508.43-.595.06-.024.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"></path></svg></a>
+<a aria-label="LINE 社群 12the Community" class="nav-ig nav-line nav-line-community" href="https://line.me/ti/g2/FZTVg_EzivjbGwyQ9z1bmNeR5AvEkZEpKSgigg?utm_source=invitation&amp;utm_medium=link_copy&amp;utm_campaign=default" rel="noopener" target="_blank" title="LINE 社群"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z"></path><circle cx="8" cy="11" fill="currentColor" r="1"></circle><circle cx="12" cy="11" fill="currentColor" r="1"></circle><circle cx="16" cy="11" fill="currentColor" r="1"></circle></svg></a>
+<a aria-label="Instagram @12the_official" class="nav-ig nav-instagram" href="https://www.instagram.com/12the_official/" rel="noopener" target="_blank"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><rect height="18" rx="5" width="18" x="3" y="3"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" fill="currentColor" r="1"></circle></svg></a>
+<div class="mobile-menu-btn"><span></span><span></span><span></span></div>
+</div>
+</nav>
+<div class="event-subnav" aria-label="活動頁面導覽">
+  <div class="wrap">
+    <a href="#highlights">活動亮點</a>
+    <a href="#schedule">場次資訊</a>
+    <a href="#tickets">票價優惠</a>
+    <a href="#faq">FAQ</a>
+    <a class="register" href="https://forms.gle/MCSg6jZnZRcUrSkF6" target="_blank" rel="noopener">立即報名</a>
+  </div>
+</div>
+
+  <main id="top">
+    <header class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">12the Special Event</span>
+          <h1 class="poster-title">HIMARI<br>BEACHSIDE<br>SPECIAL</h1>
+          <p>陽光落在肌膚上，視線停在她身上。9/12–13 兩天限定，從第一次靠近，到更讓人心跳加速的距離感，把 Himari 最撩人的每一面留在高雄。</p>
+          <div class="meta">
+            <span class="chip">2026.09.12（六）— 09.13（日）</span>
+            <span class="chip">高雄限定</span>
+            <span class="chip">18+ 活動</span>
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://forms.gle/MCSg6jZnZRcUrSkF6" target="_blank" rel="noopener">填寫報名表 →</a>
+            <a class="btn btn-secondary" href="https://lin.ee/vNrTaTE" target="_blank" rel="noopener">加入官方 LINE</a>
+            <a class="btn btn-white" href="#tickets">查看票價</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="sun-ball" aria-hidden="true"></div>
+          <div class="hero-stamp"><div><span>HIMARI</span>KAOHSIUNG<br>09.12–13</div></div>
+
+          <div class="hero-card">
+            <div class="frame">
+              <img src="../assets/events/himari-2026/hero.jpg" alt="Himari 主視覺">
+              <div class="caption">
+                <small>Kaohsiung Special Event</small>
+                只屬於這兩天的心動時光
+              </div>
+            </div>
+          </div>
+
+          <div class="mini-card">
+            <img src="../assets/events/himari-2026/bikini.jpg" alt="Himari bikini visual">
+            <div class="cap">Bikini • Summer • Sunshine</div>
+          </div>
+
+
+          <img class="logo-badge" src="../assets/brand/12the-logo.png" alt="12the logo">
+        </div>
+      </div>
+      <div class="hero-wave" aria-hidden="true"></div>
+    </header>
+
+    <section>
+      <div class="wrap">
+        <div class="countdown-grid">
+          <div class="count-card">
+            <div class="count-top">
+              <div>
+                <span class="eyebrow">Countdown</span>
+                <h2 style="margin-top:8px">距離 Himari 高雄專場開始，<br>還有多久？</h2>
+              </div>
+              <img src="../assets/events/himari-2026/sun.png" alt="sun icon">
+            </div>
+            <p class="muted">Day 1 將於 <strong>2026/09/12（六）10:30</strong> 開始。喜歡的場次別等到額滿才想起來。</p>
+            <div class="timer" id="timer">
+              <div class="timebox"><strong id="days">--</strong><span>Days</span></div>
+              <div class="timebox"><strong id="hours">--</strong><span>Hours</span></div>
+              <div class="timebox"><strong id="minutes">--</strong><span>Minutes</span></div>
+              <div class="timebox"><strong id="seconds">--</strong><span>Seconds</span></div>
+            </div>
+          </div>
+
+          <div class="seats">
+            <div class="seat-card">
+              <div class="head">
+                <img src="../assets/events/himari-2026/decor-01.png" alt="">
+                <div>
+                  <h3 style="margin:0">報名狀態</h3>
+                  <div class="seat-note">目前全面開放報名中</div>
+                </div>
+              </div>
+              <div class="seat-num">OPEN</div>
+              <div class="tagline">實際名額請以官方 LINE 即時回覆為準</div>
+            </div>
+
+            <div class="seat-card">
+              <div class="head">
+                <img src="../assets/events/himari-2026/decor-02.png" alt="">
+                <div>
+                  <h3 style="margin:0">剩餘名額重點</h3>
+                  <div class="seat-note">報名前可先快速確認</div>
+                </div>
+              </div>
+              <div style="display:grid; gap:8px; margin-top:8px">
+                <div><strong>初見特典會</strong>｜開放 40 名</div>
+                <div><strong>互動見面會 VIP</strong>｜每場限 5 名</div>
+                <div><strong>攝影會</strong>｜4 場開放報名</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="highlights">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Event Highlights</span>
+            <h2>更靠近一點，<br>就更難把視線移開。</h2>
+          </div>
+          <p class="muted">白天有陽光感與比基尼氛圍，夜晚有更撩人的距離感。從互動、晚宴到專屬攝影，這次把 Himari 的性感、嫵媚與鏡頭魅力一次完整收藏。</p>
+        </div>
+
+        <div class="card-grid-4">
+          <article class="info-card">
+            <div class="icon-wrap"><img src="../assets/events/himari-2026/decor-03.png" alt=""></div>
+            <strong>2 Days</strong>
+            <h3>高雄限定專場</h3>
+            <p>Day 1 互動見面會＋女神晚宴，Day 2 全日專屬攝影，一次感受不同距離。</p>
+          </article>
+          <article class="info-card">
+            <div class="icon-wrap"><img src="../assets/events/himari-2026/sun.png" alt=""></div>
+            <strong>VIP 5</strong>
+            <h3>每場 VIP 限定</h3>
+            <p>最佳視野、互動優先，並享有 VIP 專屬遊戲與客製化生寫真簽名框。</p>
+          </article>
+          <article class="info-card">
+            <div class="icon-wrap"><img src="../assets/events/himari-2026/decor-04.png" alt=""></div>
+            <strong>2+1</strong>
+            <h3>雙場加贈</h3>
+            <p>任報 2 場付費活動，加贈 1 張 30 秒互動券，讓曖昧距離再多一點。</p>
+          </article>
+          <article class="info-card">
+            <div class="icon-wrap"><img src="../assets/events/himari-2026/decor-05.png" alt=""></div>
+            <strong>4+1</strong>
+            <h3>跨場升級</h3>
+            <p>任報 4 場付費活動，可選加贈 1 場或 NT$1,500 交通補助，二擇一。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="photo-story">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Photo Story</span>
+            <h2>柔和、火辣、夜感、鏡頭感，<br>全部都是她。</h2>
+          </div>
+          <p class="muted">不管你喜歡的是她溫柔的一面，還是讓人心跳加速的那一面，這兩天都能比平常更靠近她。</p>
+        </div>
+
+        <div class="gallery-layout">
+          <div class="gallery-main"><img src="../assets/events/himari-2026/portrait.jpg" alt="Himari portrait"></div>
+          <div class="gallery-side">
+            <div class="polaroid">
+              <img src="../assets/events/himari-2026/mirror.jpg" alt="Himari mirror look">
+              <div class="caption">Night mood｜夜色裡更撩人的一面</div>
+            </div>
+            <div class="polaroid">
+              <img src="../assets/events/himari-2026/casual.jpg" alt="Himari casual look">
+              <div class="caption">Closer look｜再靠近一點，就更捨不得移開視線</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-box">
+          <strong style="display:block; color:var(--sky-600); margin-bottom:8px">這次你可以期待</strong>
+          互動見面會、VIP 限定內容、女神晚宴、專屬攝影會，以及各種值得收藏的加購品項。無論你想要的是更近的距離，還是更完整的回憶，這次都準備好了。
+        </div>
+
+        <div class="editorial-gallery">
+          <div class="editorial-row">
+            <div class="editorial-photo"><img src="../assets/events/himari-2026/smile.jpg" alt="Himari smile"></div>
+            <div class="editorial-copy sunny">
+              <div class="mini-label">CUTE SIDE</div>
+              <h3>笑起來的她，<br>比想像中更讓人上癮。</h3>
+              <p>不是只有性感。真正見到 Himari，你會發現她的笑容、反應與聊天時的自然感，會讓整場活動變得更有溫度。這些「鏡頭外」的小瞬間，往往才是粉絲最容易記住的部分。</p>
+            </div>
+          </div>
+
+          <div class="editorial-row reverse">
+            <div class="editorial-photo"><img src="../assets/events/himari-2026/dinner.jpg" alt="Himari elegant dinner look"></div>
+            <div class="editorial-copy">
+              <div class="mini-label">DINNER MOOD</div>
+              <h3>夜晚，把距離留得更近。</h3>
+              <p>女神晚宴不是單純吃一頓飯，而是把白天活動的熱度延續到更私密、更放鬆的氣氛裡。換上優雅造型的 Himari，會讓這一晚多一點成熟、多一點溫柔，也多一點只屬於現場的特別記憶。</p>
+            </div>
+          </div>
+
+          <div class="editorial-row">
+            <div class="editorial-photo"><img src="../assets/events/himari-2026/portrait.jpg" alt="Himari sexy portrait"></div>
+            <div class="editorial-copy">
+              <div class="mini-label">SEXY SIDE</div>
+              <h3>你喜歡的性感，<br>這次不只存在螢幕裡。</h3>
+              <p>鏡頭會放大細節，也會放大心跳。攝影會裡，你可以用自己的角度捕捉她的線條、眼神與姿態，留下真正符合你審美的那一張。</p>
+            </div>
+          </div>
+
+          <div class="editorial-row reverse">
+            <div class="editorial-photo"><img src="../assets/events/himari-2026/mirror.jpg" alt="Himari night look"></div>
+            <div class="editorial-copy dark">
+              <div class="mini-label">AFTER DARK</div>
+              <h3>白天是夏日，<br>夜晚則完全是另一個她。</h3>
+              <p class="muted">當燈光變暗、氣氛變濃，Himari 的魅力會從「漂亮」變成更有侵略性的性感。這也是專場最迷人的地方：同一個人，可以讓你在一天裡喜歡上好幾次。</p>
+            </div>
+          </div>
+        </div>
+</div>
+    </section>
+
+
+    <section id="experience">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">What Happens There?</span>
+            <h2>見面會與攝影會，<br>到底在做什麼？</h2>
+          </div>
+          <p class="muted">第一次參加也不用擔心。這兩種活動的重點不同，但目的都一樣：讓你用更舒服、更靠近她的方式，留下只屬於這一天的記憶。</p>
+        </div>
+
+        
+        <div class="experience-grid">
+          <article class="experience-card">
+            <div class="experience-photo">
+              <img src="../assets/events/himari-2026/smile.jpg" alt="Himari 互動見面會氛圍">
+            </div>
+            <div class="experience-copy">
+              <div class="label">INTERACTIVE FAN MEETING</div>
+              <h3>見面會在做什麼？</h3>
+              <p>這是一場把「螢幕裡的她」拉到你面前的時間。你可以聽她聊天、知道更多她私下的想法，和她一起玩遊戲、一起笑，甚至在近距離互動裡，看見鏡頭之外更真實、更可愛，也更讓人心動的一面。你會發現，Himari 的魅力不只是在照片裡，而是在她看向你、回應你、和你共享那一刻的時候，變得更加鮮明。</p>
+            </div>
+          </article>
+          <article class="experience-card">
+            <div class="experience-photo">
+              <img src="../assets/events/himari-2026/photoshoot.jpg" alt="Himari 攝影會氛圍">
+            </div>
+            <div class="experience-copy">
+              <div class="label">PHOTO SESSION</div>
+              <h3>攝影會在做什麼？</h3>
+              <p>你不需要是專業攝影師，也不一定要準備單眼相機。只要帶著你習慣使用的相機或手機，用自己的鏡頭捕捉她的美、她的性感、她看向你的瞬間。攝影會像是一場用「鏡頭語言」進行的互動：你按下快門，她用表情與姿態回應你，留下的是只屬於你們當下的畫面與時光。</p>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="schedule-wrap" id="schedule">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Event Schedule</span>
+            <h2>活動日期、地點、<br>場次資訊一頁看懂。</h2>
+          </div>
+          <p class="muted">兩天活動安排如下，部分場次名額有限，建議提早完成報名與確認。</p>
+        </div>
+
+        <div class="day-grid">
+          <article class="day-card day1">
+            <div class="day-head">
+              <div class="label">DAY 1｜09.12（六）</div>
+              <h3 style="margin:0; font-size:1.52rem">互動見面會・女神晚宴</h3>
+              <img class="decor" src="../assets/events/himari-2026/decor-06.png" alt="">
+            </div>
+            <div class="schedule-list">
+              <div class="schedule-item"><div class="session">場次 1</div><div class="time">10:30–12:00</div><div><div class="type">㊗️ 初見限定特典會</div><div class="note">免費入場｜限 40 人｜預收 NT$1,000 押金</div></div><div class="price">FREE</div></div>
+              <div class="schedule-item"><div class="session">場次 2</div><div class="time">13:10–14:20</div><div><div class="type">👗 互動見面會 1部</div><div class="note">一般席 / VIP 可選</div></div><div class="price">NT$2,800 起</div></div>
+              <div class="schedule-item"><div class="session">場次 3</div><div class="time">14:50–16:00</div><div><div class="type">👗 互動見面會 2部</div><div class="note">一般席 / VIP 可選</div></div><div class="price">NT$2,800 起</div></div>
+              <div class="schedule-item"><div class="session">場次 4</div><div class="time">16:30–17:40</div><div><div class="type">👗 互動見面會 3部</div><div class="note">一般席 / VIP 可選</div></div><div class="price">NT$2,800 起</div></div>
+              <div class="schedule-item"><div class="session">場次 5</div><div class="time">19:00–20:30</div><div><div class="type">🥂 女神晚宴</div><div class="note">Day 1 only</div></div><div class="price">NT$3,800</div></div>
+            </div>
+            <div class="venue">
+              <strong>地點｜L Club</strong>
+              <span>800 高雄市新興區大同一路31號</span>
+              <a class="map-link" href="https://maps.app.goo.gl/zBywaUWeQcmiN8YY6" target="_blank" rel="noopener">Google Maps →</a>
+            </div>
+          </article>
+
+          <article class="day-card day2">
+            <div class="day-head">
+              <div class="label">DAY 2｜09.13（日）</div>
+              <h3 style="margin:0; font-size:1.52rem">專屬攝影會</h3>
+              <img class="decor" src="../assets/events/himari-2026/decor-02.png" alt="">
+            </div>
+            <div class="schedule-list">
+              <div class="schedule-item"><div class="session">場次 6</div><div class="time">10:50–12:00</div><div><div class="type">📷 專屬攝影會 1部</div><div class="note">近距離專屬攝影時間</div></div><div class="price">NT$2,800</div></div>
+              <div class="schedule-item"><div class="session">場次 7</div><div class="time">13:10–14:20</div><div><div class="type">📷 專屬攝影會 2部</div><div class="note">近距離專屬攝影時間</div></div><div class="price">NT$2,800</div></div>
+              <div class="schedule-item"><div class="session">場次 8</div><div class="time">14:50–16:00</div><div><div class="type">📷 專屬攝影會 3部</div><div class="note">近距離專屬攝影時間</div></div><div class="price">NT$2,800</div></div>
+              <div class="schedule-item"><div class="session">場次 9</div><div class="time">16:30–17:40</div><div><div class="type">📷 專屬攝影會 4部</div><div class="note">近距離專屬攝影時間</div></div><div class="price">NT$2,800</div></div>
+            </div>
+            <div class="venue">
+              <strong>地點｜嘿棚 三號棚</strong>
+              <span>803 高雄市鹽埕區五福四路142號 4樓</span>
+              <a class="map-link" href="https://maps.app.goo.gl/QRkNFYLhbdggwfwVA" target="_blank" rel="noopener">Google Maps →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="tickets">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Tickets & Offers</span>
+            <h2>票價、VIP 差異、<br>優惠內容一次整理。</h2>
+          </div>
+          <p class="muted">報名前先看清楚：互動見面會分為一般席與 VIP，另外還有初見特典會、女神晚宴、專屬攝影會與加購品項可搭配。</p>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="ticket-card free">
+            <div class="ticket-tag">INTRO EVENT</div>
+            <h3>初見限定特典會</h3>
+            <div class="ticket-price">FREE</div>
+            <ul class="list">
+              <li>免費入場</li>
+              <li>限 40 人</li>
+              <li>預收 NT$1,000 押金</li>
+              <li>依主辦規則退還或兌換</li>
+            </ul>
+          </article>
+
+          <article class="ticket-card">
+            <div class="ticket-tag">GENERAL</div>
+            <h3>互動見面會 一般席</h3>
+            <div class="ticket-price">NT$2,800</div>
+            <ul class="list">
+              <li>參加該場互動見面會</li>
+              <li>依流程參與現場互動</li>
+              <li>可加購相關品項</li>
+            </ul>
+          </article>
+
+          <article class="ticket-card vip">
+            <div class="ticket-tag">VIP｜每場限 5 名</div>
+            <h3>互動見面會 VIP 席</h3>
+            <div class="ticket-price">NT$3,500</div>
+            <ul class="list">
+              <li>包含該場活動入場資格</li>
+              <li>最佳視野與互動優先</li>
+              <li>VIP 專屬互動遊戲</li>
+              <li>客製化生寫真簽名框</li>
+            </ul>
+          </article>
+
+          <article class="ticket-card dinner">
+            <div class="ticket-tag">DINNER</div>
+            <h3>女神晚宴</h3>
+            <div class="ticket-price">NT$3,800</div>
+            <ul class="list">
+              <li>僅 Day 1 舉行</li>
+              <li>夜晚限定的近距離時光</li>
+              <li>適合想收藏特別回憶的你</li>
+            </ul>
+          </article>
+
+          <article class="ticket-card">
+            <div class="ticket-tag">PHOTO SESSION</div>
+            <h3>專屬攝影會</h3>
+            <div class="ticket-price">NT$2,800</div>
+            <ul class="list">
+              <li>Day 2 共 4 場</li>
+              <li>近距離專屬攝影時間</li>
+              <li>適合想捕捉她鏡頭魅力的你</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="offer-grid">
+          <div class="offer-card">
+            <strong>2+1 優惠</strong>
+            任報 2 場付費活動，加贈 1 張「30 秒互動券」。
+          </div>
+          <div class="offer-card">
+            <strong>4+1 優惠</strong>
+            任報 4 場付費活動（不含初見特典會），可選「加贈 1 場」或「交通補助金 NT$1,500」，二擇一。
+          </div>
+        </div>
+
+        <div class="addon-shell">
+          <div class="addon">
+            <div class="mini">ADD-ON</div>
+            <h3>💋 專屬唇印卡</h3>
+            <div class="money">NT$1,000</div>
+            <p class="muted" style="margin-bottom:0">限量，建議事前預約。</p>
+          </div>
+          <div class="addon">
+            <div class="mini">ADD-ON</div>
+            <h3>📸 獨照拍立得</h3>
+            <div class="money">NT$600</div>
+            <p class="muted" style="margin-bottom:0">限定收藏，數量依現場安排為準。</p>
+          </div>
+          <div class="addon">
+            <div class="mini">ADD-ON</div>
+            <h3>🔥 上空拍立得</h3>
+            <div class="money">NT$600</div>
+            <p class="muted" style="margin-bottom:0">限定收藏，數量依現場安排為準。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">FAQ</span>
+            <h2>報名前，先把常見問題看完。</h2>
+          </div>
+          <p class="muted">有些問題大家都會問，我先幫你整理好了。若還有其他問題，也可以直接加入官方 LINE 詢問。</p>
+        </div>
+
+        <div class="faq-shell">
+          <div class="faq-grid">
+          <div class="faq-item open">
+            <div class="faq-q">
+              <div class="left"><img src="../assets/events/himari-2026/decor-07.png" alt=""><span>Q1. 要怎麼報名才算完成？</span></div>
+              <span>＋</span>
+            </div>
+            <div class="faq-a">請先填寫報名表，並依主辦流程完成付款／押金，再加入官方 LINE 進行確認，才算報名完成。</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">
+              <div class="left"><img src="../assets/events/himari-2026/sun.png" alt=""><span>Q2. VIP 和一般席差在哪裡？</span></div>
+              <span>＋</span>
+            </div>
+            <div class="faq-a">VIP 每場限 5 名，享有較好的視野、互動優先，並包含 VIP 專屬遊戲與 Himari 客製化生寫真簽名框。</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">
+              <div class="left"><img src="../assets/events/himari-2026/decor-02.png" alt=""><span>Q3. 攝影會是獨立活動嗎？</span></div>
+              <span>＋</span>
+            </div>
+            <div class="faq-a">是的。Day 2 的專屬攝影會為獨立活動，票價為每場 NT$2,800，共 4 場，可單獨報名。</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">
+              <div class="left"><img src="../assets/events/himari-2026/decor-06.png" alt=""><span>Q4. 初見限定特典會的押金怎麼算？</span></div>
+              <span>＋</span>
+            </div>
+            <div class="faq-a">初見特典會免費入場，但需預收 NT$1,000 押金。實際退還或兌換方式，依主辦當次公告與現場規則辦理。</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">
+              <div class="left"><img src="../assets/events/himari-2026/decor-03.png" alt=""><span>Q5. 海外粉絲也可以參加嗎？</span></div>
+              <span>＋</span>
+            </div>
+            <div class="faq-a">可以。海外粉絲可直接透過官方 LINE 聯繫購票與付款方式，現場也會有中日翻譯協助。</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">
+              <div class="left"><img src="../assets/events/himari-2026/decor-04.png" alt=""><span>Q6. 有年齡限制嗎？</span></div>
+              <span>＋</span>
+            </div>
+            <div class="faq-a">本活動僅限年滿 18 歲以上參加，必要時需出示可核驗之證件。</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">
+              <div class="left"><span style="font-size:1.2rem">📷</span><span>Q7. 沒有單眼相機，也可以參加攝影會嗎？</span></div>
+              <span>＋</span>
+            </div>
+            <div class="faq-a">
+              當然可以。很多人看到「攝影會」三個字，會以為一定要準備專業相機，或具備高超的攝影技術才能參加，但其實攝影會並不是攝影師限定的活動。<br><br>
+              無論是單眼相機、類單眼，或平常使用的手機，只要符合活動規範，都可以用自己習慣的方式，記錄眼前的她。真正珍貴的是，在安排完善、安全且舒適的環境中，近距離拍下「心儀女神」只屬於當下的神情與身影。<br><br>
+              照片不一定要像專業作品一樣完美。也許是她看向你的瞬間、自然露出的笑容，或一個讓你特別心動的表情，這些由你親自拍下的畫面，都會成為活動結束後能反覆回味的珍貴記憶。第一次參加也不用緊張，現場會由工作人員說明拍攝方式、時間及注意事項，使用手機也能輕鬆參與。<br><br>
+              若準備將活動照片公開發布於 Facebook、Instagram、X 等社群平台，請盡量挑選女優沒有閉眼、沒有做出不自然表情，且整體形象良好的照片。依不同經紀公司及活動規定，部分照片公開前也可能需要先知會主辦單位，或經審核後才能發布，請以各場活動現場公告及主辦單位說明為準。<br><br>
+              拍攝，是記錄相遇的一種方式。你不需要是專業攝影師，只需要帶著尊重與期待，留下屬於你們的那一刻。
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">
+              <div class="left"><span style="font-size:1.2rem">💬</span><span>Q8. 見面會在做什麼？</span></div>
+              <span>＋</span>
+            </div>
+            <div class="faq-a">
+              見面會的重點，是「互動」。你不只是坐在台下看著她，而是有機會透過聊天、遊戲與近距離交流，更了解她真實的一面。鏡頭前的 Himari 很性感、很有魅力，但當她開始聊天、笑起來、因為遊戲露出不同反應時，你會發現她還有很多只有現場才能感受到的可愛與真實。這是一場讓你從「喜歡她的作品」，變成真正記住「和她相處過的感覺」的活動。
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">
+              <div class="left"><span style="font-size:1.2rem">📸</span><span>Q9. 攝影會在做什麼？</span></div>
+              <span>＋</span>
+            </div>
+            <div class="faq-a">
+              攝影會不是專業攝影師限定，也不是比誰的器材更高級。你可以使用單眼、類單眼，甚至是自己最熟悉的手機，用自己的鏡頭捕捉她的美、她的性感與她看向你的那一刻。你按下快門，她用眼神、表情與姿態回應，這就是屬於攝影會的「鏡頭互動」。最後留下來的，不只是照片，而是一段只有你知道當時她為什麼看向你、為什麼笑起來的專屬記憶。
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <div class="rule-grid">
+          <article class="rule-card"><strong>拍攝規範</strong>未經許可請勿側拍、側錄或直播；各場拍攝與互動規則以現場說明為準。</article>
+          <article class="rule-card"><strong>官方紀錄</strong>現場可能進行活動照片／影片拍攝，並可能發布於 12the 官方社群；不願露臉者請先告知。</article>
+          <article class="rule-card"><strong>活動異動</strong>活動流程、內容與場地細節若有調整，以主辦單位最新公告為準。</article>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding-top:0">
+      <div class="wrap">
+        <div class="cta-panel">
+          <div class="cta-copy">
+            <span class="eyebrow">Call to Action</span>
+            <h2>想更靠近 Himari？<br>這次就別再錯過。</h2>
+            <p class="muted">名額有限，尤其 VIP 更容易額滿。完成報名表後，也記得加入官方 LINE，方便接收報名確認與後續通知。</p>
+            <div class="hero-actions" style="margin-top:18px">
+              <a class="btn btn-primary" href="https://forms.gle/MCSg6jZnZRcUrSkF6" target="_blank" rel="noopener">立即報名 →</a>
+              <a class="btn btn-secondary" href="https://lin.ee/vNrTaTE" target="_blank" rel="noopener">加入官方 LINE</a>
+            </div>
+            <div class="link-row">
+              <a class="social-pill" href="https://www.12the.com/" target="_blank" rel="noopener">12the 官方網站</a>
+              <a class="social-pill" href="https://www.instagram.com/12the_official/" target="_blank" rel="noopener">12the Instagram</a>
+              <a class="social-pill" href="https://www.instagram.com/himari_official_japann/" target="_blank" rel="noopener">Himari Instagram</a>
+              <a class="social-pill" href="https://x.com/himari_hpp" target="_blank" rel="noopener">Himari X</a>
+            </div>
+          </div>
+          <div class="cta-photo"><img src="../assets/events/himari-2026/bikini.jpg" alt="Himari 夏日視覺"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <img src="../assets/brand/12the-logo.png" alt="12the logo">
+      <div>Himari Kaohsiung Special Event｜<a href="https://www.12the.com/" target="_blank" rel="noopener" style="font-weight:800;color:var(--sky-600)">12the.com</a>｜© 2026 12the</div>
+    </div>
+  </footer>
+
+  <a class="floating-cta" href="https://forms.gle/MCSg6jZnZRcUrSkF6" target="_blank" rel="noopener">立即報名 Himari 高雄專場 →</a>
+
+  <script src="../assets/shared.js"></script>
+  <script>
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-q').forEach(q => {
+      q.addEventListener('click', () => {
+        q.parentElement.classList.toggle('open');
+      });
+    });
+
+    // Countdown to 2026-09-12 10:30 GMT+8
+    const target = new Date('2026-09-12T10:30:00+08:00').getTime();
+    const updateTimer = () => {
+      const now = new Date().getTime();
+      let diff = target - now;
+      if (diff < 0) diff = 0;
+      const d = Math.floor(diff / (1000*60*60*24));
+      const h = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+      const m = Math.floor((diff % (1000*60*60)) / (1000*60));
+      const s = Math.floor((diff % (1000*60)) / 1000);
+      document.getElementById('days').textContent = String(d).padStart(2,'0');
+      document.getElementById('hours').textContent = String(h).padStart(2,'0');
+      document.getElementById('minutes').textContent = String(m).padStart(2,'0');
+      document.getElementById('seconds').textContent = String(s).padStart(2,'0');
+    };
+    updateTimer();
+    setInterval(updateTimer, 1000);
+  </script>
+</body>
+</html>

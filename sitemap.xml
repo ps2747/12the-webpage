@@ -25,9 +25,20 @@
 
   <url>
     <loc>https://www.12the.com/events.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.12the.com/events/himari-2026.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.12the.com/assets/events/himari-2026/hero.jpg</image:loc>
+      <image:title>Himari 2026 高雄專場活動主視覺</image:title>
+    </image:image>
   </url>
 
   <url>

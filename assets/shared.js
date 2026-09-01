@@ -94,8 +94,8 @@
       const saved = sessionStorage.getItem("12the-tweaks");
       if (saved) t = JSON.parse(saved);
     } catch {}
-    // Defaults — events + lineup currently hidden
-    const showEvents = t.showEvents === true;
+    // Events are visible by default now that the live Himari event is published.
+    const showEvents = t.showEvents !== false;
     const showLineup = t.showLineup === true;
     if (document.body) {
       document.body.classList.toggle("hide-events", !showEvents);
@@ -137,7 +137,7 @@
       "theme": "beach",
       "typography": "magazine",
       "cards": "magazine",
-      "showEvents": false,
+      "showEvents": true,
       "showLineup": false
     } /*EDITMODE-END*/;
 
