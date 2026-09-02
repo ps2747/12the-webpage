@@ -1759,10 +1759,26 @@
   .event-subnav a { flex:0 0 auto; color:var(--sky-600) !important; font-size:.82rem; font-weight:800; text-shadow:none !important; }
   .event-subnav .register { color:#fff !important; background:var(--sky-500); border-radius:999px; padding:7px 14px; }
   #highlights, #schedule, #tickets, #faq { scroll-margin-top:145px; }
+  .cover-copy {
+    min-width:0;
+    container-type:inline-size;
+    z-index:2;
+  }
+  .cover-copy h1 {
+    max-width:100%;
+    font-size:clamp(3.7rem,5.2vw,6.8rem);
+    line-height:.88;
+    letter-spacing:-.07em;
+    white-space:nowrap;
+  }
+  @supports (font-size:1cqi) {
+    .cover-copy h1 { font-size:clamp(3.7rem,14cqi,6.8rem); }
+  }
   @media (max-width:760px) {
     .event-subnav { top:65px !important; }
     .event-subnav .wrap { justify-content:flex-start; gap:16px; }
     .hero { padding-top:58px; }
+    .cover-copy h1 { font-size:clamp(3.35rem,14cqi,5.5rem); }
   }
 </style>
 </head>
