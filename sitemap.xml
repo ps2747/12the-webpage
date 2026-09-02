@@ -8,7 +8,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.12the.com/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.12the.com/jp/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.12the.com/"/>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <image:image><image:loc>https://www.12the.com/assets/photos/hero-feature.jpg</image:loc><image:title>12the 高雄日本女優見面會與攝影會</image:title></image:image>
   </url>
 
@@ -17,7 +17,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.12the.com/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.12the.com/jp/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.12the.com/"/>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-02</lastmod>
   </url>
 
   <url>
@@ -25,7 +25,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.12the.com/events.html"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.12the.com/jp/events.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.12the.com/events.html"/>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <image:image><image:loc>https://www.12the.com/assets/events/himari-2026/hero.jpg</image:loc><image:title>Himari 高雄兩日限定活動</image:title></image:image>
   </url>
 
@@ -34,7 +34,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.12the.com/events.html"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.12the.com/jp/events.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.12the.com/events.html"/>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <image:image><image:loc>https://www.12the.com/assets/events/himari-2026/hero.jpg</image:loc><image:title>Himari 高雄2日間限定イベント</image:title></image:image>
   </url>
 
@@ -44,6 +44,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.12the.com/events/himari-2026.html"/>
     <lastmod>2026-09-01</lastmod>
     <image:image><image:loc>https://www.12the.com/assets/events/himari-2026/hero.jpg</image:loc><image:title>Himari 2026 高雄專場活動主視覺</image:title></image:image>
+  </url>
+
+  <url>
+    <loc>https://www.12the.com/events/yuki-yoshizawa-2026.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.12the.com/events/yuki-yoshizawa-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.12the.com/jp/events/yuki-yoshizawa-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.12the.com/events/yuki-yoshizawa-2026.html"/>
+    <lastmod>2026-09-02</lastmod>
+    <image:image><image:loc>https://www.12the.com/assets/events/yuki-yoshizawa-2026/hero.jpg</image:loc><image:title>吉澤友貴 2026 高雄專場活動主視覺</image:title></image:image>
+  </url>
+
+  <url>
+    <loc>https://www.12the.com/jp/events/yuki-yoshizawa-2026.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.12the.com/events/yuki-yoshizawa-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.12the.com/jp/events/yuki-yoshizawa-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.12the.com/events/yuki-yoshizawa-2026.html"/>
+    <lastmod>2026-09-02</lastmod>
+    <image:image><image:loc>https://www.12the.com/assets/events/yuki-yoshizawa-2026/hero.jpg</image:loc><image:title>吉澤友貴 2026 高雄スペシャルイベント メインビジュアル</image:title></image:image>
   </url>
 
   <url>
